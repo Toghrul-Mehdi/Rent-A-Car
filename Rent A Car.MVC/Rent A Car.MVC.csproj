@@ -39,8 +39,8 @@
     <Content Include="wwwroot\admin\vendor\simple-line-icons\node_modules\tslib\tslib.html" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Rent A Car.API\Rent A Car.API.csproj" />
+  <ItemGroup>   
+    <ProjectReference Include="..\Rent A Car.BL\Rent A Car.BL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

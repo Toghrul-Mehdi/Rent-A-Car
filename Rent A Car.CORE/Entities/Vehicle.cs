@@ -17,6 +17,5 @@ namespace Rent_A_Car.CORE.Entities
         public Category Category { get; set; }
         public Color? Color { get; set; }    
         public Fuel FuelType { get; set; }
-        public bool IsAvailable { get; set; } = true;
     }
 }

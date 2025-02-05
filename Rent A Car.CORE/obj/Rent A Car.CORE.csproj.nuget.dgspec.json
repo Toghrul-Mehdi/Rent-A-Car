@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj": {}
+    "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj": {
+    "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
+        "projectUniqueName": "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
         "projectName": "Rent A Car.CORE",
-        "projectPath": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
+        "projectPath": "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
         "packagesPath": "C:\\Users\\Victus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\obj\\",
+        "outputPath": "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

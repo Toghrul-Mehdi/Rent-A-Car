@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wEZ4yVSDOyY=",
+  "dgSpecHash": "QDObDVX5Wr4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
+  "projectFilePath": "C:\\Users\\Victus\\OneDrive\\İş masası\\Rent A Car\\Rent A Car.CORE\\Rent A Car.CORE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Victus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.11\\microsoft.aspnetcore.cryptography.internal.8.0.11.nupkg.sha512",
     "C:\\Users\\Victus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.11\\microsoft.aspnetcore.cryptography.keyderivation.8.0.11.nupkg.sha512",
