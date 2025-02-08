@@ -1,0 +1,3 @@
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\wwwroot\css\site.css
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\wwwroot\favicon.ico
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\wwwroot\js\site.js

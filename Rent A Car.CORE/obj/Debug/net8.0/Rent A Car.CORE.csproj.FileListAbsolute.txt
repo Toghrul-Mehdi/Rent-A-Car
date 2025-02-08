@@ -1,0 +1,14 @@
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\bin\Debug\net8.0\Rent A Car.CORE.deps.json
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\bin\Debug\net8.0\Rent A Car.CORE.runtimeconfig.json
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\bin\Debug\net8.0\Rent A Car.CORE.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\bin\Debug\net8.0\Rent A Car.CORE.pdb
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.csproj.AssemblyReference.cache
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.AssemblyInfoInputs.cache
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.AssemblyInfo.cs
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.csproj.CoreCompileInputs.cache
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\refint\Rent A Car.CORE.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.pdb
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.genruntimeconfig.cache
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\ref\Rent A Car.CORE.dll
