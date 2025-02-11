@@ -14,6 +14,8 @@ namespace Rent_A_Car.DAL.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Model> Models { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Advertisement> Advertisements { get; set; }
+        public DbSet<CarImages> CarImages { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)

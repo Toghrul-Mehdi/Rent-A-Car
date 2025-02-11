@@ -1,0 +1,56 @@
+﻿@using Rent_A_Car.BL.DTOs.Brand
+@model BrandCreateDTO
+<section role="main" class="content-body">
+	<header class="page-header">
+		<h2>Dashboard</h2>
+
+		<div class="right-wrapper text-end">
+			<ol class="breadcrumbs">
+				<li>
+					<a>
+						<i class="bx bx-home-alt"></i>
+					</a>
+				</li>
+
+				<li><span>Dashboard</span></li>
+				<li><span>Brand</span></li>
+				<li><span>Create</span></li>
+
+
+			</ol>
+
+			<a style="cursor: auto;" class="sidebar-right-toggle"></a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-lg-6">
+			<a asp-action="Index" asp-controller="Brand" class="btn btn-primary btn-icon-split">
+				<span class="icon text-white-50">
+					<i class="fa-solid fa-flag"></i>
+				</span>
+				<span class="text">Return List</span>
+			</a>
+			<br />
+			<br />
+			<section class="card" style="width:1140px">
+				<form method="post">
+					<div class="form-group row">
+						<div class="col-sm-6 mb-3 mb-sm-0">
+							<label asp-for="Name"></label>
+							<input type="text" class="form-control form-control-user" asp-for="Name" />
+							<span asp-validation-for="Name" class="text-danger"></span>
+						</div>
+					</div>
+					<div asp-validation-summary="ModelOnly">
+					</div>
+					<button type="submit" class="mb-1 mt-1 me-1 btn btn-primary">
+						<span class="icon text-white-50">
+							<i class="fa-solid fa-check"></i>
+						</span>
+						<span class="text">Submit</span>
+					</button>
+
+				</form>
+		</div>
+	</div>
+</section>

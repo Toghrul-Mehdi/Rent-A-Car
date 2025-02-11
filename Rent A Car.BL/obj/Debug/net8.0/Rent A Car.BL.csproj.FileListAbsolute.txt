@@ -15,3 +15,4 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.BL\obj\Debug\net8.0\Rent A Ca
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.BL\obj\Debug\net8.0\refint\Rent A Car.BL.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.BL\obj\Debug\net8.0\Rent A Car.BL.pdb
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.BL\obj\Debug\net8.0\ref\Rent A Car.BL.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.BL\obj\Debug\net8.0\Rent A Car.BL.sourcelink.json

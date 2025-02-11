@@ -12,3 +12,4 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\refint\
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.pdb
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.genruntimeconfig.cache
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\ref\Rent A Car.CORE.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.CORE\obj\Debug\net8.0\Rent A Car.CORE.sourcelink.json

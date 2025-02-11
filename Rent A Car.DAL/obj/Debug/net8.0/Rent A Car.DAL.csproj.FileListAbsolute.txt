@@ -13,3 +13,4 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.DAL\obj\Debug\net8.0\Rent A C
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.DAL\obj\Debug\net8.0\refint\Rent A Car.DAL.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.DAL\obj\Debug\net8.0\Rent A Car.DAL.pdb
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.DAL\obj\Debug\net8.0\ref\Rent A Car.DAL.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.DAL\obj\Debug\net8.0\Rent A Car.DAL.sourcelink.json

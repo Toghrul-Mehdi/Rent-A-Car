@@ -66,9 +66,7 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A C
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A Car.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A Car.MVC.RazorAssemblyInfo.cache
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A Car.MVC.RazorAssemblyInfo.cs
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\scopedcss\bundle\Rent A Car.MVC.styles.css
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\scopedcss\projectbundle\Rent A Car.MVC.bundle.scp.css
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -272,3 +270,4 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A Car.MVC.sourcelink.json

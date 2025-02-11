@@ -32,12 +32,12 @@ namespace Rent_A_Car.DAL.Configuration
                    .HasDefaultValue(false);
 
             builder.HasOne(v => v.Brand)
-                    .WithMany(b => b.Vehicles)
+                    .WithMany(b => b.Models)
                     .HasForeignKey(v => v.BrandId)
                     .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(v => v.Category)
-                   .WithMany(c => c.Vehicles)
+                   .WithMany(c => c.Models)
                    .HasForeignKey(v => v.CategoryId)
                    .OnDelete(DeleteBehavior.Cascade);
         }

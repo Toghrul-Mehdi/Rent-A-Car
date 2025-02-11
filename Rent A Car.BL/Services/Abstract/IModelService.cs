@@ -11,14 +11,15 @@ namespace Rent_A_Car.BL.Services.Abstract
 {
     public interface IModelService
     {
-        /*Task CreateAsync(VehicleCreateDto dto);
-        Task<List<Vehicle>> GetAllAsync();
-        Task<VehicleUpdateDTO> GetByDataAsync(int? id);
+        Task CreateAsync(ModelCreateDTO dto);
+        Task<List<Model>> GetAllAsync();
+        Task<ModelUpdateDTO> GetByDataAsync(int? id);
         Task<bool> DeleteAsync(int? id);
-        Task<bool> GetExistsAsync(VehicleCreateDto dto);
-        Task<bool> GetExistsAsync(VehicleUpdateDTO dto);
-        Task<bool> UpdateAsync(VehicleUpdateDTO dto, int? id);
+        Task<bool> GetExistsAsync(ModelCreateDTO dto);
+        Task<bool> GetExistsAsync(ModelUpdateDTO dto);
+        Task<bool> UpdateAsync(ModelUpdateDTO dto, int? id);
         Task<bool> GetByIdAsync(int? id);
-        Task<List<Category>> ViewBagAsync();*/
+        Task<List<Category>> ViewBagCategory();
+        Task<List<Brand>> ViewBagBrand();
     }
 }

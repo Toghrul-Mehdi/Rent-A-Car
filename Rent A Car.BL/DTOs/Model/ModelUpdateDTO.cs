@@ -5,9 +5,9 @@ namespace Rent_A_Car.BL.DTOs.Vehicle
     public class ModelUpdateDTO
     {
         [Required, MaxLength(32)]
-        public string Marka { get; set; }
-        [Required, MaxLength(32)]
-        public string Model { get; set; }
+        public string Name { get; set; }
+        [Required]
+        public int BrandId { get; set; }
         [Required]
         public int CategoryId { get; set; }
     }

@@ -155,6 +155,84 @@ namespace Rent_A_Car.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Advertisement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("City")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Color")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FuelType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MinimalGunSayi")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinimalSuruculukVesiqesi")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Advertisements");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -184,6 +262,34 @@ namespace Rent_A_Car.DAL.Migrations
                         .IsUnique();
 
                     b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.CarImages", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdvertisementId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("OtherImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvertisementId");
+
+                    b.ToTable("CarImages");
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Category", b =>
@@ -379,16 +485,54 @@ namespace Rent_A_Car.DAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Model", b =>
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Advertisement", b =>
                 {
                     b.HasOne("Rent_A_Car.CORE.Entities.Brand", "Brand")
-                        .WithMany("Vehicles")
+                        .WithMany()
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Rent_A_Car.CORE.Entities.Category", "Category")
-                        .WithMany("Vehicles")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("Advertisements")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.CarImages", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.Advertisement", "Advertisement")
+                        .WithMany("Images")
+                        .HasForeignKey("AdvertisementId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Advertisement");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Model", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.Brand", "Brand")
+                        .WithMany("Models")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Rent_A_Car.CORE.Entities.Category", "Category")
+                        .WithMany("Models")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -398,14 +542,24 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Advertisement", b =>
+                {
+                    b.Navigation("Images");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Brand", b =>
                 {
-                    b.Navigation("Vehicles");
+                    b.Navigation("Models");
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Category", b =>
                 {
-                    b.Navigation("Vehicles");
+                    b.Navigation("Models");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.User", b =>
+                {
+                    b.Navigation("Advertisements");
                 });
 #pragma warning restore 612, 618
         }

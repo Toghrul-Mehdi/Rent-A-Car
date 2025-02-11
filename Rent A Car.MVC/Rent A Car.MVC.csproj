@@ -52,10 +52,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Views\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\admin\vendor\simple-line-icons\node_modules\less\bin\lessc" />
     <None Include="wwwroot\admin\vendor\simple-line-icons\node_modules\less\dist\less.js" />
     <None Include="wwwroot\admin\vendor\simple-line-icons\node_modules\less\dist\less.min.js" />
@@ -377,6 +373,10 @@
     <TypeScriptCompile Include="wwwroot\admin\vendor\simple-line-icons\node_modules\less\test\test-es6.ts" />
     <TypeScriptCompile Include="wwwroot\admin\vendor\simple-line-icons\node_modules\source-map\source-map.d.ts" />
     <TypeScriptCompile Include="wwwroot\admin\vendor\simple-line-icons\node_modules\tslib\tslib.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\cars\" />
   </ItemGroup>
 
 </Project>

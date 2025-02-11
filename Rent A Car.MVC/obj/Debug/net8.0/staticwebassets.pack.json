@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Rent A Car.MVC.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Rent A Car.MVC.2xdss58wep.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\admin\\ajax\\ajax-datatables-sample.json",
       "PackagePath": "staticwebassets\\admin\\ajax\\ajax-datatables-sample.json"
     },
@@ -22009,668 +22005,696 @@
       "PackagePath": "staticwebassets\\admin\\video\\presentation.mp4"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\color.css",
-      "PackagePath": "staticwebassets\\css\\color.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\coloring.css",
+      "PackagePath": "staticwebassets\\css\\coloring.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\icons.css",
-      "PackagePath": "staticwebassets\\css\\icons.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\colors\\scheme-01.css",
+      "PackagePath": "staticwebassets\\css\\colors\\scheme-01.css"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\jquery.countdown.css",
+      "PackagePath": "staticwebassets\\css\\jquery.countdown.css"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\mdb.min.css",
+      "PackagePath": "staticwebassets\\css\\mdb.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\plugins.css",
+      "PackagePath": "staticwebassets\\css\\plugins.css"
     },
     {
       "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\FontAwesome.otf",
-      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.eot"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontawesome-webfont.eot",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.eot@",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.eot@"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontawesome-webfont.svg",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontawesome-webfont.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.ttf"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontawesome-webfont.woff",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\fonts\\ElegantIcons.woff"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontawesome-webfont.woff2",
-      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\elegant_font\\HTML_CSS\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\elegant_font\\HTML_CSS\\style.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontello.eot",
-      "PackagePath": "staticwebassets\\fonts\\fontello.eot"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\fonts\\et-line.eot",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\fonts\\et-line.eot"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontello.svg",
-      "PackagePath": "staticwebassets\\fonts\\fontello.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\fonts\\et-line.eot@",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\fonts\\et-line.eot@"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontello.ttf",
-      "PackagePath": "staticwebassets\\fonts\\fontello.ttf"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\fonts\\et-line.svg",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\fonts\\et-line.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\fontello.woff",
-      "PackagePath": "staticwebassets\\fonts\\fontello.woff"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\fonts\\et-line.ttf",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\fonts\\et-line.ttf"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\iconsmind.eot",
-      "PackagePath": "staticwebassets\\fonts\\iconsmind.eot"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\fonts\\et-line.woff",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\fonts\\et-line.woff"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\iconsmind.svg",
-      "PackagePath": "staticwebassets\\fonts\\iconsmind.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\et-line-font\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\et-line-font\\style.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\iconsmind.ttf",
-      "PackagePath": "staticwebassets\\fonts\\iconsmind.ttf"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\css\\font-awesome.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\iconsmind.woff",
-      "PackagePath": "staticwebassets\\fonts\\iconsmind.woff"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot@",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot@"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\simple-line-icons.eot",
-      "PackagePath": "staticwebassets\\fonts\\simple-line-icons.eot"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot@v=4.7.0",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot@v=4.7.0"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\simple-line-icons.svg",
-      "PackagePath": "staticwebassets\\fonts\\simple-line-icons.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg@v=4.7.0",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg@v=4.7.0"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\simple-line-icons.ttf",
-      "PackagePath": "staticwebassets\\fonts\\simple-line-icons.ttf"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf@v=4.7.0",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf@v=4.7.0"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\simple-line-icons.woff",
-      "PackagePath": "staticwebassets\\fonts\\simple-line-icons.woff"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2@v=4.7.0",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2@v=4.7.0"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agency-01.jpg",
-      "PackagePath": "staticwebassets\\images\\agency-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff@v=4.7.0",
+      "PackagePath": "staticwebassets\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff@v=4.7.0"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agency-02.jpg",
-      "PackagePath": "staticwebassets\\images\\agency-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\icofont\\fonts\\icofont.woff",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\fonts\\icofont.woff"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agency-03.jpg",
-      "PackagePath": "staticwebassets\\images\\agency-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\icofont\\fonts\\icofont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\fonts\\icofont.woff2"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agent-01.jpg",
-      "PackagePath": "staticwebassets\\images\\agent-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\fonts\\icofont\\icofont.min.css",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\icofont.min.css"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agent-02.jpg",
-      "PackagePath": "staticwebassets\\images\\agent-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agent-03.jpg",
-      "PackagePath": "staticwebassets\\images\\agent-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\11.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agent-04.jpg",
-      "PackagePath": "staticwebassets\\images\\agent-04.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\14.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\14.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\agent-avatar.jpg",
-      "PackagePath": "staticwebassets\\images\\agent-avatar.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\15.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\15.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-01.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-01a.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-01a.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-02.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-02a.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-02a.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-03.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-post-03a.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-post-03a.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-widget-01.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-widget-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\background\\subheader.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\subheader.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-widget-02.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-widget-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\car-single\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\car-single\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\blog-widget-03.jpg",
-      "PackagePath": "staticwebassets\\images\\blog-widget-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\car-single\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\car-single\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\compare-icon-black.svg",
-      "PackagePath": "staticwebassets\\images\\compare-icon-black.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\car-single\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\car-single\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\compare-icon.svg",
-      "PackagePath": "staticwebassets\\images\\compare-icon.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\car-single\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\car-single\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\flip-banner-bg.jpg",
-      "PackagePath": "staticwebassets\\images\\flip-banner-bg.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\bentley.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\bentley.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\happy-client-01.jpg",
-      "PackagePath": "staticwebassets\\images\\happy-client-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\bmw-m5.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\bmw-m5.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\happy-client-02.jpg",
-      "PackagePath": "staticwebassets\\images\\happy-client-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\chevrolet-camaro.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\chevrolet-camaro.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\happy-client-03.jpg",
-      "PackagePath": "staticwebassets\\images\\happy-client-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\ferrari-enzo.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\ferrari-enzo.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\home-parallax-2.jpg",
-      "PackagePath": "staticwebassets\\images\\home-parallax-2.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\ford-raptor.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\ford-raptor.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\home-parallax.jpg",
-      "PackagePath": "staticwebassets\\images\\home-parallax.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\hyundai-staria.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\hyundai-staria.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\home-slider-01.jpg",
-      "PackagePath": "staticwebassets\\images\\home-slider-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\jeep-renegade.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\jeep-renegade.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\home-slider-02.jpg",
-      "PackagePath": "staticwebassets\\images\\home-slider-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\lexus.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\lexus.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\home-slider-03.jpg",
-      "PackagePath": "staticwebassets\\images\\home-slider-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\mini-cooper.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\mini-cooper.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-01.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\range-rover.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\range-rover.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-01b.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-01b.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\toyota-rav.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\toyota-rav.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-01c.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-01c.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars-alt\\vw-polo.png",
+      "PackagePath": "staticwebassets\\images\\cars-alt\\vw-polo.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-02.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\bentley.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\bentley.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-03.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\bmw-m5.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\bmw-m5.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-04.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-04.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\chevrolet-camaro.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\chevrolet-camaro.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-04b.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-04b.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\ferrari-enzo.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\ferrari-enzo.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-05.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-05.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\ford-raptor.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\ford-raptor.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listing-06.jpg",
-      "PackagePath": "staticwebassets\\images\\listing-06.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\hyundai-staria.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\hyundai-staria.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\listings-parallax.jpg",
-      "PackagePath": "staticwebassets\\images\\listings-parallax.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\jeep-renegade.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\jeep-renegade.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\loader.gif",
-      "PackagePath": "staticwebassets\\images\\loader.gif"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\lexus.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\lexus.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-01.png",
-      "PackagePath": "staticwebassets\\images\\logo-01.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\mini-cooper.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\mini-cooper.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-02.png",
-      "PackagePath": "staticwebassets\\images\\logo-02.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\range-rover.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\range-rover.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-03.png",
-      "PackagePath": "staticwebassets\\images\\logo-03.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\toyota-rav.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\toyota-rav.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-04.png",
-      "PackagePath": "staticwebassets\\images\\logo-04.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\cars\\vw-polo.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\vw-polo.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-05.png",
-      "PackagePath": "staticwebassets\\images\\logo-05.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-06.png",
-      "PackagePath": "staticwebassets\\images\\logo-06.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-07.png",
-      "PackagePath": "staticwebassets\\images\\logo-07.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\gallery\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\icon.png",
+      "PackagePath": "staticwebassets\\images\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\icons\\1-green.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\1-green.svg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\icons\\2-green.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\2-green.svg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\icons\\3-green.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\3-green.svg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\icons\\4-green.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\4-green.svg"
+    },
+    {
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo-light.png",
+      "PackagePath": "staticwebassets\\images\\logo-light.png"
     },
     {
       "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\logo2.png",
-      "PackagePath": "staticwebassets\\images\\logo2.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\images\\misc\\avatar-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\map-icon.png",
-      "PackagePath": "staticwebassets\\images\\map-icon.png"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\car-2.png",
+      "PackagePath": "staticwebassets\\images\\misc\\car-2.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\our-office.jpg",
-      "PackagePath": "staticwebassets\\images\\our-office.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\car.png",
+      "PackagePath": "staticwebassets\\images\\misc\\car.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\plus-icon.svg",
-      "PackagePath": "staticwebassets\\images\\plus-icon.svg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\e1.jpg",
+      "PackagePath": "staticwebassets\\images\\misc\\e1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\popular-location-01.jpg",
-      "PackagePath": "staticwebassets\\images\\popular-location-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\e2.jpg",
+      "PackagePath": "staticwebassets\\images\\misc\\e2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\popular-location-02.jpg",
-      "PackagePath": "staticwebassets\\images\\popular-location-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\misc\\map.png",
+      "PackagePath": "staticwebassets\\images\\misc\\map.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\popular-location-03.jpg",
-      "PackagePath": "staticwebassets\\images\\popular-location-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-1.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\popular-location-04.jpg",
-      "PackagePath": "staticwebassets\\images\\popular-location-04.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-2.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-01.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-01.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-3.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-02.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-02.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-4.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-03.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-03.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-5.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-5.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-04.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-04.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-2\\pic-blog-6.jpg",
+      "PackagePath": "staticwebassets\\images\\news-2\\pic-blog-6.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-05.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-05.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-thumbnail\\pic-blog-1.jpg",
+      "PackagePath": "staticwebassets\\images\\news-thumbnail\\pic-blog-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\single-property-06.jpg",
-      "PackagePath": "staticwebassets\\images\\single-property-06.jpg"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-thumbnail\\pic-blog-2.jpg",
+      "PackagePath": "staticwebassets\\images\\news-thumbnail\\pic-blog-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-thumbnail\\pic-blog-3.jpg",
+      "PackagePath": "staticwebassets\\images\\news-thumbnail\\pic-blog-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news-thumbnail\\pic-blog-4.jpg",
+      "PackagePath": "staticwebassets\\images\\news-thumbnail\\pic-blog-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\big.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\big.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-1.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-2.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-3.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-4.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-5.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-5.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\news\\pic-blog-6.jpg",
+      "PackagePath": "staticwebassets\\images\\news\\pic-blog-6.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\people\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\people\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\people\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\people\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\people\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\people\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\people\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\people\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\arrows.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\arrows.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\balls.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\balls.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\gear.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\gear.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\hatchway.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\hatchway.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\pacman.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\pacman.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\petals.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\petals.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\segments.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\segments.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\stars.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\stars.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\stopwatch.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\stopwatch.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\timer.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\timer.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\triplex.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\triplex.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\preloader\\twirl.svg",
+      "PackagePath": "staticwebassets\\images\\preloader\\twirl.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\profile\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\select-form\\car.png",
+      "PackagePath": "staticwebassets\\images\\select-form\\car.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\select-form\\minibus.png",
+      "PackagePath": "staticwebassets\\images\\select-form\\minibus.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\select-form\\sportscar.png",
+      "PackagePath": "staticwebassets\\images\\select-form\\sportscar.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\select-form\\van.png",
+      "PackagePath": "staticwebassets\\images\\select-form\\van.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\slider\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\slider\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\slider\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\svg\\facebook_icon.svg",
+      "PackagePath": "staticwebassets\\images\\svg\\facebook_icon.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\svg\\google_icon.svg",
+      "PackagePath": "staticwebassets\\images\\svg\\google_icon.svg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\team\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\team\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\team\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\team\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\testimonial\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\testimonial\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\testimonial\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\ui\\arrow-down-light.png",
+      "PackagePath": "staticwebassets\\images\\ui\\arrow-down-light.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\ui\\arrow-down.png",
+      "PackagePath": "staticwebassets\\images\\ui\\arrow-down.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\ui\\arrow-up-light.png",
+      "PackagePath": "staticwebassets\\images\\ui\\arrow-up-light.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\images\\ui\\arrow-up.png",
+      "PackagePath": "staticwebassets\\images\\ui\\arrow-up.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\00rdbkd4.3r3.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\00rdbkd4.3r3.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\0oliqagc.ieu.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\0oliqagc.ieu.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\1dfshz4u.gbt.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\1dfshz4u.gbt.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\3r3nbvrj.q3k.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\3r3nbvrj.q3k.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\4ijfzo3c.042.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\4ijfzo3c.042.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\4o0jwemp.4pe.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\4o0jwemp.4pe.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\5pt1m4gm.vtb.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\5pt1m4gm.vtb.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\bnsxnkhm.uxz.png",
+      "PackagePath": "staticwebassets\\img\\cars\\bnsxnkhm.uxz.png"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\f5mxk2bl.hg2.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\f5mxk2bl.hg2.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\fmrugjwo.asb.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\fmrugjwo.asb.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\hy4fnzpk.qfq.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\hy4fnzpk.qfq.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\chosen.min.js",
-      "PackagePath": "staticwebassets\\scripts\\chosen.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\kirp5ave.v3o.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\kirp5ave.v3o.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\custom.js",
-      "PackagePath": "staticwebassets\\scripts\\custom.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\kqmdytvm.dmi.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\kqmdytvm.dmi.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\daterangepicker.js",
-      "PackagePath": "staticwebassets\\scripts\\daterangepicker.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\lbabesve.mbx.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\lbabesve.mbx.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\dropzone.js",
-      "PackagePath": "staticwebassets\\scripts\\dropzone.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\lvj1bt0w.kku.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\lvj1bt0w.kku.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\gmaps_api_v3.min.js",
-      "PackagePath": "staticwebassets\\scripts\\gmaps_api_v3.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\lyjsr1hi.dij.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\lyjsr1hi.dij.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\hoverIntent.js",
-      "PackagePath": "staticwebassets\\scripts\\hoverIntent.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\mmzic4fp.cmw.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\mmzic4fp.cmw.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\infobox.min.js",
-      "PackagePath": "staticwebassets\\scripts\\infobox.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\mrqyzshe.5iv.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\mrqyzshe.5iv.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\jquery-2.2.0.min.js",
-      "PackagePath": "staticwebassets\\scripts\\jquery-2.2.0.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\nc1h41g0.nux.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\nc1h41g0.nux.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\jquery-3.4.1.min.js",
-      "PackagePath": "staticwebassets\\scripts\\jquery-3.4.1.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\nprvktwi.uzo.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\nprvktwi.uzo.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\jquery-migrate-3.1.0.min.js",
-      "PackagePath": "staticwebassets\\scripts\\jquery-migrate-3.1.0.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\om1mpvsx.uxo.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\om1mpvsx.uxo.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\jquery.counterup.min.js",
-      "PackagePath": "staticwebassets\\scripts\\jquery.counterup.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\p3exoke1.ffq.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\p3exoke1.ffq.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\jquery.jpanelmenu.js",
-      "PackagePath": "staticwebassets\\scripts\\jquery.jpanelmenu.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\pczn2czo.lzn.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\pczn2czo.lzn.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\magnific-popup.min.js",
-      "PackagePath": "staticwebassets\\scripts\\magnific-popup.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\q2jndjxf.j40.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\q2jndjxf.j40.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\maps.js",
-      "PackagePath": "staticwebassets\\scripts\\maps.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\qi54rsvw.4xr.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\qi54rsvw.4xr.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\markerclusterer.js",
-      "PackagePath": "staticwebassets\\scripts\\markerclusterer.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\sbvuptrk.dhb.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\sbvuptrk.dhb.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\masonry.min.js",
-      "PackagePath": "staticwebassets\\scripts\\masonry.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\yypacq5i.pyu.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\yypacq5i.pyu.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\mmenu.min.js",
-      "PackagePath": "staticwebassets\\scripts\\mmenu.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\img\\cars\\znubni1k.hgy.jpg",
+      "PackagePath": "staticwebassets\\img\\cars\\znubni1k.hgy.jpg"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\moment.min.js",
-      "PackagePath": "staticwebassets\\scripts\\moment.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\designesia.js",
+      "PackagePath": "staticwebassets\\js\\designesia.js"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\owl.carousel.min.js",
-      "PackagePath": "staticwebassets\\scripts\\owl.carousel.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\quantityButtons.js",
-      "PackagePath": "staticwebassets\\scripts\\quantityButtons.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\validation-booking.js",
+      "PackagePath": "staticwebassets\\js\\validation-booking.js"
     },
     {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\rangeSlider.js",
-      "PackagePath": "staticwebassets\\scripts\\rangeSlider.js"
-    },
-    {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\slick.min.js",
-      "PackagePath": "staticwebassets\\scripts\\slick.min.js"
-    },
-    {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\sticky-kit.min.js",
-      "PackagePath": "staticwebassets\\scripts\\sticky-kit.min.js"
-    },
-    {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\switcher.js",
-      "PackagePath": "staticwebassets\\scripts\\switcher.js"
-    },
-    {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\tooltips.min.js",
-      "PackagePath": "staticwebassets\\scripts\\tooltips.min.js"
-    },
-    {
-      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\scripts\\waypoints.min.js",
-      "PackagePath": "staticwebassets\\scripts\\waypoints.min.js"
+      "Id": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\validation-contact.js",
+      "PackagePath": "staticwebassets\\js\\validation-contact.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Rent A Car.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

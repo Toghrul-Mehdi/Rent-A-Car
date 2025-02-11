@@ -1,0 +1,70 @@
+﻿@using Rent_A_Car.CORE.Entities
+@model List<Brand>
+<section role="main" class="content-body">
+	<header class="page-header">
+		<h2>Dashboard</h2>
+
+		<div class="right-wrapper text-end">
+			<ol class="breadcrumbs">
+				<li>
+					<a>
+						<i class="bx bx-home-alt"></i>
+					</a>
+				</li>
+
+				<li><span>Dashboard</span></li>
+				<li><span>Brand</span></li>
+
+
+			</ol>
+
+			<a style="cursor: auto;" class="sidebar-right-toggle"></a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-lg-6">
+			<a asp-action="Create" asp-controller="Brand" class="btn btn-success btn-icon-split">
+				<span class="icon text-white-50">
+					<i class="fa-solid fa-plus"></i>
+				</span>
+				<span class="text">Create</span>
+			</a>
+			<br />
+			<br />
+			<section class="card" style="width:1140px">
+				<header class="card-header">
+					<div class="card-actions">
+						<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+
+					</div>
+
+					<h2 class="card-title">Brand Table</h2>
+				</header>
+				<div class="card-body">
+					<table class="table table-responsive-md mb-0">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Brand</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model ?? [])
+							{
+								<tr>
+									<td>@item.Id</td>
+									<td>@item.Name</td>
+									<td class="actions">
+										<a asp-action="Update" asp-controller="Brand" asp-route-id="@item.Id"><i class="fas fa-pencil-alt"></i></a>
+										<a asp-action="Delete" asp-controller="Brand" asp-route-id="@item.Id" class="delete-row"><i class="far fa-trash-alt"></i></a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>

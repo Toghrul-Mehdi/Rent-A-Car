@@ -10,7 +10,8 @@ namespace Rent_A_Car.MVC.Controllers
     {     
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.Where(x=>x.IsDeleted==false).ToListAsync());
+            ViewBag.UserCount = await _context.Users.CountAsync();
+            return View(await _context.Advertisements.Where(x=>x.IsDeleted==false).Include(x=>x.Category).Include(x=>x.Brand).ToListAsync());
         }        
     }
 }
