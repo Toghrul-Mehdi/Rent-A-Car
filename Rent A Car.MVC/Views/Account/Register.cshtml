@@ -9,7 +9,7 @@
 
     <!-- section begin -->
     <section id="subheader" class="jarallax text-light">
-        <img src="images/background/subheader.jpg" class="jarallax-img" alt="">
+        <img src="~/images/background/subheader.jpg" class="jarallax-img" alt="">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -48,7 +48,7 @@
                             <div class="col-md-6">
                                 <div class="field-set">
                                     <label>Email Address:</label>
-                                    <input asp-for="Email" type='email' class="form-control">
+                                    <input asp-for="Email" type='text' class="form-control">
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                             <div class="col-md-12">
 
                                 <div class="col-lg-3">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" style="background-color:forestgreen" class="btn btn-primary">Register</button>
                                 </div>                               
 
                             </div>

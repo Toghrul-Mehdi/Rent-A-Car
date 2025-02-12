@@ -1,4 +1,5 @@
-﻿
+﻿@using Rent_A_Car.CORE.Entities
+@model Advertisement
 <!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
     <div id="top"></div>
@@ -25,23 +26,21 @@
                 <div class="col-lg-6">
                     <div id="slider-carousel" class="owl-carousel">
                         <div class="item">
-                            <img src="~/images/car-single/1.jpg" alt="">
+                            <img src="~/img/cars/@Model.ImageUrl" alt="">
                         </div>
-                        <div class="item">
-                            <img src="~/images/car-single/2.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="~/images/car-single/3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="~/images/car-single/4.jpg" alt="">
-                        </div>
+                        @foreach (var item in Model.Images)
+                        {
+                            <div class="item">
+                                <img src="~/img/cars/@item.OtherImageUrl" alt="">
+                            </div>
+                        }
+                        
                     </div>
                 </div>
 
                 <div class="col-lg-3">
-                    <h3>BMW M2 2020</h3>
-                    <p>The BMW M2 is the high-performance version of the 2 Series 2-door coupé. The first generation of the M2 is the F87 coupé and is powered by turbocharged.</p>
+                    <h3>@Model.Brand.Name @Model.Model</h3>
+                    <p>@Model.Description</p>
 
                     <div class="spacer-10"></div>
 
@@ -49,7 +48,7 @@
                     <div class="de-spec">
                         <div class="d-row">
                             <span class="d-title">Body</span>
-                            <spam class="d-value">Sedan</spam>
+                            <spam class="d-value">@Model.Category.CategoryName</spam>
                         </div>
                         <div class="d-row">
                             <span class="d-title">Seat</span>
@@ -65,39 +64,16 @@
                         </div>
                         <div class="d-row">
                             <span class="d-title">Fuel Type</span>
-                            <spam class="d-value">Hybird</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Engine</span>
-                            <spam class="d-value">3000</spam>
-                        </div>
+                            <spam class="d-value">@Model.FuelType</spam>
+                        </div>                        
                         <div class="d-row">
                             <span class="d-title">Year</span>
-                            <spam class="d-value">2020</spam>
-                        </div>
+                            <spam class="d-value">@Model.Year</spam>
+                        </div> 
+                     
                         <div class="d-row">
-                            <span class="d-title">Mileage</span>
-                            <spam class="d-value">200</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Transmission</span>
-                            <spam class="d-value">Automatic</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Drive</span>
-                            <spam class="d-value">4WD</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Fuel Economy</span>
-                            <spam class="d-value">18.5</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Exterior Color</span>
-                            <spam class="d-value">Blue Metalic</spam>
-                        </div>
-                        <div class="d-row">
-                            <span class="d-title">Interior Color</span>
-                            <spam class="d-value">Black</spam>
+                            <span class="d-title">Color</span>
+                            <spam class="d-value">@Model.Color</spam>
                         </div>
                     </div>
 
@@ -115,7 +91,7 @@
                 <div class="col-lg-3">
                     <div class="de-price text-center">
                         Daily rate
-                        <h3>$265</h3>
+                        <h3>$@Model.Price</h3>
                     </div>
                     <div class="spacer-30"></div>
                     <div class="de-box mb25">

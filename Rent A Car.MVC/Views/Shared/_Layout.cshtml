@@ -3,7 +3,7 @@
 
 <head>
     <title>Rentaly - Multipurpose Vehicle Car Rental Website Template</title>
-    <link rel="icon" href="~/images/icon.png" type="image/gif" sizes="16x16">
+    <link  rel="icon" href="~/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Rentaly - Multipurpose Vehicle Car Rental Website Template" name="description">
@@ -59,7 +59,7 @@
                                 <div class="de-flex-col">
                                     <!-- logo begin -->
                                     <div id="logo">
-                                        <a href="index.html">
+                                        <a asp-action="Index" asp-controller="Home">
                                             <img class="logo-1" src="~/images/logo-light.png" alt="">
                                             <img class="logo-2" src="~/images/logo.png" alt="">
                                         </a>
@@ -70,7 +70,7 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li>
-                                        <a class="menu-item">Home</a>
+                                        <a class="menu-item" asp-action="Index" asp-controller="Home">Home</a>
                                         
                                     </li>
                                     <li>
@@ -252,11 +252,7 @@
         </footer>
         <!-- footer close -->
     </div>
-    <div id="selector">
-        <div id="demo-rtl" class="sc-opt">
-            <div class="sc-icon">RTL</div><span class="sc-val">Click to Enable</span>
-        </div>
-    </div>
+   
     <div id="purchase-now">
         <a href="https://themeforest.net/cart/configure_before_adding/44940477" target="_blank"><span>$</span>25</a>
         <div class="pn-hover">Buy Now</div>
