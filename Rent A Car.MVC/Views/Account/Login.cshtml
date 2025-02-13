@@ -19,9 +19,11 @@
 							<form class="form-border" method="post">
 								<div class="field-set">
 									<input asp-for="UsernameOrEmail" type="text" class="form-control" placeholder="Username or Email" />
+									<span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
 								</div>
 								<div class="field-set">
 									<input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+									<span asp-validation-for="Password" class="text-danger"></span>
 								</div>
 								<div class="field-set" >
 									<div class="form-check form-switch">

@@ -1,0 +1,187 @@
+﻿@using Rent_A_Car.CORE.Entities
+@model List<Advertisement> 
+<!-- content begin -->
+<div class="no-bottom no-top zebra" id="content">
+    <div id="top"></div>
+
+    <!-- section begin -->
+    <section id="subheader" class="jarallax text-light">
+        <img src="~/images/background/2.jpg" class="jarallax-img" alt="">
+        <div class="center-y relative text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Cars</h1>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section close -->
+
+    <section id="section-cars">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">                   
+                    <div class="item_filter_group">
+                        <h4>Car Body Type</h4>
+                        <div class="de_form">
+                            @foreach (var item in ViewBag.Category)
+                            {
+                                <div class="de_checkbox">
+                                    <input id="category_@item.Id"
+                                           name="categories"
+                                           type="checkbox"
+                                           value="@item.Id"
+                                           class="category-checkbox">
+
+                                    <label for="category_@item.Id">@item.CategoryName</label>
+                                </div>
+                            }
+
+
+                            
+
+                        </div>
+                    </div>                    
+
+                    <div class="item_filter_group">
+                        <h4>Price ($)</h4>
+                        <div class="price-input">
+                            <div class="field">
+                                <span>Min</span>
+                                <input type="number" class="input-min" value="0">
+                            </div>
+                            <div class="field">
+                                <span>Max</span>
+                                <input type="number" class="input-max" value="@ViewBag.MaxPrice">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="@ViewBag.MaxPrice" value="0" step="1">
+                            <input type="range" class="range-max" min="0" max="@ViewBag.MaxPrice" value="@ViewBag.MaxPrice" step="1">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        @foreach (var item in Model ?? [])
+                        {
+                            <div class="col-xl-4 col-lg-6 car-item" data-category="@item.Category.Id" data-price="@item.Price">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="~/img/cars/@item.ImageUrl" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>@item.Brand.Name @item.Model</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>25</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="~/images/icons/1-green.svg" alt="">@item.City</span>
+                                                <span class="d-atr"><img src="~/images/icons/2-green.svg" alt="">@item.FuelType</span>
+                                                <span class="d-atr"><img src="~/images/icons/3-green.svg" alt="">4</span>
+                                                <span class="d-atr"><img src="~/images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
+                                            </div>
+                                            <div class="d-price">
+                                                Daily rate from <span>$@item.Price</span>
+                                                <a style="background-color:forestgreen" class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Id">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+<!-- content close -->
+
+<a href="#" id="back-to-top"></a>
+
+@section scripts {
+    <script>
+                         document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll(".category-checkbox");
+            const carItems = document.querySelectorAll(".car-item");
+
+            const minInput = document.querySelector(".input-min");
+            const maxInput = document.querySelector(".input-max");
+
+            const minRange = document.querySelector(".range-min");
+            const maxRange = document.querySelector(".range-max");
+
+            const priceSlider = document.querySelector(".slider .progress");
+
+            
+            minInput.addEventListener("input", filterCars);
+            maxInput.addEventListener("input", filterCars);
+
+            minRange.addEventListener("input", function () {
+                minInput.value = minRange.value;
+                filterCars();
+            });
+
+            maxRange.addEventListener("input", function () {
+                maxInput.value = maxRange.value;
+                filterCars();
+            });
+
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener("change", function () {
+                    filterCars();
+                });
+            });
+
+            
+            function filterCars() {
+                const selectedCategories = Array.from(checkboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+
+                const minPrice = parseFloat(minInput.value);
+                const maxPrice = parseFloat(maxInput.value);
+
+                carItems.forEach(car => {
+                    const carCategory = car.getAttribute("data-category");
+                    const carPrice = parseFloat(car.getAttribute("data-price"));
+
+                    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(carCategory);
+                    const matchesPrice = carPrice >= minPrice && carPrice <= maxPrice;
+
+                    if (matchesCategory && matchesPrice) {
+                        car.style.display = "block";
+                    } else {
+                        car.style.display = "none";
+                    }
+                });
+
+                
+                const progressWidth = ((maxPrice - minPrice) / (maxRange.max - minRange.min)) * 100;
+                priceSlider.style.width = `${progressWidth}%`;
+            }
+        });
+
+
+
+    </script>
+}

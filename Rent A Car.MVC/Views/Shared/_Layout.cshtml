@@ -74,7 +74,7 @@
                                         
                                     </li>
                                     <li>
-                                        <a class="menu-item">Cars</a>
+                                        <a class="menu-item" asp-action="Index" asp-controller="Car">Cars</a>
                                         
                                     </li>
                                     <li>
@@ -154,7 +154,7 @@
                                 }
                                 else{
                                     <div class="menu_side_area">
-                                        <a asp-action="Register" asp-controller="Account" class="btn-main">Register</a>
+                                        <a asp-action="Register" asp-controller="Account" style="background-color:forestgreen" class="btn-main">Register</a>
                                         <span id="menu-btn"></span>
                                     </div>
                                     <div class="menu_side_area">
@@ -253,10 +253,7 @@
         <!-- footer close -->
     </div>
    
-    <div id="purchase-now">
-        <a href="https://themeforest.net/cart/configure_before_adding/44940477" target="_blank"><span>$</span>25</a>
-        <div class="pn-hover">Buy Now</div>
-    </div>
+   
     <!-- Javascript Files
     ================================================== -->
     <script src="~/js/plugins.js" ></script>

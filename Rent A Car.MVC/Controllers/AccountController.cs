@@ -66,40 +66,43 @@ namespace Rent_A_Car.MVC.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Login(LoginDTO dto)
+        public async Task<IActionResult> Login(LoginDTO dto, string? returnUrl = null)
         {
             if (!ModelState.IsValid) return View();
 
-            User? user = null;
-
-            if (dto.UsernameOrEmail.Contains("@"))
-            {
-                user=await _usermanager.FindByEmailAsync(dto.UsernameOrEmail);
-            }
-            else
-            {
-                user=await _usermanager.FindByNameAsync(dto.UsernameOrEmail);
-            }
+            User? user = dto.UsernameOrEmail.Contains("@")
+                ? await _usermanager.FindByEmailAsync(dto.UsernameOrEmail)
+                : await _usermanager.FindByNameAsync(dto.UsernameOrEmail);
 
             if (user == null)
             {
-                ModelState.AddModelError("", "Username  or password is wrong.");
+                ModelState.AddModelError("", "Username or password is wrong.");
                 return View();
             }
-
-
 
             var result = await _signinmanager.PasswordSignInAsync(user, dto.Password, dto.RememberMe, true);
 
             if (!result.Succeeded)
             {
                 ModelState.AddModelError("", "Username or password is wrong.");
+                return View();
             }
-            if(_usermanager.Users.Any(x=>x.NormalizedUserName == user.NormalizedUserName))
+
+            
+            if (await _usermanager.IsInRoleAsync(user, "Admin"))
             {
                 return RedirectToAction("Index", "Admin");
             }
+
+            
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+
             return RedirectToAction("Index", "Home");
         }
+
+
     }
 }

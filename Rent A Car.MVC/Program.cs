@@ -43,7 +43,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseUserSeed();
 app.UseRouting();
-
+app.UseStatusCodePages(async context =>
+{
+    var response = context.HttpContext.Response;
+    if (response.StatusCode == 404)
+    {
+        response.Redirect("/Home/NotFound");
+    }
+});
 app.UseAuthorization();
 app.UseStaticFiles();
 

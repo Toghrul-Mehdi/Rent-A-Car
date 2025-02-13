@@ -13,5 +13,10 @@ namespace Rent_A_Car.MVC.Controllers
             ViewBag.UserCount = await _context.Users.CountAsync();
             return View(await _context.Advertisements.Where(x=>x.IsDeleted==false).Include(x=>x.Category).Include(x=>x.Brand).ToListAsync());
         }        
+
+        public IActionResult NotFound()
+        {
+            return View();
+        }
     }
 }

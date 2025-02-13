@@ -36,7 +36,16 @@
     --gray-color:#acacac;
 
 }
+.car-item {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
 
+    .car-item.hidden {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
 .g-custom{
     --bs-gutter-x: 30px;
     --bs-gutter-y: 30px;
@@ -7110,6 +7119,7 @@ header.smaller{
 }
 
 
+.de-color-icons .fa-whatsapp{background: #3ea1ec;}
 .de-color-icons .fa-twitter{background: #3ea1ec;}
 .de-color-icons .fa-facebook{background: #344e86;}
 .de-color-icons .fa-google-plus{background: #d73925;}
