@@ -15,6 +15,8 @@ namespace Rent_A_Car.CORE.Entities
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public ICollection<CarImages> Images { get; set; }
+        public int ViewCount { get; set; }
+        public int Like {  get; set; }
         public decimal Price { get; set; }
         public int Year { get; set; }
         public City City { get; set; }
@@ -31,5 +33,6 @@ namespace Rent_A_Car.CORE.Entities
         public Fuel FuelType { get; set; }
         public Color Color { get; set; }
         public AdvertisementStatus Status { get; set; }
+        public IEnumerable<WishList> WishList { get; set; }
     }
 }

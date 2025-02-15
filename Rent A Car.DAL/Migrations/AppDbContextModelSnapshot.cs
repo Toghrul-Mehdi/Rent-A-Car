@@ -192,6 +192,9 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Like")
+                        .HasColumnType("int");
+
                     b.Property<int>("MinimalGunSayi")
                         .HasColumnType("int");
 
@@ -218,6 +221,9 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -434,6 +440,24 @@ namespace Rent_A_Car.DAL.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.WishList", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AdvertisementId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UserId", "AdvertisementId");
+
+                    b.HasIndex("AdvertisementId");
+
+                    b.ToTable("WishLists");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -542,9 +566,30 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.WishList", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.Advertisement", "Advertisement")
+                        .WithMany("WishList")
+                        .HasForeignKey("AdvertisementId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("WishList")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Advertisement");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Advertisement", b =>
                 {
                     b.Navigation("Images");
+
+                    b.Navigation("WishList");
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Brand", b =>
@@ -560,6 +605,8 @@ namespace Rent_A_Car.DAL.Migrations
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.User", b =>
                 {
                     b.Navigation("Advertisements");
+
+                    b.Navigation("WishList");
                 });
 #pragma warning restore 612, 618
         }

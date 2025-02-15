@@ -82,7 +82,9 @@ namespace Rent_A_Car.MVC.Controllers
                 City = dto.CityName,
                 Price = dto.Price,
                 CategoryId = categoryId,
-                PhoneNumber= dto.PhoneNumber,
+                ViewCount = 0,
+                Like = 0,
+                PhoneNumber = dto.PhoneNumber,
                 UserId = userId,
                 Year = dto.Year,
                 MinimalGunSayi = dto.MinimalGunSayi,
@@ -124,6 +126,8 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (data == null) return NotFound("İlan bulunamadı!");
 
+            data.ViewCount++;
+            await _context.SaveChangesAsync();
             return View(data);
         }
 

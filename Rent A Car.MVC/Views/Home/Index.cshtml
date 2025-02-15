@@ -1,6 +1,9 @@
 ﻿@using Rent_A_Car.CORE.Entities
 @model List<Advertisement>
 <!-- content begin -->
+@section styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+}
 <div class="no-bottom no-top" id="content">
     <div id="top"></div>
     <section id="section-hero" aria-label="section" class="jarallax">
@@ -442,7 +445,7 @@
 
                 <div id="items-carousel" class="owl-carousel wow fadeIn">
 
-                   @foreach (var item in Model ?? [])
+                    @foreach (var item in Model ?? [])
                     {
                         <div class="col-lg-12">
                             <div class="de-item mb30">
@@ -452,24 +455,42 @@
                                 <div class="d-info">
                                     <div class="d-text">
                                         <h4>@item.Brand.Name @item.Model</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>74</span>
-                                        </div>
+
+                                            @if(User.Identity!.IsAuthenticated){
+
+                                            <div class="d-item_like">
+                                                <a class="add-to-favorite" elan-id="@item.Id">
+                                                    <i class="fa-regular fa-heart heart-icon"></i> 
+                                                </a>
+                                            </div>
+
+
+                                            
+                                            }
+                                        
+
                                         <div class="d-atr-group">
                                             <span class="d-atr"><img src="images/icons/1-green.svg" alt="">@item.City</span>
                                             <span class="d-atr"><img src="images/icons/2-green.svg" alt="">@item.FuelType</span>
                                             <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
                                             <span class="d-atr"><img src="images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
                                         </div>
+
+                                        <!-- View Count -->
+                                        <div class="view-count">
+                                            <i class="fa fa-eye"></i> <span id="view-count-@item.Id">@item.ViewCount</span> views
+                                        </div>
                                         <div class="d-price">
                                             Daily rate from <span>$@item.Price</span>
                                             <a class="btn-main" asp-route-id="@item.Id" asp-action="Detail" asp-controller="Advertisement">Rent Now</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     }
+
 
                     
 
@@ -720,3 +741,60 @@
 </div>
 <!-- content close -->
 <a href="#" id="back-to-top"></a>
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            
+            fetch('/Home/GetFavouriteStatus')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        $('.add-to-favorite').each(function () {
+                            var adId = $(this).attr('elan-id');
+                            var icon = $(this).find('i');
+
+                            if (data.favouriteAds.includes(parseInt(adId))) {
+                                console.log(adId);
+                                icon.removeClass('fa-regular fa-heart').addClass('fa-solid fa-heart').css('color', '#ff4500');
+                            }
+                        });
+                    }
+                })
+                .catch(error => console.error('Error checking favourite status:', error));
+
+            
+            $(document).on('click', '.add-to-favorite', function (e) {
+                e.preventDefault(); 
+
+                var adId = $(this).attr('elan-id');
+                var icon = $(this).find('i');
+
+                fetch('/Home/AddToFavourite/' + adId, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'id=' + adId 
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        toastr.success('Advertisement Added to Favourite');
+                        icon.removeClass('fa-regular fa-heart').addClass('fa-solid fa-heart').css('color', '#ff4500');
+                    } else {
+                        toastr.error('Removed from Favourites');
+                        icon.removeClass('fa-solid fa-heart').addClass('fa-regular fa-heart').css('color', 'grey');
+                    }
+                })
+                .catch(error => {
+                    console.error("Error: ", error);
+                    toastr.error('An error occurred, please try again');
+                });
+            });
+        });
+    </script>
+}
+
+

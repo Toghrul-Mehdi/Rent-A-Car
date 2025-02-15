@@ -1,0 +1,33 @@
+﻿@using Rent_A_Car.BL.DTOs.Profile
+@model ProfileDTO
+
+<div class="menu_side_area">
+    <div class="de-login-menu">
+        @if (Model != null)
+        {
+            <span id="de-click-menu-profile" class="de-menu-profile">
+                <img src="~/images/profile/1.jpg" class="img-fluid" alt="Profile Picture">
+            </span>
+
+            <div id="de-submenu-profile" class="de-submenu">
+                <div class="d-name">
+                    <h4>@Model.Fullname</h4>
+                </div>
+
+                <div class="d-line"></div>
+
+                <ul class="menu-col">
+                    <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-home"></i>Dashboard</a></li>
+                    <li><a asp-action="Orders" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Orders</a></li>
+                    <li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
+                    <li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <a asp-action="Login" asp-controller="Account" class="btn btn-primary">Login</a>
+        }
+        <span id="menu-btn"></span>
+    </div>
+</div>

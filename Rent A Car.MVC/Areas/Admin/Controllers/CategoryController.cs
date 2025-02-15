@@ -1,11 +1,14 @@
 ﻿using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Rent_A_Car.BL.DTOs.Category;
 using Rent_A_Car.BL.Services.Abstract;
+using Rent_A_Car.CORE.Enums;
 
 namespace Rent_A_Car.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = nameof(Roles.Admin))]
     public class CategoryController(ICategoryService _service) : Controller
     {
         public async Task<IActionResult> Index()

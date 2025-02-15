@@ -3,72 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\profile\\favouritecar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\profile\\favouritecar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\home\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\home\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\advertisement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\advertisement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\advertisementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\advertisementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|solutionrelative:rent a car.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\advertisement\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\advertisement\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.bl\\dtos\\advertisement\\advertisementcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|solutionrelative:rent a car.bl\\dtos\\advertisement\\advertisementcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -79,12 +35,128 @@
       "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\advertisementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\advertisementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\advertisement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\advertisement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.core\\entities\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|solutionrelative:rent a car.core\\entities\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.bl\\dtos\\profile\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|solutionrelative:rent a car.bl\\dtos\\profile\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\areas\\admin\\controllers\\modelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\areas\\admin\\controllers\\modelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\extension\\seedextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\extension\\seedextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.bl\\dtos\\advertisement\\advertisementcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|solutionrelative:rent a car.bl\\dtos\\advertisement\\advertisementcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\wwwroot\\js\\designesia.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\wwwroot\\js\\designesia.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.core\\entities\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|solutionrelative:rent a car.core\\entities\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\configuration\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\configuration\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\configuration\\wishlistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\configuration\\wishlistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|solutionrelative:rent a car.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\home\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\home\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\advertisement\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\advertisement\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA1BD14-6CDD-4C61-95AF-A441F03C3D90}|Rent A Car.MVC\\Rent A Car.MVC.csproj|solutionrelative:rent a car.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87F0DF05-E97A-47BC-9055-654F1F5839F5}|Rent A Car.BL\\Rent A Car.BL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.bl\\dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -123,10 +195,6 @@
       "RelativeMoniker": "D:0:0:{14BD4F59-842E-435B-BF18-6D2F3DDFB1C9}|Rent A Car.CORE\\Rent A Car.CORE.csproj|solutionrelative:rent a car.core\\enums\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\configuration\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\configuration\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\migrations\\20250209200116_elanlar_sekiller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\migrations\\20250209200116_elanlar_sekiller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -145,6 +213,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\migrations\\20250210235838_fsdfsd2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\migrations\\20250210235838_fsdfsd2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\migrations\\20250213035223_mig2121.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\migrations\\20250213035223_mig2121.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|c:\\users\\victus\\source\\repos\\rent a car\\rent a car.dal\\migrations\\20250213034544_mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E1D5F5-8C87-4A4E-8812-3F21B212AC60}|Rent A Car.DAL\\Rent A Car.DAL.csproj|solutionrelative:rent a car.dal\\migrations\\20250213034544_mig212.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,72 +230,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotFound.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAlwD8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-13T02:36:15.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Car\\Index.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Car\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Car\\Index.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Car\\Index.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAlwFkAAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-13T01:38:13.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\CarController.cs",
-              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\CarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T01:38:03.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAlwP8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T21:26:17Z",
+              "Title": "HeaderViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\ViewComponents\\HeaderViewComponent.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\ViewComponents\\HeaderViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:43:58.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAALcBAAAAAAAAAAAAAMsBAAB5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T13:18:40.096Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAawBQAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T19:55:46.915Z"
             },
             {
               "$type": "Document",
@@ -229,156 +265,14 @@
               "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Rent A Car.MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAawEQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T16:22:24.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
-              "ViewState": "AgIAAHoBAAAAAAAAAAAAAIwBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T21:27:04.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "Rent A Car.MVC\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-13T00:52:20.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Program.cs",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Program.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Program.cs",
-              "RelativeToolTip": "Rent A Car.MVC\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAQwDIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T18:41:09.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdvertisementController.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
-              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwHAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T13:29:40.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T11:30:05.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T13:26:28.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdvertisementCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
-              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
-              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T14:03:30.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAAAG4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T18:10:32.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\User.cs",
-              "RelativeToolTip": "Rent A Car.CORE\\Entities\\User.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T14:07:57.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T13:31:18.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Rent A Car.MVC\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T11:42:24.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\_ViewStart.cshtml",
@@ -386,59 +280,270 @@
               "RelativeToolTip": "Rent A Car.MVC\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T18:17:02.373Z"
+              "WhenOpened": "2025-02-11T18:17:02.373Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAMcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T04:24:11.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FavouriteCar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Profile\\FavouriteCar.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Profile\\FavouriteCar.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Profile\\FavouriteCar.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Profile\\FavouriteCar.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAcwFcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T05:44:26.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAawE4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:18:29.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAawJ4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T21:26:17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "Rent A Car.MVC\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-13T00:52:20.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Program.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T18:41:09.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Car\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Car\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Car\\Index.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Car\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwCIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T01:38:13.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdvertisementController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\AdvertisementController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAYwIEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T13:29:40.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAMwMQBAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T13:18:40.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Advertisement.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\Advertisement.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\Advertisement.cs",
               "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\Advertisement.cs",
               "RelativeToolTip": "Rent A Car.CORE\\Entities\\Advertisement.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwB0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA7wCQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-09T19:32:08.223Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Advertisement\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T21:27:04.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T11:44:51.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\CarController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\CarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T01:38:03.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T11:42:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAjwFgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T11:30:05.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Rent A Car.DAL\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Rent A Car.DAL\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAArwBEAAAA3AAAAAAAAAA==",
+              "Title": "ProfileDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Profile\\ProfileDTO.cs",
+              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Profile\\ProfileDTO.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Profile\\ProfileDTO.cs",
+              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Profile\\ProfileDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T19:55:46.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
-              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T13:38:57.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
-              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T13:39:04.893Z"
+              "WhenOpened": "2025-02-13T12:08:28.547Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "ModelController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\ModelController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\ModelController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\ModelController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\ModelController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwAoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:26:50.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:26:45.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:26:41.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "Rent A Car.MVC\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:25:44.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdvertisementCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
+              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
+              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Advertisement\\AdvertisementCreateDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:03:30.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "SeedExtension.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Extension\\SeedExtension.cs",
               "RelativeDocumentMoniker": "Rent A Car.MVC\\Extension\\SeedExtension.cs",
@@ -450,7 +555,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
+              "Title": "designesia.js",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\designesia.js",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\wwwroot\\js\\designesia.js",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\wwwroot\\js\\designesia.js",
+              "RelativeToolTip": "Rent A Car.MVC\\wwwroot\\js\\designesia.js",
+              "ViewState": "AgIAAJ0FAAAAAAAAAAAhwKkFAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-13T04:00:46.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20250213035223_Mig2121.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213035223_Mig2121.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250213035223_Mig2121.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213035223_Mig2121.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Migrations\\20250213035223_Mig2121.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:52:23.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WishList.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\WishList.cs",
+              "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\WishList.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\WishList.cs",
+              "RelativeToolTip": "Rent A Car.CORE\\Entities\\WishList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:16:23.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Configuration\\CategoryConfiguration.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\CategoryConfiguration.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Configuration\\CategoryConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:34:03.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WishListConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\WishListConfiguration.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Configuration\\WishListConfiguration.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\WishListConfiguration.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Configuration\\WishListConfiguration.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:42:03.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "20250213034544_Mig212.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213034544_Mig212.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250213034544_Mig212.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213034544_Mig212.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Migrations\\20250213034544_Mig212.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:45:44.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\User.cs",
+              "RelativeToolTip": "Rent A Car.CORE\\Entities\\User.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:07:57.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ModelConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwCcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:09:37.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250213033613_Mig212.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Migrations\\20250213033613_Mig212.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:36:13.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250213032848_Mig212.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Migrations\\20250213032848_Mig212.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:28:49.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20250213032641_Mig212.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs",
+              "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs",
+              "RelativeToolTip": "Rent A Car.DAL\\Migrations\\20250213032641_Mig212.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:26:41.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "NotFound.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Home\\NotFound.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAlwD8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:36:15.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T13:26:28.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Advertisement\\Detail.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAG4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T18:10:32.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Rent A Car.MVC\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Rent A Car.MVC\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T13:31:18.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
+              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Auth\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T13:38:57.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
+              "RelativeToolTip": "Rent A Car.BL\\DTOs\\Auth\\RegisterDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T13:39:04.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "FileExtension.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.MVC\\Extension\\FileExtension.cs",
               "RelativeDocumentMoniker": "Rent A Car.MVC\\Extension\\FileExtension.cs",
@@ -462,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 52,
               "Title": "20250210235838_fsdfsd2.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250210235838_fsdfsd2.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250210235838_fsdfsd2.cs",
@@ -474,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 42,
               "Title": "Model.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\Model.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\Model.cs",
@@ -486,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 47,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Enums\\City.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Enums\\City.cs",
@@ -498,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "CarImages.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\CarImages.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\CarImages.cs",
@@ -510,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 51,
               "Title": "20250210200041_Updated22.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250210200041_Updated22.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250210200041_Updated22.cs",
@@ -522,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 43,
               "Title": "20250210202736_Updated21.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250210202736_Updated21.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250210202736_Updated21.cs",
@@ -534,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 44,
               "Title": "Brand.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\Brand.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\Brand.cs",
@@ -546,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 45,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.CORE\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "Rent A Car.CORE\\Entities\\Category.cs",
@@ -558,19 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ModelConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
-              "RelativeDocumentMoniker": "Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
-              "ToolTip": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
-              "RelativeToolTip": "Rent A Car.DAL\\Configuration\\ModelConfiguration.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAwCcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T14:09:37.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 50,
               "Title": "20250210141016_UpdatedTable1.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250210141016_UpdatedTable1.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250210141016_UpdatedTable1.cs",
@@ -582,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 48,
               "Title": "20250209200116_Elanlar_Sekiller1.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250209200116_Elanlar_Sekiller1.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250209200116_Elanlar_Sekiller1.cs",
@@ -594,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 49,
               "Title": "20250209195803_Elanlar_Sekiller.cs",
               "DocumentMoniker": "C:\\Users\\Victus\\source\\repos\\Rent A Car\\Rent A Car.DAL\\Migrations\\20250209195803_Elanlar_Sekiller.cs",
               "RelativeDocumentMoniker": "Rent A Car.DAL\\Migrations\\20250209195803_Elanlar_Sekiller.cs",

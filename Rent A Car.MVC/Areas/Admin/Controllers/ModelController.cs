@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Rent_A_Car.BL.DTOs.Vehicle;
 using Rent_A_Car.BL.Services.Abstract;
+using Rent_A_Car.CORE.Enums;
 
 namespace Rent_A_Car.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = nameof(Roles.Admin))]
     public class ModelController(IModelService _service) : Controller
     {
         public async Task<IActionResult> Index()

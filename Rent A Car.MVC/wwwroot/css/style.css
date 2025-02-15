@@ -46,6 +46,23 @@
         opacity: 0;
         transform: translateY(20px); 
     }
+
+.heart-icon {
+    font-size: 24px;
+    color: black; /* Başlangıçta boş kalp */
+    transition: all 0.3s ease-in-out;
+}
+
+    /* Beğenilmiş kalp (boş kalp kaybolur, kırmızı kalp gelir) */
+    .heart-icon.liked {
+        color: transparent; /* Boş kalbi görünmez yap */
+        background: url('/images/heart-full.png') no-repeat center center;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+    }
+
 .g-custom{
     --bs-gutter-x: 30px;
     --bs-gutter-y: 30px;
@@ -12234,13 +12251,7 @@ input[type="range"]::-moz-range-thumb {
     margin-left: 6px;
 }
 
-.dark-scheme .de-item .d-item_like i{
-    color:rgba(255, 255, 255, .3);
-}
 
-.de-item .d-item_like i.active{
-    color:#d75a87;
-}
 
 .de-item.alt-2{
     padding: 0;

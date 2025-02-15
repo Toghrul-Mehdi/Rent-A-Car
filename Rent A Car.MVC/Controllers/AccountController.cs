@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Rent_A_Car.BL.DTOs.Auth;
 using Rent_A_Car.CORE.Entities;
 using Rent_A_Car.DAL.Context;
+using System.Security.Claims;
 
 namespace Rent_A_Car.MVC.Controllers
 {
@@ -66,7 +69,7 @@ namespace Rent_A_Car.MVC.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Login(LoginDTO dto, string? returnUrl = null)
+        public async Task<IActionResult> Login(LoginDTO dto, string? returnUrl = "/")
         {
             if (!ModelState.IsValid) return View();
 
@@ -76,7 +79,7 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (user == null)
             {
-                ModelState.AddModelError("", "Username or password is wrong.");
+                ModelState.AddModelError("", "User not found. Please check your username or email.");
                 return View();
             }
 
@@ -84,9 +87,22 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError("", "Username or password is wrong.");
+                ModelState.AddModelError("", "Incorrect password. Please try again.");
                 return View();
             }
+
+
+            /*var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim(ClaimTypes.Email, user.Email),  
+        new Claim("Fullname", user.Fullname ?? ""),  
+        new Claim("ImageUrl", user.ImageUrl ?? "default.png")
+    };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);*/
 
             
             if (await _usermanager.IsInRoleAsync(user, "Admin"))
@@ -100,8 +116,16 @@ namespace Rent_A_Car.MVC.Controllers
                 return Redirect(returnUrl);
             }
 
+            
             return RedirectToAction("Index", "Home");
         }
+
+        public async Task<IActionResult> SignOut()
+        {
+            await _signinmanager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
+
 
 
     }

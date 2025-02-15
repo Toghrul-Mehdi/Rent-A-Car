@@ -1895,25 +1895,7 @@
              });
          });
 
-         jQuery(".d-item_like").on("click", function() {
-             var iteration = $(this).data('iteration') || 1;
-             
-             switch (iteration) {
-                 case 1:
-                     $(this).find("i").addClass("active");
-                     var val = parseInt($(this).find("span").text())+1;
-                     $(this).find("span").text(val);
-                     break;
-                 case 2:
-                     $(this).find("i").removeClass("active");
-                     var val = parseInt($(this).find("span").text())-1;
-                     $(this).find("span").text(val);                   
-                     break;
-             }
-             iteration++;
-             if (iteration > 2) iteration = 1;
-             $(this).data('iteration', iteration);
-         });
+        
 
 
          /* --------------------------------------------------

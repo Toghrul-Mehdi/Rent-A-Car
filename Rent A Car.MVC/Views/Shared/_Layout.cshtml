@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -17,6 +19,7 @@
     <link href="~/css/plugins.css"  rel="stylesheet" type="text/css">
     <link href="~/css/style.css"  rel="stylesheet" type="text/css">
     <link href="~/css/coloring.css"  rel="stylesheet" type="text/css">
+    @await RenderSectionAsync("styles", false)
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
@@ -145,12 +148,14 @@
                                 </ul>
                             </div>
                             <div class="de-flex-col">
+                                
                                 @if (User.Identity!.IsAuthenticated)
                                 {
                                     <div class="menu_side_area">
                                         <a asp-action="Index" asp-controller="Advertisement" class="btn-main" style="background-color:orange">Elan Yerlersdir</a>
                                         <span id="menu-btn"></span>
                                     </div>
+                                    @await Component.InvokeAsync("Header")
                                 }
                                 else{
                                     <div class="menu_side_area">

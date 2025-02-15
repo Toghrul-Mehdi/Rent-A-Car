@@ -12,5 +12,6 @@ namespace Rent_A_Car.CORE.Entities
         public string Fullname { get; set; }
         public string ImageUrl { get; set; }
         public List<Advertisement> Advertisements { get; set; }
+        public IEnumerable<WishList> WishList { get; set; }
     }
 }
