@@ -1,103 +1,109 @@
 ﻿<!-- content begin -->
-        <div class="no-bottom no-top zebra" id="content">
-            <div id="top"></div>
+<div class="no-bottom no-top zebra" id="content">
+	<div id="top"></div>
 
-            <!-- section begin -->
-            <section id="subheader" class="jarallax text-light">
-                <img src="~/images/background/14.jpg" class="jarallax-img" alt="">
-                    <div class="center-y relative text-center">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h1>My Favorite Cars</h1>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <!-- section close -->
+	<!-- section begin -->
+	<section id="subheader" class="jarallax text-light">
+		<img src="~/images/background/14.jpg" class="jarallax-img" alt="">
+		<div class="center-y relative text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>My Favorite Cars</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- section close -->
 
-            <section id="section-settings" class="bg-gray-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 mb30">
-                            <div class="card padding30 rounded-5">
-                                <div class="profile_avatar">
-                                    <div class="profile_img">
-                                        <img src="~/images/profile/1.jpg" alt="">
-                                    </div>
-                                    <div class="profile_name">
-                                        <h4>
-                                            Monica Lucas                                                
-                                            <span class="profile_username text-gray">monica@rentaly.com</span>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="spacer-20"></div>
-                                <ul class="menu-col">
-                            <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i   style="color:limegreen"  class="fa fa-home"></i>Dashboard</a></li>
-                            <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i   style="color:limegreen"  class="fa fa-user"></i>My Profile</a></li>
-                            <li><a asp-action="Orders" asp-controller="Profile" asp-route-username="@Model.Username"><i  style="color:limegreen"  class="fa fa-calendar"></i>My Orders</a></li>
-                            <li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username" style="background-color:limegreen" class="active"><i  class="fa fa-car"></i>My Favorite Cars</a></li>
-                            <li><a asp-action="SignOut" asp-controller="Account"><i style="color:limegreen" class="fa fa-sign-out"></i>Sign Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
+	<section id="section-settings" class="bg-gray-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 mb30">
+					<div class="card padding30 rounded-5">
+						<div class="profile_avatar">
+							<div style="color:limegreen" class="profile_img">
+								@if (!string.IsNullOrEmpty(Model.ImageUrl))
+								{
+									<img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
+								}
+								else
+								{
+									<img src="~/images/profile/1.jpg" alt="Default Profile Photo">
+								}
+							</div>
+							<div class="profile_name">
+								<h4>
+									Monica Lucas
+									<span class="profile_username text-gray">monica@rentaly.com</span>
+								</h4>
+							</div>
+						</div>
+						<div class="spacer-20"></div>
+						<ul class="menu-col">
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i style="color:limegreen" class="fa fa-home"></i>Dashboard</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i style="color:limegreen" class="fa fa-calendar"></i>My Advertisement</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username" style="background-color:limegreen" class="active"><i class="fa fa-car"></i>My Favorite Cars</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i style="color:limegreen" class="fa fa-sign-out"></i>Sign Out</a></li>
+						</ul>
+					</div>
+				</div>
 
-                        <div class="col-lg-9">
-                    <div class="card padding30 rounded-5">
-                        <h4>My Favorites</h4>
-                        <div class="spacer-10"></div>
-                        @if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
-                        {
-                            @foreach (var item in ViewBag.Favourite)
-                            {
-
-
-                                <div class="de-item-list no-border mb30">
-                                    <div class="d-img">
-                                        <img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
-                                            <div class="d-atr-group">
-                                                <ul class="d-atr">
-                                                    <li><span>Seats:</span> 4</li>
-                                                    <li><span>Luggage:</span> 2</li>
-                                                    <li><span>Doors:</span> 4</li>
-                                                    <li><span>City:</span> @(item.Advertisement.City)</li>
-                                                    <li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
-                                                    <li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-price">
-                                        Daily rate from <span>$@(item.Advertisement.Price)</span>
-                                        <a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Rent Now</a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            }
-                        }
-                        else
-                        {
-                            <h3>List Empty</h3>
-                        }
+				<div class="col-lg-9">
+					<div class="card padding30 rounded-5">
+						<h4>My Favorites</h4>
+						<div class="spacer-10"></div>
+						@if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
+						{
+							@foreach (var item in ViewBag.Favourite)
+							{
 
 
-                    </div>
+								<div class="de-item-list no-border mb30">
+									<div class="d-img">
+										<img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
+									</div>
+									<div class="d-info">
+										<div class="d-text">
+											<h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
+											<div class="d-atr-group">
+												<ul class="d-atr">
+													<li><span>Seats:</span> 4</li>
+													<li><span>Luggage:</span> 2</li>
+													<li><span>Doors:</span> 4</li>
+													<li><span>City:</span> @(item.Advertisement.City)</li>
+													<li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
+													<li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="d-price">
+										Daily rate from <span>$@(item.Advertisement.Price)</span>
+										<a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Rent Now</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							}
+						}
+						else
+						{
+							<h3>List Empty</h3>
+						}
 
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+					</div>
 
 
-        </div>
-        <!-- content close -->
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <a href="#" id="back-to-top"></a>
+
+</div>
+<!-- content close -->
+
+<a href="#" id="back-to-top"></a>

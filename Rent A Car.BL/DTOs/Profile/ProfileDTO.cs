@@ -11,6 +11,7 @@ namespace Rent_A_Car.BL.DTOs.Profile
         public string Fullname { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
+        public decimal Balance  { get; set; }
         public string ImageUrl { get; set; }
     }
 }

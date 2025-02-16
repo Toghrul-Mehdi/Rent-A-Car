@@ -22,6 +22,7 @@ namespace Rent_A_Car.MVC.ViewComponents
                 Fullname = user.Fullname, 
                 Username = user.UserName,
                 Email = user.Email,
+                Balance = user.Balance,
                 ImageUrl = string.IsNullOrEmpty(user.ImageUrl) ? "/images/profile/1.jpg" : user.ImageUrl
             };
 

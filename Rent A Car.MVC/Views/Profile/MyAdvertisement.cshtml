@@ -1,0 +1,115 @@
+﻿@using Rent_A_Car.BL.DTOs.Profile
+@model ProfileDTO
+
+<!-- content begin -->
+<div class="no-bottom no-top zebra" id="content">
+	<div id="top"></div>
+
+	<!-- section begin -->
+	<section id="subheader" class="jarallax text-light">
+		<img src="~/images/background/14.jpg" class="jarallax-img" alt="">
+		<div class="center-y relative text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>My Advertisements</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- section close -->
+
+	<section id="section-settings" class="bg-gray-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 mb30">
+					<div class="card padding30 rounded-5">
+						<div class="profile_avatar">
+							<div style="color:limegreen" class="profile_img">
+								@if (!string.IsNullOrEmpty(Model.ImageUrl))
+								{
+										<img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
+								}
+								else
+								{
+										<img src="~/images/profile/1.jpg" alt="Default Profile Photo">
+								}
+							</div>
+							<div class="profile_name">
+								<h4>
+									@Model.Username
+									<span class="profile_username text-gray">@Model.Email</span>
+								</h4>
+							</div>
+						</div>
+						<div class="spacer-20"></div>
+						<ul class="menu-col">
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i  class="fa fa-home"></i>Dashboard</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i  class="fa fa-calendar"></i>My Advertisement</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i  class="fa fa-sign-out"></i>Sign Out</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-9">
+					<div class="card padding30 rounded-5">
+						<h4>My Advertisement</h4>
+						<div class="spacer-10"></div>
+						@if (ViewBag.Ads != null && ViewBag.Ads.Count > 0)
+						{
+							@foreach (var item in ViewBag.Ads)
+							{
+
+
+										<div class="de-item-list no-border mb30">
+											<div class="d-img">
+												<img src="~/img/cars/@(item.ImageUrl)" class="img-fluid" alt="">
+											</div>
+											<div class="d-info">
+												<div class="d-text">
+													<h4>@(item.Brand.Name)  @(item.Model)</h4>
+													<div class="d-atr-group">
+														<ul class="d-atr">
+															<li><span>Seats:</span> 4</li>
+															<li><span>Luggage:</span> 2</li>
+															<li><span>Doors:</span> 4</li>
+															<li><span>City:</span> @(item.City)</li>
+															<li><span>Fuel:</span> @(item.FuelType)</li>
+															<li><span>Type:</span> @(item.Category.CategoryName)</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="d-price">
+												Daily rate from <span>$@(item.Price)</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+							}
+						}
+						else
+						{
+								<h3>Elaniniz yoxdur Yoxdur</h3>
+									<div class="menu_side_area">
+												<a asp-action="Index" asp-controller="Advertisement" class="btn-main" style="background-color:orange">Elan Yerlersdir</a>
+												<span id="menu-btn"></span>
+									</div>
+						}
+
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+<!-- content close -->
+
+<a href="#" id="back-to-top"></a>

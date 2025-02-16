@@ -30,8 +30,15 @@
                 <div class="col-lg-3 mb30">
                     <div class="card padding30 rounded-5">
                         <div class="profile_avatar">
-                            <div class="profile_img">
-                                <img src="~/images/profile/1.jpg" alt="">
+                            <div style="color:limegreen" class="profile_img">
+                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
+                                }
+                                else
+                                {
+                                    <img src="~/images/profile/1.jpg" alt="Default Profile Photo">
+                                }
                             </div>
                             <div class="profile_name">
                                 <h4>
@@ -43,8 +50,7 @@
                         <div class="spacer-20"></div>
                         <ul class="menu-col">
                             <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username" style="background-color:limegreen" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
-                            <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-user"></i>My Profile</a></li>
-                            <li><a asp-action="Orders" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Orders</a></li>
+                            <li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Advertisement</a></li>
                             <li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
                             <li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
                         </ul>

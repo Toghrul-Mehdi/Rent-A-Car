@@ -377,6 +377,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\img\cars\" />
+    <Folder Include="wwwroot\img\users\" />
   </ItemGroup>
 
 </Project>

@@ -5672,6 +5672,7 @@ wwwroot\img\cars\qi54rsvw.4xr.jpg
 wwwroot\img\cars\sbvuptrk.dhb.jpg
 wwwroot\img\cars\yypacq5i.pyu.jpg
 wwwroot\img\cars\znubni1k.hgy.jpg
+wwwroot\img\users\hae0c2j0.rve.jpg
 wwwroot\js\designesia.js
 wwwroot\js\plugins.js
 wwwroot\js\validation-booking.js

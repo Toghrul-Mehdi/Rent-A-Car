@@ -10,6 +10,7 @@ namespace Rent_A_Car.CORE.Enums
     {     
         Active,   
         Inactive, 
-        Archived   
+        Archived,
+        VIP
     }
 }
