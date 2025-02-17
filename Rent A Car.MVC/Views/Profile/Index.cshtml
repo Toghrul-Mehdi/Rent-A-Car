@@ -1,6 +1,6 @@
 ﻿@using Rent_A_Car.BL.DTOs.Profile
 @using Rent_A_Car.CORE.Entities
-@model ProfileDTO 
+@model ProfileDTO
 @{
     var favouriteList = ViewBag.Favourite;
 }
@@ -62,12 +62,44 @@
                         <div class="col-lg-3 col-6 mb25 order-sm-1">
                             <div class="card padding30 rounded-5">
                                 <div class="symbol mb40">
-                                    <i class="fa id-color fa-2x fa-calendar-check-o"></i>
+                                    <!-- Buraya ikon eklenebilir -->
                                 </div>
-                                <span class="h1 mb0">03</span>
-                                <span class="text-gray">Upcoming Orders</span>
+
+                                <!-- Medaxil Butonu -->
+                                <a class="btn btn-success" id="medaxilBtn">
+                                    <i class="fas fa-plus"></i> Medaxil
+                                </a>
+                                <form method="post" action="/Profile/Medaxil">
+                                    <!-- Medaxil Input (Başlangıçta Gizli) -->
+                                    <input type="number" id="medaxilInput" class="form-control mt-2"
+                                           placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
+
+                                    <input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
+
+                                    <button type="submit" id="confirmMedaxil" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
+                                </form>
+
+                                <br />
+
+                                <!-- Mexaric Butonu -->
+                                <a class="btn btn-danger" id="mexaricBtn">
+                                    <i class="fas fa-minus"></i> Mexaric
+                                </a>
+
+                                <form method="post" action="/Profile/Mexaric">
+                                    <!-- Mexaric Input (Başlangıçta Gizli) -->
+                                    <input type="number" id="mexaricInput" class="form-control mt-2"
+                                           placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
+
+                                    <input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
+
+                                    <button type="submit" id="confirmMexaric" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
+                                </form>
+
+
                             </div>
                         </div>
+
 
                         <div class="col-lg-3 col-6 mb25 order-sm-1">
                             <div class="card padding30 rounded-5">
@@ -78,6 +110,17 @@
                                 <span class="text-gray">Coupons</span>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-6 mb25 order-sm-1">
+                            <div class="card padding30 rounded-5">
+                                <div class="symbol mb40">
+                                    <i class="fa id-color fa-2x fa-calendar-check-o"></i>
+                                </div>
+                                <span class="h1 mb0">03</span>
+                                <span class="text-gray">Upcoming Orders</span>
+                            </div>
+                        </div>
+
+
 
                         <div class="col-lg-3 col-6 mb25 order-sm-1">
                             <div class="card padding30 rounded-5">
@@ -89,15 +132,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-6 mb25 order-sm-1">
-                            <div class="card padding30 rounded-5">
-                                <div class="symbol mb40">
-                                    <i class="fa id-color fa-2x fa-calendar-times-o"></i>
-                                </div>
-                                <span class="h1 mb0">24</span>
-                                <span class="text-gray">Cancel Orders</span>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div class="card padding30 rounded-5 mb25">
@@ -171,8 +206,8 @@
                         {
                             @foreach (var item in ViewBag.Favourite)
                             {
-                                
-                            
+
+
                                 <div class="de-item-list no-border mb30">
                                     <div class="d-img">
                                         <img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
@@ -204,9 +239,9 @@
                         {
                             <h3>List Empty</h3>
                         }
-                        
 
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -218,3 +253,138 @@
 <!-- content close -->
 
 <a href="#" id="back-to-top"></a>
+@section scripts {
+    <script>
+                        document.getElementById("medaxilBtn").addEventListener("click", function () {
+            var medaxilInput = document.getElementById("medaxilInput");
+            var confirmMedaxil = document.getElementById("confirmMedaxil");
+            var mexaricInput = document.getElementById("mexaricInput");
+            var confirmMexaric = document.getElementById("confirmMexaric");
+
+            // Mexaric kapat
+            mexaricInput.style.display = "none";
+            confirmMexaric.style.display = "none";
+
+            // Medaxil aç/kapat
+            if (medaxilInput.style.display === "none") {
+                medaxilInput.style.display = "block";
+                confirmMedaxil.style.display = "block";
+                medaxilInput.focus();
+            } else {
+                medaxilInput.style.display = "none";
+                confirmMedaxil.style.display = "none";
+            }
+        });
+
+        document.getElementById("mexaricBtn").addEventListener("click", function () {
+            var medaxilInput = document.getElementById("medaxilInput");
+            var confirmMedaxil = document.getElementById("confirmMedaxil");
+            var mexaricInput = document.getElementById("mexaricInput");
+            var confirmMexaric = document.getElementById("confirmMexaric");
+
+            // Medaxil kapat
+            medaxilInput.style.display = "none";
+            confirmMedaxil.style.display = "none";
+
+            // Mexaric aç/kapat
+            if (mexaricInput.style.display === "none") {
+                mexaricInput.style.display = "block";
+                confirmMexaric.style.display = "block";
+                mexaricInput.focus();
+            } else {
+                mexaricInput.style.display = "none";
+                confirmMexaric.style.display = "none";
+            }
+        });
+
+        // Təsdiqlə butonları için event ekleme
+        document.getElementById("confirmMedaxil").addEventListener("click", function () {
+            var miktar = document.getElementById("medaxilInput").value;
+            if (miktar) {
+                alert("Medaxil miqdarı: " + miktar);
+                document.getElementById("medaxilInput").style.display = "none";
+                document.getElementById("confirmMedaxil").style.display = "none";
+            } else {
+                alert("Lütfən miqdarı daxil edin!");
+            }
+        });
+
+        document.getElementById("confirmMexaric").addEventListener("click", function () {
+            var miktar = document.getElementById("mexaricInput").value;
+            if (miktar) {
+                alert("Mexaric miqdarı: " + miktar);
+                document.getElementById("mexaricInput").style.display = "none";
+                document.getElementById("confirmMexaric").style.display = "none";
+            } else {
+                alert("Lütfən miqdarı daxil edin!");
+            }
+        });
+
+
+    </script>
+    <script>
+        document.getElementById("medaxilInput").addEventListener("input", function () {
+            // 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
+        this.value = this.value.replace(/\D/g, '');
+
+        // 2️⃣ 0 ile başlıyorsa temizle
+        if (this.value.startsWith("0")) {
+            this.value = "";
+        }
+        // 3️⃣ Maksimum uzunluk kontrolü (Örnek: 10 karakter)
+        let maxLength = 5;
+        if (this.value.length > maxLength) {
+            this.value = this.value.substring(0, maxLength);
+        }
+        });
+    </script>
+    <script>
+               document.getElementById("mexaricInput").addEventListener("input", function () {
+            // 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
+            this.value = this.value.replace(/\D/g, '');
+
+            // 2️⃣ 0 ile başlıyorsa temizle
+            if (this.value.startsWith("0")) {
+                this.value = "";
+            }
+
+            // 3️⃣ Maksimum uzunluk kontrolü (Örnek: 5 karakter)
+            let maxLength = 5;
+            if (this.value.length > maxLength) {
+                this.value = this.value.substring(0, maxLength);
+            }
+
+            // 4️⃣ Bakiyeye uygunluk kontrolü
+            let amount = parseInt(this.value);
+            if (amount > 0) {
+                // Fetch ile kullanıcının bakiyesini kontrol et
+                fetch('/Profile/GetUserBalance', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    let userBalance = data.balance;
+
+                    if (amount > userBalance) {
+                        // Bakiyeden fazla bir miktar girilirse, kullanıcıyı uyar
+                        alert('Yeterli bakiyeniz yok!');
+                        // Mexaric inputunu temizle
+                        this.value = "";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        });
+
+    </script>
+   
+
+
+
+
+}

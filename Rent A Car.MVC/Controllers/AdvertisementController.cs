@@ -16,8 +16,7 @@ namespace Rent_A_Car.MVC.Controllers
             {
                 var brands = await _context.Brands
                 .Where(x => x.IsDeleted == false)
-                .ToListAsync();
-                
+                .ToListAsync();                
 
                 ViewBag.Brand = brands;
 

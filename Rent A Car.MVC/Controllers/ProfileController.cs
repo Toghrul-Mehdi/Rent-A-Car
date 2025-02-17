@@ -142,7 +142,66 @@ namespace Rent_A_Car.MVC.Controllers
             return View(model);
 
         }
-        
+        [HttpPost]
+        public async Task<IActionResult> Medaxil(string? username, int? amount)
+        {
+            if (!amount.HasValue || amount <= 0)
+                return BadRequest("Miqdar düzgün daxil edilməyib.");
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+
+            if (user == null)
+                return NotFound("İstifadəçi tapılmadı.");
+
+            // Bakiyeye ekleme işlemi
+            user.Balance += amount.Value;
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Mexaric(string? username, int? amount)
+        {
+            if (!amount.HasValue || amount <= 0)
+                return BadRequest("Miqdar düzgün daxil edilməyib.");
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+
+            if (user == null)
+                return NotFound("İstifadəçi tapılmadı.");
+
+            if (user.Balance >= amount)
+            {
+                user.Balance -= amount.Value;
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+
+            }
+            else
+            {
+                return BadRequest("Yeterli balans yoxdur.");
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserBalance()
+        {
+            var username = User.Identity!.Name; 
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+
+            if (user == null)
+            {
+                return NotFound("İstifadəçi tapılmadı.");
+            }
+
+            return Ok(new { balance = user.Balance });
+        }
+
+
+
+
 
     }
 }
