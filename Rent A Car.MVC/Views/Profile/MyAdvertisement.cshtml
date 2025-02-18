@@ -1,4 +1,5 @@
 ﻿@using Rent_A_Car.BL.DTOs.Profile
+@using Rent_A_Car.CORE.Enums
 @model ProfileDTO
 
 <!-- content begin -->
@@ -30,11 +31,11 @@
 							<div style="color:limegreen" class="profile_img">
 								@if (!string.IsNullOrEmpty(Model.ImageUrl))
 								{
-										<img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
+									<img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
 								}
 								else
 								{
-										<img src="~/images/profile/1.jpg" alt="Default Profile Photo">
+									<img src="~/images/profile/1.jpg" alt="Default Profile Photo">
 								}
 							</div>
 							<div class="profile_name">
@@ -46,10 +47,10 @@
 						</div>
 						<div class="spacer-20"></div>
 						<ul class="menu-col">
-							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i  class="fa fa-home"></i>Dashboard</a></li>
-							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i  class="fa fa-calendar"></i>My Advertisement</a></li>
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-home"></i>Dashboard</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i class="fa fa-calendar"></i>My Advertisement</a></li>
 							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
-							<li><a asp-action="SignOut" asp-controller="Account"><i  class="fa fa-sign-out"></i>Sign Out</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -64,39 +65,56 @@
 							{
 
 
-										<div class="de-item-list no-border mb30">
-											<div class="d-img">
-												<img src="~/img/cars/@(item.ImageUrl)" class="img-fluid" alt="">
+								<div class="de-item-list no-border mb30">
+									<div class="d-img">
+										<img src="~/img/cars/@(item.ImageUrl)" class="img-fluid" alt="">
+									</div>
+									<div class="d-info">
+										<div class="d-text">
+											<h4>@(item.Brand.Name)  @(item.Model)</h4>
+											<div class="d-atr-group">
+												<ul class="d-atr">
+													<li><span>Seats:</span> 4</li>
+													<li><span>Luggage:</span> 2</li>
+													<li><span>Doors:</span> 4</li>
+													<li><span>City:</span> @(item.City)</li>
+													<li><span>Fuel:</span> @(item.FuelType)</li>
+													<li><span>Type:</span> @(item.Category.CategoryName)</li>
+												</ul>
 											</div>
-											<div class="d-info">
-												<div class="d-text">
-													<h4>@(item.Brand.Name)  @(item.Model)</h4>
-													<div class="d-atr-group">
-														<ul class="d-atr">
-															<li><span>Seats:</span> 4</li>
-															<li><span>Luggage:</span> 2</li>
-															<li><span>Doors:</span> 4</li>
-															<li><span>City:</span> @(item.City)</li>
-															<li><span>Fuel:</span> @(item.FuelType)</li>
-															<li><span>Type:</span> @(item.Category.CategoryName)</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-											<div class="d-price">
-												Daily rate from <span>$@(item.Price)</span>
-											</div>
-											<div class="clearfix"></div>
 										</div>
+									</div>
+
+									<div class="d-price">
+										@if (item.Status != AdvertisementStatus.VIP)
+										{
+											<form method="post" action="/Profile/GetVIP">
+												<input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
+												<input type="hidden" name="adId" value="@item.Id"> <!-- İlanın ID'si -->
+												<button type="submit" class="btn-main vip-button" style="background-color:orange">
+													<i class="fas fa-star"></i> VIP
+												</button>
+											</form>
+										}
+
+
+										<br />
+										Daily rate from <span>$@(item.Price)</span>
+									</div>
+
+
+
+									<div class="clearfix"></div>
+								</div>
 							}
 						}
 						else
 						{
-								<h3>Elaniniz yoxdur Yoxdur</h3>
-									<div class="menu_side_area">
-												<a asp-action="Index" asp-controller="Advertisement" class="btn-main" style="background-color:orange">Elan Yerlersdir</a>
-												<span id="menu-btn"></span>
-									</div>
+							<h3>Elaniniz yoxdur Yoxdur</h3>
+							<div class="menu_side_area">
+								<a asp-action="Index" asp-controller="Advertisement" class="btn-main" style="background-color:orange">Elan Yerlersdir</a>
+								<span id="menu-btn"></span>
+							</div>
 						}
 
 
@@ -113,3 +131,53 @@
 <!-- content close -->
 
 <a href="#" id="back-to-top"></a>
+@section scripts{
+	<script>
+						// VIP butonuna tıklama işlemi
+		document.querySelectorAll('.btn-main.vip-button').forEach(button => {
+			button.addEventListener('click', function(event) {
+				event.preventDefault(); // Butonun formu göndermesini engelle
+
+				// Bakiye kontrolü yapılacak
+				let username = document.querySelector('input[name="username"]').value; // Kullanıcı adı
+				let adId = document.querySelector('input[name="adId"]').value; // İlan ID'si
+
+				// AJAX ile bakiye sorgulaması
+				fetch('/Profile/GetUserBalance')
+					.then(response => response.json())
+					.then(data => {
+						// Kullanıcının bakiyesi 5'ten azsa uyarı göster
+						if (data.balance < 5) {
+							alert("Yeterli bakiye bulunmuyor.");
+						} else {
+							// Bakiye yeterliyse VIP işlemini gerçekleştir
+							fetch('/Profile/GetVIP', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json'
+								},
+								body: JSON.stringify({ username: username, adId: adId })
+							})
+							.then(response => response.json())
+							.then(data => {
+								if (data.message) {
+									alert("VIP işlemi başarılı!"); // Başarı mesajı
+								}
+							})
+							.catch(error => {
+								console.error('Error:', error);
+								alert("Bir hata oluştu.");
+							});
+						}
+					})
+					.catch(error => {
+						console.error('Error:', error);
+						alert("Bir hata oluştu.");
+					});
+			});
+		});
+
+	</script>
+
+
+}

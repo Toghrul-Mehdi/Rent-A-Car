@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Rent_A_Car.BL.DTOs.Profile;
 using Rent_A_Car.CORE.Entities;
+using Rent_A_Car.CORE.Enums;
 using Rent_A_Car.DAL.Context;
 using Rent_A_Car.MVC.Extension;
 using System.Security.Claims;
@@ -198,6 +199,39 @@ namespace Rent_A_Car.MVC.Controllers
 
             return Ok(new { balance = user.Balance });
         }
+        [HttpPost]
+        public async Task<IActionResult> GetVIP(string? username, int? adId)
+        {
+            if (!adId.HasValue)
+                return BadRequest("İlan ID'si geçersiz.");
+
+            // Kullanıcıyı bul
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == username);
+            if (user == null)
+                return NotFound("Kullanıcı bulunamadı.");
+
+           
+            // İlanı bul
+            var advertisement = await _context.Advertisements.FirstOrDefaultAsync(ad => ad.Id == adId);
+            if (advertisement == null)
+            {
+                return NotFound("İlan bulunamadı.");
+            }
+
+            // İlanın durumunu VIP yap
+            advertisement.Status = AdvertisementStatus.VIP;
+
+            // Kullanıcının bakiyesinden 5 birim düşür
+            user.Balance -= 5;
+
+            // Değişiklikleri kaydet
+            await _context.SaveChangesAsync();
+
+            // Başarılı işlem sonrası Profile sayfasına yönlendir
+            return Json(new { message = "VIP işlemi başarılı!" });
+        }
+
+
 
 
 
