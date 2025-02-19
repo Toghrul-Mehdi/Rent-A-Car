@@ -10,6 +10,11 @@ namespace Rent_A_Car.MVC.Controllers
         {
             ViewBag.MaxPrice = await _context.Advertisements.MaxAsync(x=>x.Price);
             ViewBag.Category = await _context.Categories.Where(x=>x.IsDeleted==false).ToListAsync();
+            ViewBag.Brand = await _context.Brands
+                        .Where(x => x.IsDeleted == false)
+                        .OrderBy(x => x.Name) 
+                        .ToListAsync();
+
             return View(await _context.Advertisements
                 .Where(x=>x.IsDeleted==false)
                 .Include(x=>x.Brand)

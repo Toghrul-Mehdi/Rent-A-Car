@@ -86,13 +86,22 @@
 									</div>
 
 									<div class="d-price">
+										<form method="post" action="/Profile/DeleteAdvertisement">
+											<input type="hidden" name="username" value="@Model.Username">
+											<input type="hidden" name="adId" value="@item.Id">
+											<button type="submit" class="btn-main delete-button" style="background-color:red">
+												Delete
+											</button>
+										</form>
+										<br />
+
 										@if (item.Status != AdvertisementStatus.VIP)
 										{
 											<form method="post" action="/Profile/GetVIP">
-												<input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
-												<input type="hidden" name="adId" value="@item.Id"> <!-- İlanın ID'si -->
+												<input type="hidden" name="username" value="@Model.Username">
+												<input type="hidden" name="adId" value="@item.Id">
 												<button type="submit" class="btn-main vip-button" style="background-color:orange">
-													<i class="fas fa-star"></i> VIP
+													<i class="fas fa-star"></i> VIP || Price:5AZN
 												</button>
 											</form>
 										}
@@ -131,53 +140,107 @@
 <!-- content close -->
 
 <a href="#" id="back-to-top"></a>
+
 @section scripts{
 	<script>
-						// VIP butonuna tıklama işlemi
-		document.querySelectorAll('.btn-main.vip-button').forEach(button => {
-			button.addEventListener('click', function(event) {
-				event.preventDefault(); // Butonun formu göndermesini engelle
+						document.addEventListener("DOMContentLoaded", function () {
+			let userBalance = 0; // Kullanıcının bakiyesi
 
-				// Bakiye kontrolü yapılacak
-				let username = document.querySelector('input[name="username"]').value; // Kullanıcı adı
-				let adId = document.querySelector('input[name="adId"]').value; // İlan ID'si
+			// Kullanıcı bakiyesini çek ve ekrana yaz
+			async function loadUserBalance() {
+				try {
+					let response = await fetch("/Profile/GetUserBalance");
+					let result = await response.json();
 
-				// AJAX ile bakiye sorgulaması
-				fetch('/Profile/GetUserBalance')
-					.then(response => response.json())
-					.then(data => {
-						// Kullanıcının bakiyesi 5'ten azsa uyarı göster
-						if (data.balance < 5) {
-							alert("Yeterli bakiye bulunmuyor.");
+					if (response.ok) {
+						userBalance = result.balance; // Bakiyeyi değişkene ata
+						document.getElementById("user-balance").innerText = `Bakiye: ${userBalance} ₺`;
+					} else {
+						alert("Hata: " + result);
+					}
+				} catch (error) {
+					console.error("Bakiye yüklenirken hata oluştu.", error);
+				}
+			}
+
+			// VIP yapma butonlarına event ekle
+			document.querySelectorAll(".vip-button").forEach(button => {
+				button.addEventListener("click", async function (event) {
+					event.preventDefault();
+
+					// Kullanıcının yeterli bakiyesi var mı kontrol et
+					if (userBalance < 5) {
+						alert("Bakiyeniz yetersiz! VIP işlemi için en az 5₺ gereklidir.");
+						return;
+					}
+
+					let form = this.closest("form"); // Formu al
+					let formData = new FormData(form); // Form verilerini al
+
+					try {
+						let response = await fetch(form.action, {
+							method: "POST",
+							body: formData
+						});
+
+						let result = await response.json();
+
+						if (response.ok) {
+							alert(result.message);
+							await loadUserBalance(); // Bakiye güncelle
+							location.reload(); // Sayfayı yenile
 						} else {
-							// Bakiye yeterliyse VIP işlemini gerçekleştir
-							fetch('/Profile/GetVIP', {
-								method: 'POST',
-								headers: {
-									'Content-Type': 'application/json'
-								},
-								body: JSON.stringify({ username: username, adId: adId })
-							})
-							.then(response => response.json())
-							.then(data => {
-								if (data.message) {
-									alert("VIP işlemi başarılı!"); // Başarı mesajı
-								}
-							})
-							.catch(error => {
-								console.error('Error:', error);
-								alert("Bir hata oluştu.");
-							});
+							alert("Hata: " + result.message);
 						}
-					})
-					.catch(error => {
-						console.error('Error:', error);
-						alert("Bir hata oluştu.");
-					});
+					} catch (error) {
+						console.error("VIP işlemi sırasında hata oluştu.", error);
+					}
+				});
 			});
+
+			// Sayfa yüklendiğinde kullanıcı bakiyesini getir
+			loadUserBalance();
 		});
 
+
 	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Silme butonlarına tıklama eventi ekle
+			document.querySelectorAll(".delete-button").forEach(button => {
+				button.addEventListener("click", async function (event) {
+					event.preventDefault(); // Formun direkt olarak gönderilmesini engelle
 
+					// Kullanıcıya onay sorusu göster
+					const isConfirmed = confirm("Bu ilanı silmek istediğinizden emin misiniz?");
 
+					if (isConfirmed) {
+						let form = this.closest("form"); // Formu al
+						let formData = new FormData(form); // Form verilerini al
+
+						try {
+							let response = await fetch(form.action, {
+								method: "POST",
+								body: formData
+							});
+
+							let result = await response.json();
+
+							if (response.ok) {
+								alert(result.message); // Silme işlemi başarılı
+								location.reload(); // Sayfayı yenile
+							} else {
+								alert("Hata: " + result.message); // Silme işlemi başarısız
+							}
+						} catch (error) {
+							console.error("Silme işlemi sırasında hata oluştu.", error);
+						}
+					} else {
+						// Kullanıcı iptal ettiğinde herhangi bir işlem yapma
+						console.log("İlan silme işlemi iptal edildi.");
+					}
+				});
+			});
+		});
+	</script>
 }

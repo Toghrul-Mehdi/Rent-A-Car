@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Rent_A_Car.BL.Helpers;
 using Rent_A_Car.BL.Services.Abstract;
 using Rent_A_Car.BL.Services.Implement;
 using Rent_A_Car.CORE.Entities;
@@ -27,6 +28,15 @@ builder.Services.AddControllers()
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<AppDbContext>();
+
+SmtpOptions opt = new();
+builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("Smtp"));
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
+{
+    options.TokenLifespan = TimeSpan.FromHours(24);
+});
+
 
 // Add application services
 builder.Services.AddScoped<ICategoryService, CategoryService>();

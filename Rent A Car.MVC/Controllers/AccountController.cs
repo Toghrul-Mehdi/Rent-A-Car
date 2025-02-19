@@ -12,6 +12,7 @@ using System.Net.Mail;
 using System.Net;
 using Microsoft.Extensions.Options;
 using Rent_A_Car.BL.Helpers;
+using System.Web;
 
 namespace Rent_A_Car.MVC.Controllers
 {
@@ -27,7 +28,6 @@ namespace Rent_A_Car.MVC.Controllers
             return View();
         }
         [HttpPost]
-
         public async Task<IActionResult> Register(RegisterDTO dto)
         {
             if (!ModelState.IsValid)
@@ -97,17 +97,7 @@ namespace Rent_A_Car.MVC.Controllers
             }
 
 
-            /*var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim(ClaimTypes.Email, user.Email),  
-        new Claim("Fullname", user.Fullname ?? ""),  
-        new Claim("ImageUrl", user.ImageUrl ?? "default.png")
-    };
-
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);*/
+           
 
             
             if (await _usermanager.IsInRoleAsync(user, "Admin"))
@@ -139,10 +129,17 @@ namespace Rent_A_Car.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> ForgotPassword(string email)
         {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                ModelState.AddModelError("", "Email boş ola bilməz.");
+                return View();
+            }
+
             var user = await _usermanager.FindByEmailAsync(email);
             if (user == null)
             {
-                return BadRequest("E-posta tapilmadi.");
+                ModelState.AddModelError("", "Belə bir email mövcud deyil.");
+                return View();
             }
 
             var token = await _usermanager.GeneratePasswordResetTokenAsync(user);
@@ -152,27 +149,37 @@ namespace Rent_A_Car.MVC.Controllers
                 values: new { token, email = user.Email },
                 protocol: "https");
 
-            SmtpClient smtp = new SmtpClient
+            try
             {
-                Host = _smtp.Host,
-                Port = _smtp.Port,
-                EnableSsl = true,
-                Credentials = new NetworkCredential(_smtp.Username, _smtp.Password)
-            };
+                using (SmtpClient smtp = new SmtpClient())
+                {
+                    smtp.Host = _smtp.Host;
+                    smtp.Port = _smtp.Port;
+                    smtp.EnableSsl = true;
+                    smtp.Credentials = new NetworkCredential(_smtp.Username, _smtp.Password);
 
-            MailMessage msg = new MailMessage
+                    MailMessage msg = new MailMessage
+                    {
+                        From = new MailAddress(_smtp.Username, "Rent A Car"),
+                        Subject = "Şifrəni Sıfırla",
+                        Body = $"<p>Şifrənizi sıfırlamaq üçün <a href='{resetLink}'>bu linkə</a> klikləyin.</p>",
+                        IsBodyHtml = true
+                    };
+                    msg.To.Add(email);
+
+                    await smtp.SendMailAsync(msg);
+                }
+            }
+            catch (Exception ex)
             {
-                From = new MailAddress(_smtp.Username, "Togrul Mehdiyev CodeAcademy"),
-                Subject = "Reset Password",
-                Body = $"<p>Şifrenizi sıfırlamak için <a href='{resetLink}'>bu bağlantıya</a> tıklayın.</p>",
-                IsBodyHtml = true
-            };
-            msg.To.Add(email);
+                ModelState.AddModelError("", "Email göndərilərkən xəta baş verdi.");
+                // Loglama sistemi varsa buraya loglama kodunu əlavə et
+                return View();
+            }
 
-            smtp.Send(msg);
-
-            return Ok("Emaile gonderildi");
+            return RedirectToAction("SendEmailView", "Account");
         }
+
 
         public IActionResult ResetPassword(string token, string email)
         {
@@ -180,7 +187,6 @@ namespace Rent_A_Car.MVC.Controllers
             {
                 return BadRequest("Invalid Connection");
             }
-
             return View(new ResetPasswordDTO { Token = token, Email = email });
         }
 
@@ -201,7 +207,7 @@ namespace Rent_A_Car.MVC.Controllers
             var resetPassResult = await _usermanager.ResetPasswordAsync(user, vm.Token, vm.NewPassword);
             if (resetPassResult.Succeeded)
             {
-                return Ok("Hershey ugurla tamamlandi");
+                return RedirectToAction("Login", "Account");
             }
 
             foreach (var error in resetPassResult.Errors)
@@ -210,6 +216,11 @@ namespace Rent_A_Car.MVC.Controllers
             }
 
             return View(vm);
+        }
+
+        public IActionResult SendEmailView()
+        {
+            return View();
         }
 
 

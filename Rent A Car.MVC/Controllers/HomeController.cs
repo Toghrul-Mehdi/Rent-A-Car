@@ -14,7 +14,13 @@ namespace Rent_A_Car.MVC.Controllers
         public async Task<IActionResult> Index()
         {            
             ViewBag.UserCount = await _context.Users.CountAsync();
-            return View(await _context.Advertisements.Where(x=>x.IsDeleted==false && x.Status == AdvertisementStatus.VIP).Include(x=>x.Category).Include(x=>x.Brand).ToListAsync());
+            return View(await _context.Advertisements
+     .Where(x => x.IsDeleted == false && x.Status == AdvertisementStatus.VIP)
+     .OrderByDescending(x => x.CreatedTime)  
+     .Include(x => x.Category)
+     .Include(x => x.Brand)
+     .ToListAsync());
+
         }
 
         public async Task<IActionResult> AddToFavourite(int? id)

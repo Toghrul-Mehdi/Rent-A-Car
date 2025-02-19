@@ -74,13 +74,15 @@ namespace Rent_A_Car.MVC.Controllers
 
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
             var favouriteList = await _context.WishLists
-               .Where(x => x.UserId == userId)
-               .Include(x => x.Advertisement)
-               .ThenInclude(x => x.Brand)
-               .Include(x => x.Advertisement)
-               .ThenInclude(x => x.Category)
-               .Include(x => x.User)
-               .ToListAsync();
+   .Where(x => x.UserId == userId)
+   .Include(x => x.Advertisement)
+   .ThenInclude(x => x.Brand)
+   .Include(x => x.Advertisement)
+   .ThenInclude(x => x.Category)
+   .Include(x => x.User)
+   .Where(x => x.Advertisement.IsDeleted == false) 
+   .ToListAsync();
+
 
             if (favouriteList == null || !favouriteList.Any())
             {
@@ -220,6 +222,7 @@ namespace Rent_A_Car.MVC.Controllers
 
             // İlanın durumunu VIP yap
             advertisement.Status = AdvertisementStatus.VIP;
+            
 
             // Kullanıcının bakiyesinden 5 birim düşür
             user.Balance -= 5;
@@ -229,6 +232,32 @@ namespace Rent_A_Car.MVC.Controllers
 
             // Başarılı işlem sonrası Profile sayfasına yönlendir
             return Json(new { message = "VIP işlemi başarılı!" });
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteAdvertisement(string username, int adId)
+        {
+            // Kullanıcıyı bul
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == username);
+            if (user == null)
+            {
+                return NotFound("Kullanıcı bulunamadı.");
+            }
+
+            // İlanı bul
+            var advertisement = await _context.Advertisements.FirstOrDefaultAsync(ad => ad.Id == adId);
+            if (advertisement == null)
+            {
+                return NotFound("İlan bulunamadı.");
+            }
+
+            // İlanı sil (isDeleted alanını true yapabilirsin)
+            advertisement.IsDeleted = true;
+
+            // Değişiklikleri kaydet
+            await _context.SaveChangesAsync();
+
+            // Başarılı işlem mesajı
+            return Json(new { message = "İlan başarıyla silindi." });
         }
 
 
