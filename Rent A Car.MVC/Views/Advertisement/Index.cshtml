@@ -42,12 +42,14 @@
 										<option value="@brand.Id">@brand.Name</option>
 									}
 								</select>
+								<span asp-validation-for="BrandId" class="text-danger"></span>
 
 								<br />
 
 								<select asp-for="Model" class="form-control" id="models">
 									<option value="">Ilk olaraq Marka Seçin</option>
 								</select>
+								<span asp-validation-for="Model" class="text-danger"></span>
 								<br />
 
 
@@ -61,6 +63,7 @@
 												<option value="@item">@item</option>
 											}
 										</select>
+										
 									</div>
 
 
@@ -77,6 +80,7 @@
 												<option value="@item">@item</option>
 											}
 										</select>
+										
 									</div>
 								</div>
 
@@ -116,7 +120,9 @@
 									<div class="col-lg-6">
 
 										<label for="coverImage">Cover Image:</label>
-										<input asp-for="CoverImage" type="file" id="coverImage" name="CoverImage" class="form-control" required />
+										<input asp-for="CoverImage" type="file" id="coverImage" name="CoverImage" class="form-control"  />
+										<span class="text-danger">@Html.ValidationMessage("CoverImage")</span>
+
 									</div>
 
 
@@ -125,7 +131,8 @@
 
 									<div class="col-lg-6">
 										<label for="otherFiles">Other Files:</label>
-										<input asp-for="OtherFiles" type="file" id="otherFiles" name="OtherFiles" class="form-control" multiple required />
+										<input asp-for="OtherFiles" type="file" id="otherFiles" name="OtherFiles" class="form-control" multiple/>
+										<span class="text-danger">@Html.ValidationMessage("OtherFiles")</span>
 									</div>
 
 
@@ -141,7 +148,8 @@
 								<div class="row g-4">
 									<div class="col-lg-12">
 										<div class="field-set">
-											<input asp-for="Title" type="text"  class="form-control" placeholder="Title" required>
+											<input asp-for="Title" type="text"  class="form-control" placeholder="Title" >
+											<span asp-validation-for="Title" class="text-danger"></span>
 										</div>
 									</div>
 									<div class="col-lg-12">
@@ -168,18 +176,21 @@
 									</div>
 									<div class="col-lg-12">
 										<div class="field-set">
-											<input asp-for="PhoneNumber" type="number"  class="form-control" placeholder="Your Phone" required>
+											<input asp-for="PhoneNumber" type="number"  class="form-control" placeholder="Your Phone" >
+											<span asp-validation-for="PhoneNumber" class="text-danger"></span>
 										</div>
 									</div>
 
 									<div class="col-lg-12">
 										<div class="field-set">
-											<textarea asp-for="Description" class="form-control" placeholder="Description" required></textarea>
+											<textarea asp-for="Description" class="form-control" placeholder="Description" ></textarea>
+											<span asp-validation-for="Description" class="text-danger"></span>
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="field-set">
-											<input asp-for="Price" type="number"  class="form-control" placeholder="Price" step="0.01" required>
+											<input asp-for="Price" type="number"  class="form-control" placeholder="Price" step="0.01" >
+											<span asp-validation-for="Price" class="text-danger"></span>
 										</div>
 									</div>
 								</div>

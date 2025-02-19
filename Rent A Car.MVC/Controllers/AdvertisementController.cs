@@ -40,6 +40,10 @@ namespace Rent_A_Car.MVC.Controllers
 
             ViewBag.Brand = brands;
 
+
+            if (!ModelState.IsValid)
+                return View();
+
             if (dto.CoverImage != null)
             {
                 if (!dto.CoverImage.ContentType.StartsWith("image"))
@@ -68,6 +72,14 @@ namespace Rent_A_Car.MVC.Controllers
                     ModelState.AddModelError("OtherFiles", fileNames + " is (are) bigger than 5MB.");
                 }
             }
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Brand = await _context.Brands
+                    .Where(x => x.IsDeleted == false)
+                    .ToListAsync();
+                return View(dto);
+            }
+
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
             int categoryId = await _context.Models.Where(x=>x.Name==dto.Model).Select(dto=>dto.CategoryId).FirstOrDefaultAsync();
             Advertisement advertisement = new Advertisement
