@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rent_A_Car.BL.DTOs.Advertisement;
+using Rent_A_Car.BL.DTOs.Booking;
 using Rent_A_Car.CORE.Entities;
 using Rent_A_Car.DAL.Context;
 using Rent_A_Car.MVC.Extension;
+using Rent_A_Car.MVC.VM;
 using System.Security.Claims;
 
 namespace Rent_A_Car.MVC.Controllers
@@ -127,7 +129,7 @@ namespace Rent_A_Car.MVC.Controllers
         {
             if (!id.HasValue) return BadRequest("Geçersiz ilan ID'si!");
 
-            var data = await _context.Advertisements
+            var advertisement = await _context.Advertisements
                 .Where(x => x.Id == id.Value)
                 .Include(x => x.Images)
                 .Include(x => x.Category)
@@ -135,14 +137,66 @@ namespace Rent_A_Car.MVC.Controllers
                 .Include(x => x.User)
                 .SingleOrDefaultAsync();
 
-            if (data == null) return NotFound("İlan bulunamadı!");
+            if (advertisement == null) return NotFound("İlan bulunamadı!");
 
-            data.ViewCount++;
+            advertisement.ViewCount++;
             await _context.SaveChangesAsync();
-            return View(data);
+
+            // BookingDTO oluşturuluyor
+            var bookingDTO = new BookingDTO
+            {
+                AdvertisementId = advertisement.Id
+            };
+
+            // ViewModel oluşturuluyor
+            var viewModel = new AdvertisementDetailViewModel
+            {
+                Advertisement = advertisement,
+                BookingDTO = bookingDTO
+            };
+
+            return View(viewModel);
         }
 
-        
+        [HttpPost]
+        public async Task<IActionResult> Book(BookingDTO bookingDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Eğer model geçerli değilse, hata mesajı göster
+                return View(bookingDTO);
+            }
+
+            // Veritabanı işlemleri ve booking işlemleri burada yapılır
+            var advertisement = await _context.Advertisements
+                .FirstOrDefaultAsync(a => a.Id == bookingDTO.AdvertisementId);
+
+            if (advertisement == null)
+            {
+                return NotFound("İlan bulunamadı!");
+            }
+
+            var booking = new Booking
+            {
+                PickupLocation = bookingDTO.PickupLocation,
+                StartDate = bookingDTO.StartDate,
+                PickupTime = bookingDTO.PickupTime,
+                DropoffTime = bookingDTO.DropoffTime,
+                EndDate = bookingDTO.EndDate,
+                AdvertisementId = bookingDTO.AdvertisementId,
+                UserID = User.Identity.Name // Giriş yapan kullanıcının ID'si
+            };
+
+            _context.Bookings.Add(booking);
+            await _context.SaveChangesAsync();
+
+            // İşlem başarılı, yönlendirme yapılabilir veya başka bir işlem yapılabilir
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+
 
 
 

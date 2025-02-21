@@ -13,6 +13,7 @@ namespace Rent_A_Car.CORE.Entities
         public string ImageUrl { get; set; }
         public decimal Balance { get; set; }
         public List<Advertisement> Advertisements { get; set; }
-        public IEnumerable<WishList> WishList { get; set; }
+        public IEnumerable<WishList> WishList { get; set; }  
+        public IEnumerable<Booking> Bookings { get; set; }
     }
 }

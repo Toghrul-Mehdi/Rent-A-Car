@@ -180,14 +180,16 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("FuelType")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -203,7 +205,8 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.Property<string>("Model")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
@@ -216,7 +219,8 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -224,6 +228,12 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.Property<int>("ViewCount")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("VipEnded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("VipStarted")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -236,7 +246,62 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Advertisements");
+                    b.ToTable("Advertisements", (string)null);
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Booking", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdvertisementId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DriverLicensePhoto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("DropoffTime")
+                        .HasColumnType("time");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PickupLocation")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("PickupTime")
+                        .HasColumnType("time");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvertisementId");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Bookings", (string)null);
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Brand", b =>
@@ -529,12 +594,31 @@ namespace Rent_A_Car.DAL.Migrations
                     b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
                         .WithMany("Advertisements")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Booking", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.Advertisement", "Advertisement")
+                        .WithMany("Bookings")
+                        .HasForeignKey("AdvertisementId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("Bookings")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Advertisement");
 
                     b.Navigation("User");
                 });
@@ -590,6 +674,8 @@ namespace Rent_A_Car.DAL.Migrations
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Advertisement", b =>
                 {
+                    b.Navigation("Bookings");
+
                     b.Navigation("Images");
 
                     b.Navigation("WishList");
@@ -608,6 +694,8 @@ namespace Rent_A_Car.DAL.Migrations
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.User", b =>
                 {
                     b.Navigation("Advertisements");
+
+                    b.Navigation("Bookings");
 
                     b.Navigation("WishList");
                 });

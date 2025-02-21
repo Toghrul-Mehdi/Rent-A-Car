@@ -222,7 +222,10 @@ namespace Rent_A_Car.MVC.Controllers
 
             // İlanın durumunu VIP yap
             advertisement.Status = AdvertisementStatus.VIP;
-            
+            advertisement.VipStarted = DateTime.UtcNow;
+            advertisement.VipEnded = advertisement.VipStarted.AddDays(7);
+
+
 
             // Kullanıcının bakiyesinden 5 birim düşür
             user.Balance -= 5;

@@ -10,17 +10,19 @@ using System.Security.Claims;
 namespace Rent_A_Car.MVC.Controllers
 {
     public class HomeController(AppDbContext _context) : Controller
-    {     
+    {    
         public async Task<IActionResult> Index()
-        {            
+        {
+            ViewBag.AdvCount = await _context.Advertisements.CountAsync();
             ViewBag.UserCount = await _context.Users.CountAsync();
             return View(await _context.Advertisements
-     .Where(x => x.IsDeleted == false && x.Status == AdvertisementStatus.VIP)
-     .OrderByDescending(x => x.CreatedTime)  
-     .Include(x => x.Category)
-     .Include(x => x.Brand)
-     .ToListAsync());
-
+                .Where(x => !x.IsDeleted
+                    && x.Status == AdvertisementStatus.VIP
+                    && x.VipEnded > DateTime.UtcNow)
+                .OrderByDescending(x => x.VipStarted)
+                .Include(x => x.Category)
+                .Include(x => x.Brand)
+                .ToListAsync());
         }
 
         public async Task<IActionResult> AddToFavourite(int? id)

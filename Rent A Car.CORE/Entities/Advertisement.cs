@@ -34,5 +34,8 @@ namespace Rent_A_Car.CORE.Entities
         public Color Color { get; set; }
         public AdvertisementStatus Status { get; set; }
         public IEnumerable<WishList> WishList { get; set; }
+        public DateTime VipStarted { get; set; }
+        public DateTime VipEnded { get; set; }
+        public IEnumerable<Booking> Bookings { get; set; }
     }
 }
