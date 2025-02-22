@@ -95,6 +95,16 @@
 										</form>
 										<br />
 
+										<form method="get" action="/Profile/Update">
+											<input type="hidden" name="username" value="@Model.Username">
+											<input type="hidden" name="adId" value="@item.Id">
+											<button type="submit" class="btn-main" style="background-color:yellowgreen">
+												Edit
+											</button>
+										</form>
+
+										<br />
+
 										@if (item.Status != AdvertisementStatus.VIP)
 										{
 											<form method="post" action="/Profile/GetVIP">
