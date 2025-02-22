@@ -1,9 +1,7 @@
 ﻿@using Rent_A_Car.CORE.Enums
 @using Rent_A_Car.MVC.VM
 @model AdvertisementDetailViewModel
-@{
-    var isAuthenticated = User.Identity?.IsAuthenticated ?? false;    
-}
+
 <!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
     <div id="top"></div>
@@ -69,11 +67,11 @@
                         <div class="d-row">
                             <span class="d-title">Fuel Type</span>
                             <spam class="d-value">@Model.Advertisement.FuelType</spam>
-                        </div>                        
+                        </div>
                         <div class="d-row">
                             <span class="d-title">Year</span>
                             <spam class="d-value">@Model.Advertisement.Year</spam>
-                        </div> 
+                        </div>
 
                         <div class="d-row">
                             <span class="d-title">Color</span>
@@ -98,17 +96,18 @@
                         <h3>$@Model.Advertisement.Price</h3>
                     </div>
                     <div class="spacer-30"></div>
-                    @if (User.Identity.Name == Model.Advertisement.User.UserName)
+                    @if (User.Identity!.Name == Model.Advertisement.User.UserName)
                     {
 
                     }
-                    else if (!isAuthenticated)
+                    else if (!User.Identity.IsAuthenticated)
                     {
                         // Giriş yapmamış kullanıcı için giriş formu
                         <div class="de-box mb25">
-                            <form name="contactForm" id="contact_form" method="post">
-                                <input asp-action="Login" asp-controller="Account" type="submit" id="send_message" value="Login For Book Now" style="background-color:dodgerblue" class="btn-main btn-fullwidth">
-                                <div class="clearfix"></div>
+                            <form action="/Account/Login" method="get">
+                                <div class="col-lg-3">
+                                    <button type="submit" style="background-color:dodgerblue" class="btn btn-primary">Login</button>
+                                </div>
                             </form>
                         </div>
                     }
@@ -116,65 +115,15 @@
                     {
                         // Giriş yapmış kullanıcı için rezervasyon formu
                         <div class="de-box mb25">
-                            <form action="/Advertisement/Book" method="post">
-                                <h4>Booking this car</h4>
-                                <div class="spacer-20"></div>
-                                <input type="hidden" asp-for="BookingDTO.AdvertisementId" value="@Model.Advertisement.Id">
-                                <input type="hidden" asp-for="BookingDTO.UserID" value="@Model.Advertisement.User.Id">
-                                <div class="row">
-                                    <!-- Pick Up Location -->
-                                    <div class="col-lg-12 mb20">
-                                        <h5>Pick Up Location</h5>
-                                        <select asp-for="BookingDTO.PickupLocation" class="form-control">
-                                            @foreach (PickupLocation item in Enum.GetValues(typeof(PickupLocation)))
-                                            {
-                                                <option value="@item">@item</option>
-                                            }
-                                        </select>
-                                    </div>
-
-
-
-                                    <!-- Pick Up Date & Time -->
-                                    <div class="col-lg-12 mb20">
-                                        <h5>Pick Up Date & Time</h5>
-                                        <div class="date-time-field">
-                                            <input type="text" asp-for="BookingDTO.StartDate" class="form-control" id="date-picker" name="StartDate" value="@(Model.BookingDTO.StartDate)">
-                                            <select asp-for="BookingDTO.PickupTime" class="form-control" name="PickUpTime" id="pickup-time">
-                                                <option selected disabled value="Select time">Time</option>
-                                                @for (int i = 0; i < 24; i++)
-                                                {
-                                                    <option value="@($"{i:D2}:00")">@($"{i:D2}:00")</option>
-                                                    <option value="@($"{i:D2}:30")">@($"{i:D2}:30")</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Return Date & Time -->
-                                    <div class="col-lg-12 mb20">
-                                        <h5>Return Date & Time</h5>
-                                        <div class="date-time-field">
-                                            <input type="text" asp-for="BookingDTO.EndDate" class="form-control" id="date-picker-2" name="EndDate" value="@(Model.BookingDTO.EndDate)">
-                                            <select asp-for="BookingDTO.DropoffTime" class="form-control" name="DropoffTime" id="dropoff-time">
-                                                <option selected disabled value="Select time">Time</option>
-                                                @for (int i = 0; i < 24; i++)
-                                                {
-                                                    <option value="@($"{i:D2}:00")">@($"{i:D2}:00")</option>
-                                                    <option value="@($"{i:D2}:30")">@($"{i:D2}:30")</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <input type="submit"  value="Book Now" style="background-color:forestgreen" class="btn-main btn-fullwidth">
-                                <div class="clearfix"></div>
-                            </form>
+                        <form action="/Booking/Index" method="get">
+                            <input type="hidden" name="advertisementId" value="@Model.Advertisement.Id">
+                            <div class="col-lg-3">
+                                <button type="submit" style="background-color:forestgreen" class="btn btn-primary">Book Now</button>
+                            </div>
+                        </form>
                         </div>
-                    }
-                    
 
+                    }
                     <div class="de-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 10px; width: 250px; text-align: center; margin: auto;">
                         <h4 style="margin-bottom: 10px; color: #333;">Contact</h4>
                         <div>
@@ -183,12 +132,12 @@
                                 Telefon: <a href="tel:@Model.Advertisement.PhoneNumber" style="text-decoration: none; color: #007bff;">@Model.Advertisement.PhoneNumber</a>
                             </p>
 
-                            <a href="https://wa.me/(Model.PhoneNumber.Replace("+", "").Replace(" ", ""))" target="_blank" style="display: inline-block; margin-top: 10px; background: #25D366; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">
-                                <span><i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i></span>
-                            </a>
+                           
+
                         </div>
                     </div>
 
+                   
                 </div>
             </div>
         </div>
@@ -196,6 +145,12 @@
 
 
 </div>
-<!-- content close -->
+
 
 <a href="#" id="back-to-top"></a>
+
+
+
+
+
+

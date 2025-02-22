@@ -158,56 +158,6 @@ namespace Rent_A_Car.MVC.Controllers
             return View(viewModel);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Book(BookingDTO bookingDTO)
-        {
-            if (!ModelState.IsValid)
-            {
-                // Eğer model geçerli değilse, hata mesajı göster
-                return View(bookingDTO);
-            }
-
-            // Veritabanı işlemleri ve booking işlemleri burada yapılır
-            var advertisement = await _context.Advertisements
-                .FirstOrDefaultAsync(a => a.Id == bookingDTO.AdvertisementId);
-
-            if (advertisement == null)
-            {
-                return NotFound("İlan bulunamadı!");
-            }
-
-            var booking = new Booking
-            {
-                PickupLocation = bookingDTO.PickupLocation,
-                StartDate = bookingDTO.StartDate,
-                PickupTime = bookingDTO.PickupTime,
-                DropoffTime = bookingDTO.DropoffTime,
-                EndDate = bookingDTO.EndDate,
-                AdvertisementId = bookingDTO.AdvertisementId,
-                UserID = User.Identity.Name // Giriş yapan kullanıcının ID'si
-            };
-
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
-
-            // İşlem başarılı, yönlendirme yapılabilir veya başka bir işlem yapılabilir
-            return RedirectToAction("Index", "Home");
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     }
 }

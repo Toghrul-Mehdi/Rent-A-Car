@@ -17,7 +17,6 @@ namespace Rent_A_Car.BL.DTOs.Booking
         public TimeSpan PickupTime { get; set; }  // Pickup zamanı
         public TimeSpan DropoffTime { get; set; }  // Dropoff zamanı
         public PickupLocation PickupLocation { get; set; }  // Pickup Lokasyonu
-        public IFormFile DriverLicensePhoto { get; set; }  // Ehliyet fotoğrafı URL'si
         public BookingStatus Status { get; set; }  // Kiralama durumu (örneğin: "Pending", "Confirmed", "Cancelled")
     }
 

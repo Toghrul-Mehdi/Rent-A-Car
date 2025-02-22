@@ -19,6 +19,8 @@
     <link href="~/css/plugins.css"  rel="stylesheet" type="text/css">
     <link href="~/css/style.css"  rel="stylesheet" type="text/css">
     <link href="~/css/coloring.css"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     @await RenderSectionAsync("styles", false)
     <!-- color scheme -->
     <link id="colors" href="~/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
@@ -80,9 +82,7 @@
                                         <a class="menu-item" asp-action="Index" asp-controller="Car">Cars</a>
                                         
                                     </li>
-                                    <li>
-                                        <a class="menu-item" asp-action="Index" asp-controller="Booking">Booking</a>
-                                    </li>                                   
+                                                                   
                                     <li>
                                         <a class="menu-item" asp-action="Index" asp-controller="About">About Us</a>
                                         

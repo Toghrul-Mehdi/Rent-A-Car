@@ -263,10 +263,6 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DriverLicensePhoto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<TimeSpan>("DropoffTime")
                         .HasColumnType("time");
 

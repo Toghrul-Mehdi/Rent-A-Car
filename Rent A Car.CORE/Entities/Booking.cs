@@ -21,6 +21,5 @@ namespace Rent_A_Car.CORE.Entities
         public decimal TotalPrice { get; set; }
         public BookingStatus Status { get; set; }
         public PickupLocation PickupLocation { get; set; }
-        public string DriverLicensePhoto { get; set; }
     }
 }

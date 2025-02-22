@@ -56,6 +56,12 @@
      /* --------------------------------------------------
       * header | sticky
       * --------------------------------------------------*/
+
+    
+        
+        
+       
+    
      function header_sticky() {
          jQuery("header").addClass("clone", 1000, "easeOutBounce");
          var $document = $(document);

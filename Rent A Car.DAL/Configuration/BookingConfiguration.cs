@@ -44,8 +44,7 @@ namespace Rent_A_Car.DAL.Configuration
             builder.Property(b => b.PickupLocation)
                 .IsRequired();
 
-            builder.Property(b => b.DriverLicensePhoto)
-                .IsRequired();
+            
 
             // User ve Advertisement ilişkileri için ON DELETE NO ACTION
             builder.HasOne(b => b.User)
