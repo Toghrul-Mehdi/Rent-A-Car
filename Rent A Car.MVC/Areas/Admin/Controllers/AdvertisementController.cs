@@ -14,5 +14,25 @@ namespace Rent_A_Car.MVC.Areas.Admin.Controllers
         {
             return View(await _context.Advertisements.Include(x => x.Category).Include(x => x.Brand).Include(x => x.User).Where(x => x.IsDeleted == false).ToListAsync());
         }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if(!id.HasValue)
+            {
+                return BadRequest();
+            }
+            // İlanı bul
+            var advertisement = await _context.Advertisements.FirstOrDefaultAsync(ad => ad.Id == id);
+            if (advertisement == null)
+            {
+                return NotFound("İlan bulunamadı.");
+            }
+
+            // İlanı sil (isDeleted alanını true yapabilirsin)
+            advertisement.IsDeleted = true;
+
+            // Değişiklikleri kaydet
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

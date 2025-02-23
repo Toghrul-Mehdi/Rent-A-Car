@@ -27,58 +27,61 @@
 	<!-- start: page -->
 	<section class="content-with-menu mailbox">
 		<div class="content-with-menu-container" data-mailbox data-mailbox-view="email">
-			
+
 			<div style="margin-right:300px" class="inner-body mailbox-email">
 				<div class="mailbox-email-header mb-3">
 					<h3 class="mailbox-email-subject m-0 font-weight-light">
 						Released Porto Admin! (@ViewBag.UnReadQuestion)
-					</h3>					
+					</h3>
 				</div>
 				<div class="mailbox-email-container">
 					<div class="mailbox-email-screen pt-4">
-						@foreach (var item in ViewBag.Question)
+						@if (ViewBag.Question != null && ViewBag.Question.Count > 0)
 						{
-							<div class="card mb-3">
-								<div class="card-header">
-									<div class="card-actions">
-										<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-										<a href="#" class="fas fa-reply" onclick="showReplyInput(event, 'question-@item.Id')"></a>
+							@foreach (var item in ViewBag.Question)
+							{
+								<div class="card mb-3">
+									<div class="card-header">
+										<div class="card-actions">
+											<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+											<a href="#" class="fas fa-reply" onclick="showReplyInput(event, 'question-@item.Id')"></a>
+										</div>
+
+										<p class="card-title">@item.User.UserName <i class="fas fa-angle-right fa-fw"></i> You</p>
 									</div>
+									<div class="card-body">
+										<p>@item.QuestionText</p>
+									</div>
+									<div class="card-footer">
+										<p class="m-0"><small>@item.CreatedTime</small></p>
+									</div>
+								</div>
 
-									<p class="card-title">@item.User.UserName <i class="fas fa-angle-right fa-fw"></i> You</p>
-								</div>
-								<div class="card-body">
-									<p>@item.QuestionText</p>
-								</div>
-								<div class="card-footer">
-									<p class="m-0"><small>@item.CreatedTime</small></p>
-								</div>
-							</div>
-
-							<!-- Cevap kutusu (başlangıçta gizli) -->
-							<form method="post" asp-action="ReplyQuestion" asp-controller="Mail">
-								<div id="question-@item.Id" class="reply-box" style="display: none;">
-									<input type="hidden" name="QuestionId" value="@item.Id"> <!-- Dinamik Sorunun ID'si -->
-									<input name="AdminResponse" type="text" class="form-control" placeholder="Cevabınızı yazın" required>
-									<br />
-									<button type="submit" class="btn btn-primary">Gönder</button>
-								</div>
-							</form>
+								<!-- Cevap kutusu (başlangıçta gizli) -->
+								<form method="post" asp-action="ReplyQuestion" asp-controller="Mail">
+									<div id="question-@item.Id" class="reply-box" style="display: none;">
+										<input type="hidden" name="QuestionId" value="@item.Id"> <!-- Dinamik Sorunun ID'si -->
+										<input name="AdminResponse" type="text" class="form-control" placeholder="Cevabınızı yazın" required>
+										<br />
+										<button type="submit" class="btn btn-primary">Gönder</button>
+									</div>
+								</form>
+							}
 						}
 
 
-						
+
 					</div>
 
-					
+
 				</div>
 			</div>
-			
+
 		</div>
 	</section>
 	<!-- end: page -->
 </section>
-@section scripts{
+@section scripts {
 	<a href="#" class="fas fa-reply" onclick="showReplyInput(event, 'question-1')"></a>
 
 	<!-- Cevap kutusu (başlangıçta gizli) -->
@@ -96,4 +99,4 @@
 	</script>
 
 }
-	
+

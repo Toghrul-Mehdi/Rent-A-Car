@@ -68,6 +68,9 @@
                     <div class="item_filter_group">
                         <h4>Car Body Type</h4>
                         <div class="de_form">
+                            @if (ViewBag.Category != null && ViewBag.Category.Count > 0)
+                            {
+
                             @foreach (var item in ViewBag.Category)
                             {
                                 <div class="de_checkbox">
@@ -80,7 +83,7 @@
                                     <label for="category_@item.Id">@item.CategoryName</label>
                                 </div>
                             }
-
+                            }
 
                             
 

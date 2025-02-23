@@ -294,7 +294,7 @@ namespace Rent_A_Car.MVC.Controllers
             return Json(new { message = "İlan başarıyla silindi." });
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public async Task<IActionResult> Update(string username, int adId)
         {
             var brands = await _context.Brands
@@ -438,7 +438,7 @@ namespace Rent_A_Car.MVC.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Index", "Home");
-        }
+        }*/
 
         public async Task<IActionResult> Messages(string? username)
         {
