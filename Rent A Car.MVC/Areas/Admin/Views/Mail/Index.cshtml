@@ -1,0 +1,99 @@
+﻿@using Rent_A_Car.BL.DTOs.Question
+@model QuestionReplyDTO
+<section role="main" class="content-body">
+	<header class="page-header">
+		<h2>E-Mail</h2>
+
+		<div class="right-wrapper text-end">
+			<ol class="breadcrumbs">
+				<li>
+					<a href="index.html">
+						<i class="bx bx-home-alt"></i>
+					</a>
+				</li>
+
+				<li><span>Mailbox</span></li>
+
+				<li><a href="mailbox-folder.html">Inbox</a></li>
+
+				<li><span>E-Mail</span></li>
+
+			</ol>
+
+			<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fas fa-chevron-left"></i></a>
+		</div>
+	</header>
+
+	<!-- start: page -->
+	<section class="content-with-menu mailbox">
+		<div class="content-with-menu-container" data-mailbox data-mailbox-view="email">
+			
+			<div style="margin-right:300px" class="inner-body mailbox-email">
+				<div class="mailbox-email-header mb-3">
+					<h3 class="mailbox-email-subject m-0 font-weight-light">
+						Released Porto Admin! (@ViewBag.UnReadQuestion)
+					</h3>					
+				</div>
+				<div class="mailbox-email-container">
+					<div class="mailbox-email-screen pt-4">
+						@foreach (var item in ViewBag.Question)
+						{
+							<div class="card mb-3">
+								<div class="card-header">
+									<div class="card-actions">
+										<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+										<a href="#" class="fas fa-reply" onclick="showReplyInput(event, 'question-@item.Id')"></a>
+									</div>
+
+									<p class="card-title">@item.User.UserName <i class="fas fa-angle-right fa-fw"></i> You</p>
+								</div>
+								<div class="card-body">
+									<p>@item.QuestionText</p>
+								</div>
+								<div class="card-footer">
+									<p class="m-0"><small>@item.CreatedTime</small></p>
+								</div>
+							</div>
+
+							<!-- Cevap kutusu (başlangıçta gizli) -->
+							<form method="post" asp-action="ReplyQuestion" asp-controller="Mail">
+								<div id="question-@item.Id" class="reply-box" style="display: none;">
+									<input type="hidden" name="QuestionId" value="@item.Id"> <!-- Dinamik Sorunun ID'si -->
+									<input name="AdminResponse" type="text" class="form-control" placeholder="Cevabınızı yazın" required>
+									<br />
+									<button type="submit" class="btn btn-primary">Gönder</button>
+								</div>
+							</form>
+						}
+
+
+						
+					</div>
+
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- end: page -->
+</section>
+@section scripts{
+	<a href="#" class="fas fa-reply" onclick="showReplyInput(event, 'question-1')"></a>
+
+	<!-- Cevap kutusu (başlangıçta gizli) -->
+	<div id="question-1" class="reply-box" style="display: none;">
+		<input type="text" id="replyInput-1" class="form-control" placeholder="Cevabınızı yazın">
+		<button onclick="sendReply(1)" class="btn btn-primary">Gönder</button>
+	</div>
+
+	<script>
+				function showReplyInput(event, replyBoxId) {
+			event.preventDefault(); // Sayfanın yenilenmesini önler
+			document.getElementById(replyBoxId).style.display = "block";
+		}
+
+	</script>
+
+}
+	

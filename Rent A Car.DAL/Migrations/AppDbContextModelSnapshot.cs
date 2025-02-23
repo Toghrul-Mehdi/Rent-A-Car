@@ -428,6 +428,44 @@ namespace Rent_A_Car.DAL.Migrations
                     b.ToTable("Models");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdminResponse")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAnswered")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("QuestionText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ResponseAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Questions");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -649,6 +687,17 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Question", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("Questions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.WishList", b =>
                 {
                     b.HasOne("Rent_A_Car.CORE.Entities.Advertisement", "Advertisement")
@@ -692,6 +741,8 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Advertisements");
 
                     b.Navigation("Bookings");
+
+                    b.Navigation("Questions");
 
                     b.Navigation("WishList");
                 });

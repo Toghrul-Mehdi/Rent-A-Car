@@ -440,6 +440,38 @@ namespace Rent_A_Car.MVC.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public async Task<IActionResult> Messages(string? username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByNameAsync(username);
+
+
+            if (user == null)
+            {
+                return NotFound();
+            }           
+
+            var question = await _context.Questions.Include(x=>x.User).Where(x=>x.UserId==user.Id).ToListAsync();
+            
+
+            ViewBag.Questions = question;
+
+            var model = new ProfileDTO
+            {
+                Fullname = user.Fullname,
+                Username = user.UserName,
+                Email = user.Email,
+                Balance = user.Balance,
+                ImageUrl = string.IsNullOrEmpty(user.ImageUrl) ? "/images/profile/photo.jpg" : user.ImageUrl
+            };
+
+            return View(model);
+        }
+
 
 
 
