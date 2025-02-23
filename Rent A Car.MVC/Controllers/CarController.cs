@@ -8,7 +8,16 @@ namespace Rent_A_Car.MVC.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            ViewBag.MaxPrice = await _context.Advertisements.MaxAsync(x=>x.Price);
+            ViewBag.MaxPrice = _context.Advertisements
+     .Where(x => x.Price != null) // Null olan fiyatları hariç tut
+     .AsEnumerable() // Sorguyu client-side'a taşı
+     .Select(x => x.Price)
+     .DefaultIfEmpty(0) // Null değerleri 0 ile değiştir
+     .Max();
+
+
+
+
             ViewBag.Category = await _context.Categories.Where(x=>x.IsDeleted==false).ToListAsync();
             ViewBag.Brand = await _context.Brands
                         .Where(x => x.IsDeleted == false)
