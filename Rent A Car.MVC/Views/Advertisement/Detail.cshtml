@@ -114,11 +114,12 @@
                     else
                     {
                         // Giriş yapmış kullanıcı için rezervasyon formu
+                        <h4  style="margin-bottom: 10px; color: #333;margin-left:95px">Booking</h4>
                         <div class="de-box mb25">
                         <form action="/Booking/Index" method="get">
-                            <input type="hidden" name="advertisementId" value="@Model.Advertisement.Id">
+                            <input type="hidden" name="advertisementId" value="@Model.Advertisement.Id">    
                             <div class="col-lg-3">
-                                <button type="submit" style="background-color:forestgreen" class="btn btn-primary">Book Now</button>
+                                <button  type="submit" style="background-color:forestgreen;width:200px" class="btn btn-primary">Book Now</button>
                             </div>
                         </form>
                         </div>

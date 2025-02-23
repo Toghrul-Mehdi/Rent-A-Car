@@ -17,7 +17,7 @@
                     <div class="spacer-single"></div>
                 </div>
 
-                <div class="col-lg-12">
+                @* <div class="col-lg-12">
                     <div class="spacer-single sm-hide"></div>
                     <div class="p-4 rounded-3 shadow-soft" data-bgcolor="#ffffff">
 
@@ -198,7 +198,7 @@
 
                         </form>
                     </div>
-                </div>
+                </div> *@
 
                 <div class="spacer-double"></div>
 
@@ -406,7 +406,7 @@
             <div class="row text-center">
                 <div class="col-md-3 col-sm-6 mb-sm-30">
                     <div class="de_count bg-dark text-light wow fadeInUp">
-                        <h3 class="timer" data-to="15425" data-speed="3000">0</h3>
+                        <h3 class="timer" data-to="@ViewBag.OrderCount" data-speed="3000">0</h3>
                         Completed Orders
                     </div>
                 </div>
@@ -443,57 +443,56 @@
                     <div class="spacer-20"></div>
                 </div>
 
-                <div id="items-carousel" class="owl-carousel wow fadeIn">
+                <div class="col-lg-9">
+                    <div class="row">
 
-                    @foreach (var item in Model ?? [])
-                    {
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="img/cars/@item.ImageUrl" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>@item.Brand.Name @item.Model</h4>
+                        @foreach (var item in Model ?? [])
+                        {
+                            <div style="width:320px" class="col-xl-4 col-lg-6 car-item" data-category="@item.Category.Id" data-price="@item.Price" data-brand="@item.BrandId">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="img/cars/@item.ImageUrl" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>@item.Brand.Name @item.Model</h4>
 
-                                            @if(User.Identity!.IsAuthenticated){
+                                            @if (User.Identity!.IsAuthenticated && item.UserId != User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
+                                            {
 
-                                            <div class="d-item_like">
-                                                <a class="add-to-favorite" elan-id="@item.Id">
-                                                    <i class="fa-regular fa-heart heart-icon"></i> 
-                                                </a>
+                                                <div class="d-item_like">
+                                                    <a class="add-to-favorite" elan-id="@item.Id">
+                                                        <i class="fa-regular fa-heart heart-icon"></i>
+                                                    </a>
+                                                </div>
+
+                                            }
+
+
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">@item.City</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">@item.FuelType</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
                                             </div>
 
+                                            <!-- View Count -->
+                                            <div class="view-count">
+                                                <i class="fa fa-eye"></i> <span id="view-count-@item.Id">@item.ViewCount</span> views
+                                            </div>
+                                            <div class="d-price">
+                                                Daily rate from <span>$@item.Price</span>
+                                                <a class="btn-main" asp-route-id="@item.Id" asp-action="Detail" asp-controller="Advertisement">Rent Now</a>
+                                            </div>
 
-                                            
-                                            }
-                                        
-
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">@item.City</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">@item.FuelType</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
                                         </div>
-
-                                        <!-- View Count -->
-                                        <div class="view-count">
-                                            <i class="fa fa-eye"></i> <span id="view-count-@item.Id">@item.ViewCount</span> views
-                                        </div>
-                                        <div class="d-price">
-                                            Daily rate from <span>$@item.Price</span>
-                                            <a class="btn-main" asp-route-id="@item.Id" asp-action="Detail" asp-controller="Advertisement">Rent Now</a>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        }                    
+                       
 
-
-                    
-
+                    </div>
                 </div>
 
             </div>
@@ -527,126 +526,7 @@
         </div>
     </section>
 
-    <section id="section-news">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 offset-lg-3 text-center">
-                    <span class="subtitle">Latest From Us</h2></span>
-                    <h2>News &amp; Promo</h2>
-                    <p>Breaking news, fresh perspectives, and in-depth coverage - stay ahead with our latest news, insights, and analysis.</p>
-                    <div class="spacer-20"></div>
-                </div>
-
-                <div class="col-lg-4 mb10">
-                    <div class="bloglist s2 item">
-                        <div class="post-content">
-                            <div class="post-image">
-                                <div class="date-box">
-                                    <div class="m">10</div>
-                                    <div class="d">MAR</div>
-                                </div>
-                                <img alt="" src="images/news/pic-blog-1.jpg" class="lazy">
-                            </div>
-                            <div class="post-text">
-                                <h4><a href="news-single.html">Enjoy Best Travel Experience<span></span></a></h4>
-                                <p>Traveling is an enriching experience that allows us to explore new destinations, immerse ourselves in different cultures, and create lifelong memories.</p>
-                                <a class="btn-main" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb10">
-                    <div class="bloglist s2 item">
-                        <div class="post-content">
-                            <div class="post-image">
-                                <div class="date-box">
-                                    <div class="m">12</div>
-                                    <div class="d">MAR</div>
-                                </div>
-                                <img alt="" src="images/news/pic-blog-2.jpg" class="lazy">
-                            </div>
-                            <div class="post-text">
-                                <h4><a href="news-single.html">The Future of Car Rent<span></span></a></h4>
-                                <p>As technology continues to advance at a rapid pace, the car rental industry is poised for a transformative shift. The future of car rental promises..</p>
-                                <a class="btn-main" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb10">
-                    <div class="bloglist s2 item">
-                        <div class="post-content">
-                            <div class="post-image">
-                                <div class="date-box">
-                                    <div class="m">14</div>
-                                    <div class="d">MAR</div>
-                                </div>
-                                <img alt="" src="images/news/pic-blog-3.jpg" class="lazy">
-                            </div>
-                            <div class="post-text">
-                                <h4><a href="news-single.html">Holiday Tips For Backpacker<span></span></a></h4>
-                                <p>For adventure seekers and budget-conscious travelers, backpacking offers a thrilling and immersive way to explore the world. Whether you're embarking..</p>
-                                <a class="btn-main" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="section-testimonials" class="no-top no-bottom">
-        <div class="container-fluid">
-            <div class="row g-2 p-2 align-items-center">
-
-                <div class="col-md-4">
-                    <div class="de-image-text">
-                        <div class="d-text">
-                            <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                            <h4>Excellent Service! Car Rent Service!</h4>
-                            <blockquote>
-                                I have been using Rentaly for my Car Rental needs for over 5 years now. I have never had any problems with their service. Their customer support is always responsive and helpful. I would recommend Rentaly to anyone looking for a reliable Car Rental provider.
-                                <span class="by">Stepanie Hutchkiss</span>
-                            </blockquote>
-                        </div>
-                        <img src="images/testimonial/1.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="de-image-text">
-                        <div class="d-text">
-                            <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                            <h4>Excellent Service! Car Rent Service!</h4>
-                            <blockquote>
-                                We have been using Rentaly for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.
-                                <span class="by">Jovan Reels</span>
-                            </blockquote>
-                        </div>
-                        <img src="images/testimonial/2.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="de-image-text">
-                        <div class="d-text">
-                            <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                            <h4>Excellent Service! Car Rent Service!</h4>
-                            <blockquote>
-                                Endorsed by industry experts, Rentaly is the Car Rental solution you can trust. With years of experience in the field, we provide fast, reliable and secure Car Rental services.
-                                <span class="by">Kanesha Keyton</span>
-                            </blockquote>
-                        </div>
-                        <img src="images/testimonial/3.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    
 
     <section id="section-faq">
         <div class="container">
@@ -731,7 +611,7 @@
                                 1 200 333 800
                             </span>
                         </div>
-                        <a href="#" class="btn-main">Contact Us</a>
+                        <a asp-action="Index" asp-controller="Contact" class="btn-main">Contact Us</a>
                     </div>
                 </div>
             </div>

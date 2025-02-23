@@ -2,251 +2,221 @@
 @using Rent_A_Car.CORE.Entities
 @model ProfileDTO
 @{
-    var favouriteList = ViewBag.Favourite;
+	var favouriteList = ViewBag.Favourite;
 }
 <!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
-    <div id="top"></div>
+	<div id="top"></div>
 
-    <!-- section begin -->
-    <section id="subheader" class="jarallax text-light">
-        <img src="~/images/background/14.jpg" class="jarallax-img" alt="">
-        <div class="center-y relative text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1>Dashboard</h1>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section close -->
+	<!-- section begin -->
+	<section id="subheader" class="jarallax text-light">
+		<img src="~/images/background/14.jpg" class="jarallax-img" alt="">
+		<div class="center-y relative text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>Dashboard</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- section close -->
 
-    <section id="section-cars" class="bg-gray-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 mb30">
-                    <div class="card padding30 rounded-5">
-                        <div class="profile_avatar">
-                            <div style="color:limegreen" class="profile_img">
-                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
-                                {
-                                    <img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
-                                }
-                                else
-                                {
-                                    <img src="~/images/profile/1.jpg" alt="Default Profile Photo">
-                                }
-                            </div>
-                            <div class="profile_name">
-                                <h4>
-                                    @Model.Fullname
-                                    <span class="profile_username text-gray">@Model.Email</span>
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="spacer-20"></div>
-                        <ul class="menu-col">
-                            <li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username" style="background-color:limegreen" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
-                            <li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Advertisement</a></li>
-                            <li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
-                            <li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
-                        </ul>
-                    </div>
-                </div>
+	<section id="section-cars" class="bg-gray-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 mb30">
+					<div class="card padding30 rounded-5">
+						<div class="profile_avatar">
+							<div style="color:limegreen" class="profile_img">
+								
+									<img src="~/img/users/admin.jpg" alt="Profile Photo">
+								
+							</div>
+							<div class="profile_name">
+								<h4>
+									@Model.Fullname
+									<span class="profile_username text-gray">@Model.Email</span>
+								</h4>
+							</div>
+						</div>
+						<div class="spacer-20"></div>
+						<ul class="menu-col">
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username" style="background-color:limegreen" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Advertisement</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-lg-3 col-6 mb25 order-sm-1">
-                            <div class="card padding30 rounded-5">
-                                <div class="symbol mb40">
-                                    <!-- Buraya ikon eklenebilir -->
-                                </div>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-lg-3 col-6 mb25 order-sm-1">
+							<div class="card padding30 rounded-5">
+								<div class="symbol mb40">
+									<!-- Buraya ikon eklenebilir -->
+								</div>
 
-                                <!-- Medaxil Butonu -->
-                                <a class="btn btn-success" id="medaxilBtn">
-                                    <i class="fas fa-plus"></i> Medaxil
-                                </a>
-                                <form method="post" action="/Profile/Medaxil">
-                                    <!-- Medaxil Input (Başlangıçta Gizli) -->
-                                    <input type="number" id="medaxilInput" class="form-control mt-2"
-                                           placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
+								<!-- Medaxil Butonu -->
+								<a class="btn btn-success" id="medaxilBtn">
+									<i class="fas fa-plus"></i> Medaxil
+								</a>
+								<form method="post" action="/Profile/Medaxil">
+									<!-- Medaxil Input (Başlangıçta Gizli) -->
+									<input type="number" id="medaxilInput" class="form-control mt-2"
+										   placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
 
-                                    <input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
+									<input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
 
-                                    <button type="submit" id="confirmMedaxil" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
-                                </form>
+									<button type="submit" id="confirmMedaxil" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
+								</form>
 
-                                <br />
+								<br />
 
-                                <!-- Mexaric Butonu -->
-                                <a class="btn btn-danger" id="mexaricBtn">
-                                    <i class="fas fa-minus"></i> Mexaric
-                                </a>
+								<!-- Mexaric Butonu -->
+								<a class="btn btn-danger" id="mexaricBtn">
+									<i class="fas fa-minus"></i> Mexaric
+								</a>
 
-                                <form method="post" action="/Profile/Mexaric">
-                                    <!-- Mexaric Input (Başlangıçta Gizli) -->
-                                    <input type="number" id="mexaricInput" class="form-control mt-2"
-                                           placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
+								<form method="post" action="/Profile/Mexaric">
+									<!-- Mexaric Input (Başlangıçta Gizli) -->
+									<input type="number" id="mexaricInput" class="form-control mt-2"
+										   placeholder="Miqdarı daxil edin" maxlength="5" style="display: none;" name="amount">
 
-                                    <input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
+									<input type="hidden" name="username" value="@User.Identity!.Name"> <!-- Kullanıcı adı buraya yerleştirildi -->
 
-                                    <button type="submit" id="confirmMexaric" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
-                                </form>
+									<button type="submit" id="confirmMexaric" class="btn btn-primary mt-2" style="display: none;">Təsdiqlə</button>
+								</form>
 
 
-                            </div>
-                        </div>
+							</div>
+						</div>
 
 
-                        <div class="col-lg-3 col-6 mb25 order-sm-1">
-                            <div class="card padding30 rounded-5">
-                                <div class="symbol mb40">
-                                    <i class="fa id-color fa-2x fa-tags"></i>
-                                </div>
-                                <span class="h1 mb0">12</span>
-                                <span class="text-gray">Coupons</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mb25 order-sm-1">
-                            <div class="card padding30 rounded-5">
-                                <div class="symbol mb40">
-                                    <i class="fa id-color fa-2x fa-calendar-check-o"></i>
-                                </div>
-                                <span class="h1 mb0">03</span>
-                                <span class="text-gray">Upcoming Orders</span>
-                            </div>
-                        </div>
+						<div class="col-lg-3 col-6 mb25 order-sm-1">
+							<div class="card padding30 rounded-5">
+								<div class="symbol mb40">
+									<i class="fa id-color fa-2x fa-car"></i>
+								</div>
+								<span class="h1 mb0">@ViewBag.FavCount</span>
+								<span class="text-gray">Favourites</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-6 mb25 order-sm-1">
+							<div class="card padding30 rounded-5">
+								<div class="symbol mb40">
+									<i class="fa id-color fa-2x fa-calendar-check-o"></i>
+								</div>
+								<span class="h1 mb0">@ViewBag.OrderCount</span>
+								<span class="text-gray">Orders</span>
+							</div>
+						</div>
 
 
 
-                        <div class="col-lg-3 col-6 mb25 order-sm-1">
-                            <div class="card padding30 rounded-5">
-                                <div class="symbol mb40">
-                                    <i class="fa id-color fa-2x fa-calendar"></i>
-                                </div>
-                                <span class="h1 mb0">58</span>
-                                <span class="text-gray">Total Orders</span>
-                            </div>
-                        </div>
+						<div class="col-lg-3 col-6 mb25 order-sm-1">
+							<div class="card padding30 rounded-5">
+								<div class="symbol mb40">
+									<i class="fa id-color fa-2x fa-calendar"></i>
+								</div>
+								<span class="h1 mb0">@ViewBag.AdvCount</span>
+								<span class="text-gray">Total Advertisements</span>
+							</div>
+						</div>
 
 
-                    </div>
+					</div>
 
-                    <div class="card padding30 rounded-5 mb25">
-                        <h4>My Recent Orders</h4>
+					<div class="card padding30 rounded-5 mb25">
+						<h4>My Recent Orders</h4>
 
-                        <table class="table de-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col"><span class="fs-12 text-gray">Order ID</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Car Name</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Pick Up Location</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Drop Off Location</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Pick Up Date</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Return Date</span></th>
-                                    <th scope="col"><span class="fs-12 text-gray">Status</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#01236</div></td>
-                                    <td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">Jeep Renegade</span></td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Location</span>New York</td>
-                                    <td><span class="d-lg-none d-sm-block">Drop Off Location</span>Los Angeles</td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Date</span>March 2, 2023</td>
-                                    <td><span class="d-lg-none d-sm-block">Return Date</span>March 10, 2023</td>
-                                    <td><div class="badge rounded-pill bg-success">completed</div></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#01263</div></td>
-                                    <td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">Mini Cooper</span></td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Location</span>San Fransisco</td>
-                                    <td><span class="d-lg-none d-sm-block">Drop Off Location</span>Chicago</td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Date</span>March 8, 2023</td>
-                                    <td><span class="d-lg-none d-sm-block">Return Date</span>March 10, 2023</td>
-                                    <td><div class="badge rounded-pill bg-danger">cancelled</div></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#01245</div></td>
-                                    <td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">Ferrari Enzo</span></td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Location</span>Philadelphia</td>
-                                    <td><span class="d-lg-none d-sm-block">Drop Off Location</span>Washington</td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Date</span>March 6, 2023</td>
-                                    <td><span class="d-lg-none d-sm-block">Return Date</span>March 10, 2023</td>
-                                    <td><div class="badge rounded-pill bg-warning">scheduled</div></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#01287</div></td>
-                                    <td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">Hyundai Staria</span></td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Location</span>Kansas City</td>
-                                    <td><span class="d-lg-none d-sm-block">Drop Off Location</span>Houston</td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Date</span>March 13, 2023</td>
-                                    <td><span class="d-lg-none d-sm-block">Return Date</span>March 10, 2023</td>
-                                    <td><div class="badge rounded-pill bg-success">completed</div></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#01216</div></td>
-                                    <td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">Toyota Rav 4</span></td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Location</span>Baltimore</td>
-                                    <td><span class="d-lg-none d-sm-block">Drop Off Location</span>Sacramento</td>
-                                    <td><span class="d-lg-none d-sm-block">Pick Up Date</span>March 7, 2023</td>
-                                    <td><span class="d-lg-none d-sm-block">Return Date</span>March 10, 2023</td>
-                                    <td><div class="badge rounded-pill bg-warning">scheduled</div></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="card padding30 rounded-5">
-                        <h4>My Favorites</h4>
-                        <div class="spacer-10"></div>
-                        @if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
-                        {
-                            @foreach (var item in ViewBag.Favourite)
-                            {
+						<table class="table de-table">
+							<thead>
+								<tr>
+									<th scope="col"><span class="fs-12 text-gray">Order ID</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Car Name</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Pick Up Location</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Pick Up Date</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Return Date</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Status</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								@if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
+								{
+						
+								@foreach (var item in ViewBag.Orders)
+								{
+									<tr>
+										<td><span class="d-lg-none d-sm-block">Order ID</span><div class="badge bg-gray-100 text-dark">#@item.Id</div></td>
+										<td><span class="d-lg-none d-sm-block">Car Name</span><span class="bold">@item.Advertisement.Brand.Name  @item.Advertisement.Model</span></td>
+										<td><span class="d-lg-none d-sm-block">Pick Up Location</span>@item.Advertisement.City</td>
+										<td><span class="d-lg-none d-sm-block">Pick Up Date</span>@item.StartDate.ToString("dd/MM/yyyy")</td>
+										<td><span class="d-lg-none d-sm-block">Return Date</span>@item.EndDate.ToString("dd/MM/yyyy")</td>
+										<td><div class="badge rounded-pill bg-warning">scheduled</div></td>
+									</tr>
+								}
+								}
+								else
+								{
+									<h3>Orders Empty</h3>
+								}
 
 
-                                <div class="de-item-list no-border mb30">
-                                    <div class="d-img">
-                                        <img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
-                                            <div class="d-atr-group">
-                                                <ul class="d-atr">
-                                                    <li><span>Seats:</span> 4</li>
-                                                    <li><span>Luggage:</span> 2</li>
-                                                    <li><span>Doors:</span> 4</li>
-                                                    <li><span>City:</span> @(item.Advertisement.City)</li>
-                                                    <li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
-                                                    <li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-price">
-                                        Daily rate from <span>$@(item.Advertisement.Price)</span>
-                                        <a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Rent Now</a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            }
-                        }
-                        else
-                        {
-                            <h3>List Empty</h3>
-                        }
+							</tbody>
+						</table>
+					</div>
+					<div class="card padding30 rounded-5">
+						<h4>My Favorites</h4>
+						<div class="spacer-10"></div>
+						@if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
+						{
+							@foreach (var item in ViewBag.Favourite)
+							{
+
+
+								<div class="de-item-list no-border mb30">
+									<div class="d-img">
+										<img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
+									</div>
+									<div class="d-info">
+										<div class="d-text">
+											<h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
+											<div class="d-atr-group">
+												<ul class="d-atr">
+													<li><span>Seats:</span> 4</li>
+													<li><span>Luggage:</span> 2</li>
+													<li><span>Doors:</span> 4</li>
+													<li><span>City:</span> @(item.Advertisement.City)</li>
+													<li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
+													<li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="d-price">
+										Daily rate from <span>$@(item.Advertisement.Price)</span>
+										<a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Rent Now</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							}
+						}
+						else
+						{
+							<h3>List Empty</h3>
+						}
 
 
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 </div>
@@ -254,135 +224,135 @@
 
 <a href="#" id="back-to-top"></a>
 @section scripts {
-    <script>
-                        document.getElementById("medaxilBtn").addEventListener("click", function () {
-            var medaxilInput = document.getElementById("medaxilInput");
-            var confirmMedaxil = document.getElementById("confirmMedaxil");
-            var mexaricInput = document.getElementById("mexaricInput");
-            var confirmMexaric = document.getElementById("confirmMexaric");
+	<script>
+						document.getElementById("medaxilBtn").addEventListener("click", function () {
+			var medaxilInput = document.getElementById("medaxilInput");
+			var confirmMedaxil = document.getElementById("confirmMedaxil");
+			var mexaricInput = document.getElementById("mexaricInput");
+			var confirmMexaric = document.getElementById("confirmMexaric");
 
-            // Mexaric kapat
-            mexaricInput.style.display = "none";
-            confirmMexaric.style.display = "none";
+			// Mexaric kapat
+			mexaricInput.style.display = "none";
+			confirmMexaric.style.display = "none";
 
-            // Medaxil aç/kapat
-            if (medaxilInput.style.display === "none") {
-                medaxilInput.style.display = "block";
-                confirmMedaxil.style.display = "block";
-                medaxilInput.focus();
-            } else {
-                medaxilInput.style.display = "none";
-                confirmMedaxil.style.display = "none";
-            }
-        });
+			// Medaxil aç/kapat
+			if (medaxilInput.style.display === "none") {
+				medaxilInput.style.display = "block";
+				confirmMedaxil.style.display = "block";
+				medaxilInput.focus();
+			} else {
+				medaxilInput.style.display = "none";
+				confirmMedaxil.style.display = "none";
+			}
+		});
 
-        document.getElementById("mexaricBtn").addEventListener("click", function () {
-            var medaxilInput = document.getElementById("medaxilInput");
-            var confirmMedaxil = document.getElementById("confirmMedaxil");
-            var mexaricInput = document.getElementById("mexaricInput");
-            var confirmMexaric = document.getElementById("confirmMexaric");
+		document.getElementById("mexaricBtn").addEventListener("click", function () {
+			var medaxilInput = document.getElementById("medaxilInput");
+			var confirmMedaxil = document.getElementById("confirmMedaxil");
+			var mexaricInput = document.getElementById("mexaricInput");
+			var confirmMexaric = document.getElementById("confirmMexaric");
 
-            // Medaxil kapat
-            medaxilInput.style.display = "none";
-            confirmMedaxil.style.display = "none";
+			// Medaxil kapat
+			medaxilInput.style.display = "none";
+			confirmMedaxil.style.display = "none";
 
-            // Mexaric aç/kapat
-            if (mexaricInput.style.display === "none") {
-                mexaricInput.style.display = "block";
-                confirmMexaric.style.display = "block";
-                mexaricInput.focus();
-            } else {
-                mexaricInput.style.display = "none";
-                confirmMexaric.style.display = "none";
-            }
-        });
+			// Mexaric aç/kapat
+			if (mexaricInput.style.display === "none") {
+				mexaricInput.style.display = "block";
+				confirmMexaric.style.display = "block";
+				mexaricInput.focus();
+			} else {
+				mexaricInput.style.display = "none";
+				confirmMexaric.style.display = "none";
+			}
+		});
 
-        // Təsdiqlə butonları için event ekleme
-        document.getElementById("confirmMedaxil").addEventListener("click", function () {
-            var miktar = document.getElementById("medaxilInput").value;
-            if (miktar) {
-                alert("Medaxil miqdarı: " + miktar);
-                document.getElementById("medaxilInput").style.display = "none";
-                document.getElementById("confirmMedaxil").style.display = "none";
-            } else {
-                alert("Lütfən miqdarı daxil edin!");
-            }
-        });
+		// Təsdiqlə butonları için event ekleme
+		document.getElementById("confirmMedaxil").addEventListener("click", function () {
+			var miktar = document.getElementById("medaxilInput").value;
+			if (miktar) {
+				alert("Medaxil miqdarı: " + miktar);
+				document.getElementById("medaxilInput").style.display = "none";
+				document.getElementById("confirmMedaxil").style.display = "none";
+			} else {
+				alert("Lütfən miqdarı daxil edin!");
+			}
+		});
 
-        document.getElementById("confirmMexaric").addEventListener("click", function () {
-            var miktar = document.getElementById("mexaricInput").value;
-            if (miktar) {
-                alert("Mexaric miqdarı: " + miktar);
-                document.getElementById("mexaricInput").style.display = "none";
-                document.getElementById("confirmMexaric").style.display = "none";
-            } else {
-                alert("Lütfən miqdarı daxil edin!");
-            }
-        });
+		document.getElementById("confirmMexaric").addEventListener("click", function () {
+			var miktar = document.getElementById("mexaricInput").value;
+			if (miktar) {
+				alert("Mexaric miqdarı: " + miktar);
+				document.getElementById("mexaricInput").style.display = "none";
+				document.getElementById("confirmMexaric").style.display = "none";
+			} else {
+				alert("Lütfən miqdarı daxil edin!");
+			}
+		});
 
 
-    </script>
-    <script>
-        document.getElementById("medaxilInput").addEventListener("input", function () {
-            // 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
-        this.value = this.value.replace(/\D/g, '');
+	</script>
+	<script>
+		document.getElementById("medaxilInput").addEventListener("input", function () {
+			// 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
+		this.value = this.value.replace(/\D/g, '');
 
-        // 2️⃣ 0 ile başlıyorsa temizle
-        if (this.value.startsWith("0")) {
-            this.value = "";
-        }
-        // 3️⃣ Maksimum uzunluk kontrolü (Örnek: 10 karakter)
-        let maxLength = 5;
-        if (this.value.length > maxLength) {
-            this.value = this.value.substring(0, maxLength);
-        }
-        });
-    </script>
-    <script>
-               document.getElementById("mexaricInput").addEventListener("input", function () {
-            // 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
-            this.value = this.value.replace(/\D/g, '');
+		// 2️⃣ 0 ile başlıyorsa temizle
+		if (this.value.startsWith("0")) {
+			this.value = "";
+		}
+		// 3️⃣ Maksimum uzunluk kontrolü (Örnek: 10 karakter)
+		let maxLength = 5;
+		if (this.value.length > maxLength) {
+			this.value = this.value.substring(0, maxLength);
+		}
+		});
+	</script>
+	<script>
+			   document.getElementById("mexaricInput").addEventListener("input", function () {
+			// 1️⃣ Harfleri ve sembolleri sil, sadece rakamları bırak
+			this.value = this.value.replace(/\D/g, '');
 
-            // 2️⃣ 0 ile başlıyorsa temizle
-            if (this.value.startsWith("0")) {
-                this.value = "";
-            }
+			// 2️⃣ 0 ile başlıyorsa temizle
+			if (this.value.startsWith("0")) {
+				this.value = "";
+			}
 
-            // 3️⃣ Maksimum uzunluk kontrolü (Örnek: 5 karakter)
-            let maxLength = 5;
-            if (this.value.length > maxLength) {
-                this.value = this.value.substring(0, maxLength);
-            }
+			// 3️⃣ Maksimum uzunluk kontrolü (Örnek: 5 karakter)
+			let maxLength = 5;
+			if (this.value.length > maxLength) {
+				this.value = this.value.substring(0, maxLength);
+			}
 
-            // 4️⃣ Bakiyeye uygunluk kontrolü
-            let amount = parseInt(this.value);
-            if (amount > 0) {
-                // Fetch ile kullanıcının bakiyesini kontrol et
-                fetch('/Profile/GetUserBalance', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                })
-                .then(response => response.json())
-                .then(data => {
-                    let userBalance = data.balance;
+			// 4️⃣ Bakiyeye uygunluk kontrolü
+			let amount = parseInt(this.value);
+			if (amount > 0) {
+				// Fetch ile kullanıcının bakiyesini kontrol et
+				fetch('/Profile/GetUserBalance', {
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				})
+				.then(response => response.json())
+				.then(data => {
+					let userBalance = data.balance;
 
-                    if (amount > userBalance) {
-                        // Bakiyeden fazla bir miktar girilirse, kullanıcıyı uyar
-                        alert('Yeterli bakiyeniz yok!');
-                        // Mexaric inputunu temizle
-                        this.value = "";
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            }
-        });
+					if (amount > userBalance) {
+						// Bakiyeden fazla bir miktar girilirse, kullanıcıyı uyar
+						alert('Yeterli bakiyeniz yok!');
+						// Mexaric inputunu temizle
+						this.value = "";
+					}
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+			}
+		});
 
-    </script>
-   
+	</script>
+
 
 
 

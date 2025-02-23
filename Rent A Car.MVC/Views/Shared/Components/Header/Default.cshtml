@@ -7,14 +7,10 @@
         {
             <span class="badge rounded-pill bg-warning text-dark">Balance: @Model.Balance</span>
             <span id="de-click-menu-profile" class="de-menu-profile">
-                @if (!string.IsNullOrEmpty(Model.ImageUrl))
-                {
-                    <img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
-                }
-                else
-                {
-                    <img src="~/images/profile/1.jpg" alt="Default Profile Photo">
-                }
+                
+                    <img src="~/img/users/admin.jpg" alt="Profile Photo">               
+                    
+                
             </span>
 
             <div id="de-submenu-profile" class="de-submenu">

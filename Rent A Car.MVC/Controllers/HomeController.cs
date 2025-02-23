@@ -14,6 +14,7 @@ namespace Rent_A_Car.MVC.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.AdvCount = await _context.Advertisements.CountAsync();
+            ViewBag.OrderCount = await _context.Bookings.CountAsync();
             ViewBag.UserCount = await _context.Users.CountAsync();
             return View(await _context.Advertisements
                 .Where(x => !x.IsDeleted

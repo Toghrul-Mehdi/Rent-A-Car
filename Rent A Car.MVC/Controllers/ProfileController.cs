@@ -31,6 +31,22 @@ namespace Rent_A_Car.MVC.Controllers
             }
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
 
+            var orders = await _context.Bookings.Include(x=>x.Advertisement)
+                .ThenInclude(x=>x.Brand)
+                .Include(x=>x.Advertisement)
+                .ThenInclude(x=>x.Category)
+                .Include(x=>x.User)
+                .ToListAsync();
+
+            if (orders == null || !orders.Any())
+            {
+                ViewBag.Orders = new List<Booking>();
+            }
+            else
+            {
+                ViewBag.Orders = orders;
+            }
+
             var favouriteList = await _context.WishLists
                 .Where(x => x.UserId == userId)
                 .Include(x => x.Advertisement)
@@ -39,6 +55,8 @@ namespace Rent_A_Car.MVC.Controllers
                 .ThenInclude(x => x.Category)
                 .Include(x => x.User)
                 .ToListAsync();
+
+
 
             if (favouriteList == null || !favouriteList.Any())
             {
@@ -57,7 +75,17 @@ namespace Rent_A_Car.MVC.Controllers
                 Balance = user.Balance,
                 ImageUrl = string.IsNullOrEmpty(user.ImageUrl) ? "/images/profile/photo.jpg" : user.ImageUrl
             };
-
+            ViewBag.AdvCount = await _context.Advertisements.Include(x=>x.User).Where(x=>x.UserId == userId).CountAsync();
+            ViewBag.OrderCount = await _context.Bookings.Include(x => x.User).Where(x=>x.UserID == userId).CountAsync(); 
+            ViewBag.FavCount = await _context.WishLists
+                .Where(x => x.UserId == userId)
+                .Include(x => x.Advertisement)
+                .ThenInclude(x => x.Brand)
+                .Include(x => x.Advertisement)                
+                .ThenInclude(x => x.Category)
+                .Include(x => x.User)
+                .Where(x => x.Advertisement.IsDeleted == false)
+                .CountAsync();
             return View(model);
         }
         public async Task<IActionResult> FavouriteCar(string username)

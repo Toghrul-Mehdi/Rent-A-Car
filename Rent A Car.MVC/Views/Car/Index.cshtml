@@ -106,7 +106,7 @@
                                         <div class="d-text">
                                             <h4>@item.Brand.Name @item.Model</h4>
 
-                                            @if (User.Identity!.IsAuthenticated)
+                                            @if (User.Identity!.IsAuthenticated && item.UserId != User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
                                             {
 
                                                 <div class="d-item_like">

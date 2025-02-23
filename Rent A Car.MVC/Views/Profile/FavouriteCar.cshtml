@@ -1,4 +1,7 @@
-﻿<!-- content begin -->
+﻿@using Rent_A_Car.BL.DTOs.Profile
+@using Rent_A_Car.CORE.Enums
+@model ProfileDTO
+<!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
 	<div id="top"></div>
 
@@ -25,19 +28,12 @@
 					<div class="card padding30 rounded-5">
 						<div class="profile_avatar">
 							<div style="color:limegreen" class="profile_img">
-								@if (!string.IsNullOrEmpty(Model.ImageUrl))
-								{
-									<img src="~/img/users/@Model.ImageUrl" alt="Profile Photo">
-								}
-								else
-								{
-									<img src="~/images/profile/1.jpg" alt="Default Profile Photo">
-								}
+								<img src="~/img/users/admin.jpg" alt="Profile Photo">
 							</div>
 							<div class="profile_name">
 								<h4>
-									Monica Lucas
-									<span class="profile_username text-gray">monica@rentaly.com</span>
+									@Model.Username
+									<span class="profile_username text-gray">@Model.Email</span>
 								</h4>
 							</div>
 						</div>
