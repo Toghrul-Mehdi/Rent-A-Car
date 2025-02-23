@@ -41,7 +41,7 @@ namespace Rent_A_Car.BL.Services.Implement
 
         public async Task<List<Model>> GetAllAsync()
         {
-            return await _context.Models.Where(x => x.IsDeleted == false).Include(x => x.Category).Include(x=>x.Brand).ToListAsync();
+            return await _context.Models.Where(x => x.IsDeleted == false).Include(x => x.Category).Include(x=>x.Brand).Where(x=>x.Brand.IsDeleted==false).Where(x => x.Category.IsDeleted == false).ToListAsync();
         }
 
         public async Task<ModelUpdateDTO> GetByDataAsync(int? id)

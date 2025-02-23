@@ -39,34 +39,44 @@ namespace Rent_A_Car.MVC.Controllers
                 .Where(x => x.IsDeleted == false)
                 .ToListAsync();
 
-
+            
             ViewBag.Brand = brands;
 
 
-            if (!ModelState.IsValid)
-                return View();
 
-            if (dto.CoverImage != null)
+
+            if (dto.CoverImage != null && dto.CoverImage.Length > 0) 
             {
-                if (!dto.CoverImage.ContentType.StartsWith("image"))
+                if (string.IsNullOrEmpty(dto.CoverImage.ContentType) || !dto.CoverImage.ContentType.StartsWith("image"))
                 {
-                    ModelState.AddModelError("File", "File must be image!");
+                    ModelState.AddModelError("CoverImage", "File must be an image!");
                 }
                 if (dto.CoverImage.Length > 5 * 1024 * 1024)
                 {
-                    ModelState.AddModelError("File", "File must be less than 5mb!");
+                    ModelState.AddModelError("CoverImage", "File must be less than 5MB!");
                 }
             }
+            else
+            {
+                ModelState.AddModelError("CoverImage", "Cover image is required.");
+            }
+
             if (dto.OtherFiles != null && dto.OtherFiles.Any())
             {
-                if (!dto.OtherFiles.All(x => x.ContentType.StartsWith("image")))
+                if (dto.OtherFiles.Count > 3)
+                {
+                    ModelState.AddModelError("OtherFiles", "You can upload a maximum of 3 images.");
+                }
+
+                if (dto.OtherFiles.Any(x => string.IsNullOrEmpty(x.ContentType) || !x.ContentType.StartsWith("image")))
                 {
                     string fileNames = string.Join(',', dto.OtherFiles
-                        .Where(x => !x.ContentType.StartsWith("image"))
+                        .Where(x => string.IsNullOrEmpty(x.ContentType) || !x.ContentType.StartsWith("image"))
                         .Select(x => x.FileName));
                     ModelState.AddModelError("OtherFiles", fileNames + " is (are) not an image.");
                 }
-                if (!dto.OtherFiles.All(x => x.Length <= 5 * 1024 * 1024))
+
+                if (dto.OtherFiles.Any(x => x.Length > 5 * 1024 * 1024))
                 {
                     string fileNames = string.Join(',', dto.OtherFiles
                         .Where(x => x.Length > 5 * 1024 * 1024)
@@ -74,6 +84,8 @@ namespace Rent_A_Car.MVC.Controllers
                     ModelState.AddModelError("OtherFiles", fileNames + " is (are) bigger than 5MB.");
                 }
             }
+
+
             if (!ModelState.IsValid)
             {
                 ViewBag.Brand = await _context.Brands
@@ -81,6 +93,7 @@ namespace Rent_A_Car.MVC.Controllers
                     .ToListAsync();
                 return View(dto);
             }
+
 
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
             int categoryId = await _context.Models.Where(x=>x.Name==dto.Model).Select(dto=>dto.CategoryId).FirstOrDefaultAsync();

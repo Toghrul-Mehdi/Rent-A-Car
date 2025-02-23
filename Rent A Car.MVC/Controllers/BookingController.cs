@@ -113,7 +113,15 @@ namespace Rent_A_Car.MVC.Controllers
             // 10. Değişiklikleri kaydet
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index", "Home");
+            var username = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
+
+            if (string.IsNullOrEmpty(username))
+            {
+                return Unauthorized(); 
+            }
+
+            return RedirectToAction("Index", "Profile", new { username });
+
         }
 
 

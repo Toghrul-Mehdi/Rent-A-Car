@@ -27,9 +27,7 @@ namespace Rent_A_Car.BL.DTOs.Advertisement
         [Required]
         public int BrandId { get; set; }
         [Required]
-        public string Model { get; set; }
-        public string UserId { get; set; } = null!;
-        public User User { get; set; }
+        public string Model { get; set; }        
         public Fuel FuelType { get; set; } 
         public Color Color { get; set; } 
         public AdvertisementStatus Status { get; set; } 
