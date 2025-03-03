@@ -35,16 +35,12 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Microsof
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
@@ -266,8 +262,5 @@ C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\ru\Micro
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\obj\Debug\net8.0\Rent A Car.MVC.sourcelink.json
+C:\Users\Victus\source\repos\Rent A Car\Rent A Car.MVC\bin\Debug\net8.0\Stripe.net.dll

@@ -9,11 +9,11 @@ namespace Rent_A_Car.MVC.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.MaxPrice = _context.Advertisements
-     .Where(x => x.Price != null) // Null olan fiyatları hariç tut
-     .AsEnumerable() // Sorguyu client-side'a taşı
-     .Select(x => x.Price)
-     .DefaultIfEmpty(0) // Null değerleri 0 ile değiştir
-     .Max();
+            .Where(x => x.Price != null) 
+            .AsEnumerable() 
+            .Select(x => x.Price)
+            .DefaultIfEmpty(0) 
+            .Max();
 
 
 

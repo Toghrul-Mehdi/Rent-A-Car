@@ -179,43 +179,59 @@ namespace Rent_A_Car.MVC.Controllers
         public async Task<IActionResult> Medaxil(string? username, int? amount)
         {
             if (!amount.HasValue || amount <= 0)
-                return BadRequest("Miqdar düzgün daxil edilməyib.");
+            {
+                TempData["Error"] = "Miqdar düzgün daxil edilməyib.";
+                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+            }
 
             var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
 
             if (user == null)
-                return NotFound("İstifadəçi tapılmadı.");
+            {
+                TempData["Error"] = "İstifadəçi tapılmadı.";
+                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+            }
 
             // Bakiyeye ekleme işlemi
             user.Balance += amount.Value;
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
 
+            TempData["Success"] = "Məbləğ uğurla əlavə edildi!";
+            return RedirectToAction("Index", "Profile", new { username = User.Identity!.Name });
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Mexaric(string? username, int? amount)
         {
             if (!amount.HasValue || amount <= 0)
-                return BadRequest("Miqdar düzgün daxil edilməyib.");
+            {
+                TempData["Error"] = "Miqdar düzgün daxil edilməyib.";
+                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+            }
 
             var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
 
             if (user == null)
-                return NotFound("İstifadəçi tapılmadı.");
+            {
+                TempData["Error"] = "İstifadəçi tapılmadı.";
+                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
+            }
 
             if (user.Balance >= amount)
             {
                 user.Balance -= amount.Value;
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
-
+                TempData["Success"] = "Məbləğ uğurla çıxarıldı!";
             }
             else
             {
-                return BadRequest("Yeterli balans yoxdur.");
+                TempData["Error"] = "Yeterli balans yoxdur.";
             }
+
+            return RedirectToAction("Index", "Profile", new { username = User.Identity.Name });
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetUserBalance()

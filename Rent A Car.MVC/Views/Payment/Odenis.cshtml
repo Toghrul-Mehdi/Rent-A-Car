@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+<h1>Payment</h1>
+<button id="checkout-button">Ödəniş et</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe("pk_test_51Qn2HoJrd7Qcqp7aXK2QNeh2dANOFR9xHafZaPewRwZbkpmpU8QEB7KeqITs5kKS4E5WSnYAiUlIbRU03lFnFlsk008NqfLQfp");
+
+    document.getElementById("checkout-button").addEventListener("click", function () {
+        fetch("/create-checkout-session", { method: "POST" })
+            .then(response => response.json())
+            .then(session => {
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .catch(error => console.error("Error:", error));
+    });
+</script>

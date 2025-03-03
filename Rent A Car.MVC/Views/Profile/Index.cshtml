@@ -4,6 +4,7 @@
 @{
 	var favouriteList = ViewBag.Favourite;
 }
+
 <!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
 	<div id="top"></div>
@@ -59,6 +60,19 @@
 							<div class="card padding30 rounded-5">
 								<div class="symbol mb40">
 									<!-- Buraya ikon eklenebilir -->
+								@if (TempData["Success"] != null)
+								{
+									<div class="alert alert-success">
+										@TempData["Success"]
+									</div>
+								}
+
+								@if (TempData["Error"] != null)
+								{
+									<div class="alert alert-danger">
+										@TempData["Error"]
+									</div>
+								}
 								</div>
 
 								<!-- Medaxil Butonu -->
@@ -272,22 +286,22 @@
 		document.getElementById("confirmMedaxil").addEventListener("click", function () {
 			var miktar = document.getElementById("medaxilInput").value;
 			if (miktar) {
-				alert("Medaxil miqdarı: " + miktar);
+				
 				document.getElementById("medaxilInput").style.display = "none";
 				document.getElementById("confirmMedaxil").style.display = "none";
 			} else {
-				alert("Lütfən miqdarı daxil edin!");
+				
 			}
 		});
 
 		document.getElementById("confirmMexaric").addEventListener("click", function () {
 			var miktar = document.getElementById("mexaricInput").value;
 			if (miktar) {
-				alert("Mexaric miqdarı: " + miktar);
+				
 				document.getElementById("mexaricInput").style.display = "none";
 				document.getElementById("confirmMexaric").style.display = "none";
 			} else {
-				alert("Lütfən miqdarı daxil edin!");
+				
 			}
 		});
 
@@ -341,7 +355,7 @@
 
 					if (amount > userBalance) {
 						// Bakiyeden fazla bir miktar girilirse, kullanıcıyı uyar
-						alert('Yeterli bakiyeniz yok!');
+						alert('Yeterli balans yoxdu!');
 						// Mexaric inputunu temizle
 						this.value = "";
 					}

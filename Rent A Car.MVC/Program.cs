@@ -7,6 +7,7 @@ using Rent_A_Car.BL.Services.Implement;
 using Rent_A_Car.CORE.Entities;
 using Rent_A_Car.DAL.Context;
 using Rent_A_Car.MVC.Extension;
+using Rent_A_Car.MVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,10 @@ builder.Services.AddAuthentication(options =>
     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
     options.SlidingExpiration = true;
 });
+
+// Stripe açarlar?n? konfiqurasiya et
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 
 
 var app = builder.Build();
