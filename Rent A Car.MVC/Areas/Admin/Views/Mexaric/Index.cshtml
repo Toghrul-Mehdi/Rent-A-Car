@@ -1,0 +1,68 @@
+﻿@using Rent_A_Car.CORE.Entities
+@model List<Cixaris>
+<section role="main" class="content-body">
+	<header class="page-header">
+		<h2>Dashboard</h2>
+
+		<div class="right-wrapper text-end">
+			<ol class="breadcrumbs">
+				<li>
+					<a>
+						<i class="bx bx-home-alt"></i>
+					</a>
+				</li>
+
+				<li><span>Dashboard</span></li>
+				<li><span>Mexaric</span></li>
+
+
+			</ol>
+
+			<a style="cursor: auto;" class="sidebar-right-toggle"></a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-lg-6">
+
+			<br />
+			<section class="card" style="width:1140px">
+				<header class="card-header">
+					<div class="card-actions">
+						<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+
+					</div>
+
+					<h2 class="card-title">Mexaricler</h2>
+				</header>
+				<div class="card-body">
+					<table class="table table-responsive-md mb-0">
+						<thead>
+							<tr>
+								<th>OrderNo</th>
+								<th>Mebleg</th>
+								<th>Istifadeci</th>
+								<th>Kart Nomresi</th>
+								<th>Vaxt</th>
+								<th>Odenis Tesdiqi</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model ?? [])
+							{
+								<tr>
+									<td>#@item.Id</td>
+									<td>-@item.Mebleg</td>
+									<td>@item.User!.UserName</td>
+									<td>@item.CardName</td>
+									<td>@item.CreatedTime</td>
+									<td><a asp-action="Confirm" asp-controller="Mexaric" asp-route-id="@item.Id"><span class="text">Confirm</span><br /><i class="fas fa-check-circle"></i></a></td>
+
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>

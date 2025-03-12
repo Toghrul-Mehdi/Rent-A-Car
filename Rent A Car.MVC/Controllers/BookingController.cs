@@ -18,7 +18,7 @@ namespace Rent_A_Car.MVC.Controllers
         {
             if (!advertisementId.HasValue)
             {
-                return BadRequest("Geçersiz ilan ID'si!");
+                return BadRequest();
             }
 
             // İlanı veritabanından çek
@@ -28,7 +28,7 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (advertisement == null)
             {
-                return NotFound("İlan bulunamadı!");
+                return NotFound();
             }
 
             // ViewModel oluştur ve ilgili alanları doldur
@@ -50,12 +50,13 @@ namespace Rent_A_Car.MVC.Controllers
         {
             // 1. İlanın var olup olmadığını kontrol et
             var advertisement = await _context.Advertisements
-                .Include(x=>x.User)
+                .Include(x => x.User)
                 .FirstOrDefaultAsync(a => a.Id == bookingDTO.AdvertisementId);
 
             if (advertisement == null)
             {
-                return NotFound("İlan bulunamadı!");
+                TempData["Error"] = "İcarəyə verilən maşın tapılmadı!";
+                return RedirectToAction("Index", "Home");
             }
 
             // 2. Kullanıcı bilgilerini al
@@ -64,16 +65,19 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (user == null)
             {
-                return Unauthorized("Kullanıcı bulunamadı!");
+                TempData["Error"] = "İstifadəçi tapılmadı! Lütfən yenidən daxil olun.";
+                return RedirectToAction("Login", "Account");
             }
 
-            // 3. Kiralama süresini hesapla (Başlangıç ve Bitiş Tarihleri)
+            // 3. Kiralama süresini hesapla
             TimeSpan rentalDuration = bookingDTO.EndDate - bookingDTO.StartDate;
-            int totalDays = (int)Math.Ceiling(rentalDuration.TotalDays); // Gün sayısı
+            int totalDays = (int)Math.Ceiling(rentalDuration.TotalDays);
 
             if (totalDays <= 0)
             {
-                return BadRequest("Geçersiz kiralama süresi!");
+                TempData["Error"] = "Vaxt araligini dogru daxil edin!";
+                return RedirectToAction("Index", "Booking", new { advertisementId = bookingDTO.AdvertisementId });
+
             }
 
             // 4. Ödenecek ücreti hesapla
@@ -82,13 +86,15 @@ namespace Rent_A_Car.MVC.Controllers
             // 5. Kullanıcının bakiyesini kontrol et
             if (user.Balance < totalPrice)
             {
-                return BadRequest("Yetersiz bakiye! Lütfen bakiyenizi doldurun.");
+                TempData["Error"] = "Balansınız kifayət qədər deyil! Zəhmət olmasa artırın.";
+                return RedirectToAction("Index", "Booking", new { advertisementId = bookingDTO.AdvertisementId });
+
             }
 
             // 6. Kullanıcının bakiyesini düş
             user.Balance -= totalPrice;
 
-            // 7. İlan sahibinin bakiyesini arttır
+            // 7. İlan sahibinin bakiyesini artır
             advertisement.User.Balance += totalPrice;
 
             // 8. Kullanıcı ve ilan sahibinin bakiyelerini güncelle
@@ -106,6 +112,7 @@ namespace Rent_A_Car.MVC.Controllers
                 AdvertisementId = bookingDTO.AdvertisementId,
                 UserID = user.Id,
                 TotalPrice = totalPrice,
+                PhoneNumber = bookingDTO.PhoneNumber,
             };
 
             _context.Bookings.Add(booking);
@@ -117,12 +124,14 @@ namespace Rent_A_Car.MVC.Controllers
 
             if (string.IsNullOrEmpty(username))
             {
-                return Unauthorized(); 
+                TempData["Error"] = "Giriş zamanı problem yarandı. Yenidən daxil olun!";
+                return RedirectToAction("Login", "Account");
             }
 
+            TempData["Success"] = "İcarə prosesi uğurla tamamlandı!";
             return RedirectToAction("Index", "Profile", new { username });
-
         }
+
 
 
         [HttpGet]

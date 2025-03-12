@@ -46,7 +46,7 @@
 
 								<br />
 
-								<select asp-for="Model" class="form-control" id="models">
+								<select asp-for="Model" class="form-control" id="models" data-selected="@Model">
 									<option value="">Ilk olaraq Marka Seçin</option>
 								</select>
 								<span asp-validation-for="Model" class="text-danger"></span>
@@ -134,10 +134,8 @@
 										<input asp-for="OtherFiles" type="file" id="otherFiles" name="OtherFiles" class="form-control" multiple/>
 										<span class="text-danger">@Html.ValidationMessage("OtherFiles")</span>
 									</div>
-
-
-
 								</div>
+
 
 							</div>
 
@@ -174,12 +172,29 @@
 											</select>
 										</div>
 									</div>
+									<h5>Phone Number</h5>
 									<div class="col-lg-12">
 										<div class="field-set">
-											<input asp-for="PhoneNumber" type="number"  class="form-control" placeholder="Your Phone" >
-											<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+											<div style="width:500px; display: flex; align-items: center; margin-right:200px">
+												<span class="input-group-text form-control" style="width: 80px; text-align: center;">+994</span>
+												<select id="phonePrefix" class="form-select form-control" style="width: 80px;">
+													<option value="50">50</option>
+													<option value="55">55</option>
+													<option value="70">70</option>
+													<option value="77">77</option>
+												</select>
+												<input id="phoneNumber" type="text" class="form-control" placeholder="XXXXXXX" maxlength="7" style="width: 150px;">
+											</div>
+
+											<!-- Gizli input - ASP.NET backend-ə göndərmək üçün -->
+											<input type="hidden" asp-for="PhoneNumber" id="fullPhoneNumber">
+
+											<span id="phoneError" class="text-danger"></span>
 										</div>
 									</div>
+
+									
+									<h5>Description</h5>
 
 									<div class="col-lg-12">
 										<div class="field-set">
@@ -189,10 +204,15 @@
 									</div>
 									<div class="col-lg-12">
 										<div class="field-set">
-											<input asp-for="Price" type="number"  class="form-control" placeholder="Price" step="0.01" >
-											<span asp-validation-for="Price" class="text-danger"></span>
+											<label for="price">Daily Rental Price ($):</label>
+											<input asp-for="Price" id="price" type="number" class="form-control"
+												   placeholder="Price" step="1" min="1" max="1000">
+											<span asp-validation-for="Price" id="price-error" class="text-danger"></span>
 										</div>
 									</div>
+
+									
+
 								</div>
 
 							</div>
@@ -236,25 +256,26 @@
 					<div class="container-timeline">
 						<ul>
 							<li>
-								<h4>Choose a vehicle</h4>
-								<p>Unlock unparalleled adventures and memorable journeys with our vast fleet of vehicles tailored to suit every need, taste, and destination.</p>
+								<h4>Nəqliyyat vasitəsi seçin</h4>
+								<p>Hər zövqə, ehtiyaca və istiqamətə uyğun geniş avtomobil parkımızla unudulmaz səyahətlərə və macəralara yola çıxın.</p>
 							</li>
 							<li>
-								<h4>Pick location &amp; date</h4>
-								<p>Pick your ideal location and date, and let us take you on a journey filled with convenience, flexibility, and unforgettable experiences.</p>
+								<h4>Məkan və tarixi seçin</h4>
+								<p>İstədiyiniz məkanı və tarixi seçin və rahatlıq, çeviklik və unudulmaz təcrübələrlə dolu bir səyahətə çıxın.</p>
 							</li>
 							<li>
-								<h4>Make a booking</h4>
-								<p>Secure your reservation with ease, unlocking a world of possibilities and embarking on your next adventure with confidence.</p>
+								<h4>Rezervasiya edin</h4>
+								<p>Asanlıqla rezervasiya edin, imkanlarla dolu bir dünyaya qapı açın və növbəti səyahətinizə əminliklə başlayın.</p>
 							</li>
 							<li>
-								<h4>Sit back &amp; relax</h4>
-								<p>Hassle-free convenience as we take care of every detail, allowing you to unwind and embrace a journey filled comfort.</p>
+								<h4>Arxaya söykənin və rahatlayın</h4>
+								<p>Bütün detalları biz həll edirik, siz isə rahatlıq və komfort dolu bir səyahətdən zövq alın.</p>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
@@ -378,33 +399,152 @@
 
 @section scripts {
 	<script>
-				document.getElementById("brands").addEventListener("change", function () {
-			var brandId = this.value;
+		document.addEventListener("DOMContentLoaded", function () {
+			var brandSelect = document.getElementById("brands");
 			var modelSelect = document.getElementById("models");
-			modelSelect.innerHTML = '<option value="">Model Seçiniz</option>';
 
-			if (brandId) {
-				fetch(`/Advertisement/GetModelsByBrandId?brandId=${brandId}`)
-					.then(response => response.json())
-					.then(data => {
-						if (Array.isArray(data)) {
-							data.forEach(model => {
-								var option = document.createElement("option");
-								option.value = model.name;
-								option.textContent = model.name;
-								modelSelect.appendChild(option);
-							});
-						} else {
-							console.error("Beklenen formatta veri alınamadı:", data);
-						}
-					})
-					.catch(error => console.error("Fetch sırasında hata:", error));
-			} else {
-				console.log("Lütfen bir marka seçiniz.");
+			// Backend-dən gələn əvvəlcədən seçilmiş model
+			var selectedModel = modelSelect.getAttribute("data-selected");
+
+			function loadModels(brandId, selectedModel = null) {
+				modelSelect.innerHTML = '<option value="">Model Seçin</option>';
+
+				if (brandId) {
+					fetch(`/Advertisement/GetModelsByBrandId?brandId=${brandId}`)
+						.then(response => response.json())
+						.then(data => {
+							if (Array.isArray(data)) {
+								data.forEach(model => {
+									var option = document.createElement("option");
+									option.value = model.name;
+									option.textContent = model.name;
+
+									// Əvvəlcədən seçilmiş model varsa, onu seç
+									if (selectedModel && model.name === selectedModel) {
+										option.selected = true;
+									}
+
+									modelSelect.appendChild(option);
+								});
+							} else {
+								console.error("Gözlənilən formatda məlumat alınmadı:", data);
+							}
+						})
+						.catch(error => console.error("Fetch xətası:", error));
+				}
 			}
-		});
 
+			// Əgər marka artıq seçilibsə, modeli yüklə
+			if (brandSelect.value) {
+				loadModels(brandSelect.value, selectedModel);
+			}
+
+			// Marka dəyişəndə modeli yenilə
+			brandSelect.addEventListener("change", function () {
+				loadModels(this.value);
+			});
+		});
 	</script>
+	<div class="col-lg-12">
+		<div class="field-set">
+			<label for="price">Daily Rental Price ($):</label>
+			<input asp-for="Price" id="price" type="number" class="form-control"
+				   placeholder="Price" step="1" min="1" max="1000">
+			<span asp-validation-for="Price" id="price-error" class="text-danger"></span>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let priceInput = document.getElementById("price");
+			let errorSpan = document.getElementById("price-error");
+
+			priceInput.addEventListener("input", function () {
+				// Yalnız rəqəmlərə icazə ver
+				this.value = this.value.replace(/[^0-9]/g, '');
+
+				// Əgər dəyər 1000-dən çoxdursa, avtomatik 1000 et və xətanı göstər
+				if (this.value > 1000) {
+					this.value = 1000;
+					errorSpan.textContent = "Maksimum məbləğ 1000 manatdır.";
+				} else {
+					errorSpan.textContent = "";
+				}
+			});
+
+			priceInput.addEventListener("keydown", function (event) {
+				// `e`, `-`, `+` düymələrinin bloklanması
+				if (event.key === "e" || event.key === "E" || event.key === "-" || event.key === "+") {
+					event.preventDefault();
+				}
+			});
+		});
+	</script>
+
+
+
+
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const phonePrefix = document.getElementById("phonePrefix");
+			const phoneInput = document.getElementById("phoneNumber");
+			const fullPhoneInput = document.getElementById("fullPhoneNumber");
+			const phoneError = document.getElementById("phoneError");
+
+			function updateFullPhoneNumber() {
+				let prefix = phonePrefix.value;
+				let number = phoneInput.value.replace(/\D/g, "").substring(0, 7); // Yalnız 7 rəqəm
+				phoneInput.value = number; // Inputu formatla
+
+				if (number.length < 7) {
+					phoneError.innerText = "Telefon nömrəsi tam və bitişik yazılmalıdır (XXXXXXX).";
+				} else {
+					phoneError.innerText = "";
+				}
+
+				// ASP.NET backend-ə göndərmək üçün tam nömrəni gizli input-a yazırıq
+				fullPhoneInput.value = "+994" + prefix + number;
+			}
+
+			phonePrefix.addEventListener("change", updateFullPhoneNumber);
+			phoneInput.addEventListener("input", updateFullPhoneNumber);
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			function validateImageInput(input) {
+				const allowedExtensions = ["jpg", "jpeg", "png", "gif", "webp"];
+				const files = input.files;
+				const invalidFiles = [];
+
+				for (let i = 0; i < files.length; i++) {
+					const fileName = files[i].name;
+					const fileExtension = fileName.split(".").pop().toLowerCase();
+
+					if (!allowedExtensions.includes(fileExtension)) {
+						invalidFiles.push(fileName);
+					}
+				}
+
+				if (invalidFiles.length > 0) {
+					alert("Only image files are allowed! Invalid files: " + invalidFiles.join(", "));
+					input.value = ""; // Seçilmiş faylları sil
+				}
+			}
+
+			// Cover Image üçün
+			document.getElementById("coverImage").addEventListener("change", function () {
+				validateImageInput(this);
+			});
+
+			// Other Files üçün
+			document.getElementById("otherFiles").addEventListener("change", function () {
+				validateImageInput(this);
+			});
+		});
+	</script>
+
 }
 
 

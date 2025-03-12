@@ -21,14 +21,14 @@ namespace Rent_A_Car.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> ReplyQuestion(QuestionReplyDTO dto)
         {
             var question = await _context.Questions.FindAsync(dto.QuestionId);
-            if (question == null) return NotFound(new { success = false, message = "Soru bulunamadı" });
+            if (question == null) return NotFound(new { success = false, message = "Sual Tapilmadi" });
 
             question.AdminResponse = dto.AdminResponse;
             question.ResponseAt = DateTime.UtcNow;
             question.IsAnswered = true;
 
             await _context.SaveChangesAsync();
-            return Ok(new { success = true });
+            return RedirectToAction(nameof(Index));
         }
 
     }

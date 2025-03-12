@@ -34,5 +34,25 @@ namespace Rent_A_Car.MVC.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Confirm(int? id)
+        {
+            if (!id.HasValue)
+            {
+                return BadRequest();
+            }
+            // İlanı bul
+            var advertisement = await _context.Advertisements.FirstOrDefaultAsync(ad => ad.Id == id);
+            if (advertisement == null)
+            {
+                return NotFound();
+            }
+
+            
+            advertisement.IsConfirmed = true;
+
+            // Değişiklikleri kaydet
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

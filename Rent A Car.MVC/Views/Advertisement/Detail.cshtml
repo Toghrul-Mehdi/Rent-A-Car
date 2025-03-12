@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1>Vehicle Fleet</h1>
+                        <h1>Avtomobil Elanı</h1>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -46,42 +46,43 @@
 
                     <div class="spacer-10"></div>
 
-                    <h4>Specifications</h4>
+                    <h4>Xüsusiyyətlər</h4>
                     <div class="de-spec">
                         <div class="d-row">
-                            <span class="d-title">Body</span>
+                            <span class="d-title">Ban Növü</span>
                             <spam class="d-value">@Model.Advertisement.Category.CategoryName</spam>
                         </div>
                         <div class="d-row">
-                            <span class="d-title">Seat</span>
-                            <spam class="d-value">2 seats</spam>
+                            <span class="d-title">Oturacaq</span>
+                            <spam class="d-value">2 oturacaq</spam>
                         </div>
                         <div class="d-row">
-                            <span class="d-title">Door</span>
-                            <spam class="d-value">2 doors</spam>
+                            <span class="d-title">Qapı</span>
+                            <spam class="d-value">2 qapı</spam>
                         </div>
                         <div class="d-row">
-                            <span class="d-title">Luggage</span>
+                            <span class="d-title">Bağaj</span>
                             <spam class="d-value">150</spam>
                         </div>
                         <div class="d-row">
-                            <span class="d-title">Fuel Type</span>
+                            <span class="d-title">Yanacaq Növü</span>
                             <spam class="d-value">@Model.Advertisement.FuelType</spam>
                         </div>
                         <div class="d-row">
-                            <span class="d-title">Year</span>
+                            <span class="d-title">İl</span>
                             <spam class="d-value">@Model.Advertisement.Year</spam>
                         </div>
 
                         <div class="d-row">
-                            <span class="d-title">Color</span>
+                            <span class="d-title">Rəng</span>
                             <spam class="d-value">@Model.Advertisement.Color</spam>
                         </div>
                     </div>
 
+
                     <div class="spacer-single"></div>
 
-                    <h4>Features</h4>
+                    <h4>Funksiyalar</h4>
                     <ul class="ul-style-2">
                         <li>Bluetooth</li>
                         <li>Multimedia Player</li>
@@ -92,7 +93,7 @@
 
                 <div class="col-lg-3">
                     <div class="de-price text-center">
-                        Daily rate
+                        Günlük Qiymət
                         <h3>$@Model.Advertisement.Price</h3>
                     </div>
                     <div class="spacer-30"></div>
@@ -114,12 +115,12 @@
                     else
                     {
                         // Giriş yapmış kullanıcı için rezervasyon formu
-                        <h4  style="margin-bottom: 10px; color: #333;margin-left:95px">Booking</h4>
+                        <h4  style="margin-bottom: 10px; color: #333;margin-left:115px">İcarə</h4>
                         <div class="de-box mb25">
                         <form action="/Booking/Index" method="get">
                             <input type="hidden" name="advertisementId" value="@Model.Advertisement.Id">    
                             <div class="col-lg-3">
-                                <button  type="submit" style="background-color:forestgreen;width:200px" class="btn btn-primary">Book Now</button>
+                                <button  type="submit" style="background-color:forestgreen;width:220px" class="btn btn-primary">İndi İcarəyə Götür</button>
                             </div>
                         </form>
                         </div>

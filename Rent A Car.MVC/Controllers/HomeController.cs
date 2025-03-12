@@ -18,6 +18,7 @@ namespace Rent_A_Car.MVC.Controllers
             ViewBag.UserCount = await _context.Users.CountAsync();
             return View(await _context.Advertisements
                 .Where(x => !x.IsDeleted
+                    && x.IsConfirmed ==true
                     && x.Status == AdvertisementStatus.VIP
                     && x.VipEnded > DateTime.UtcNow)
                 .OrderByDescending(x => x.VipStarted)

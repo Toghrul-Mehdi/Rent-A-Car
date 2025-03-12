@@ -191,6 +191,9 @@ namespace Rent_A_Car.DAL.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -208,8 +211,9 @@ namespace Rent_A_Car.DAL.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -271,6 +275,13 @@ namespace Rent_A_Car.DAL.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("PaymentSessionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PickupLocation")
                         .HasColumnType("int");
@@ -390,6 +401,40 @@ namespace Rent_A_Car.DAL.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Cixaris", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CardName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mebleg")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Cixaris");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Model", b =>
                 {
                     b.Property<int>("Id")
@@ -426,6 +471,33 @@ namespace Rent_A_Car.DAL.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Models");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Odenis", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mebleg")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Odenis");
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Question", b =>
@@ -668,6 +740,15 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Advertisement");
                 });
 
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Cixaris", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("Cixarislar")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Model", b =>
                 {
                     b.HasOne("Rent_A_Car.CORE.Entities.Brand", "Brand")
@@ -685,6 +766,15 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Rent_A_Car.CORE.Entities.Odenis", b =>
+                {
+                    b.HasOne("Rent_A_Car.CORE.Entities.User", "User")
+                        .WithMany("Odenisler")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Rent_A_Car.CORE.Entities.Question", b =>
@@ -741,6 +831,10 @@ namespace Rent_A_Car.DAL.Migrations
                     b.Navigation("Advertisements");
 
                     b.Navigation("Bookings");
+
+                    b.Navigation("Cixarislar");
+
+                    b.Navigation("Odenisler");
 
                     b.Navigation("Questions");
 

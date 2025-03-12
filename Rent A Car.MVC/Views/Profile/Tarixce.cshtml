@@ -1,0 +1,138 @@
+﻿@using Rent_A_Car.BL.DTOs.Profile
+@using Rent_A_Car.CORE.Entities
+@model ProfileDTO
+<!-- content begin -->
+<div class="no-bottom no-top zebra" id="content">
+	<div id="top"></div>
+
+	<!-- section begin -->
+	<section id="subheader" class="jarallax text-light">
+		<img src="~/images/background/14.jpg" class="jarallax-img" alt="">
+		<div class="center-y relative text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>Tarixçə</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- section close -->
+
+	<section id="section-cars" class="bg-gray-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 mb30">
+					<div class="card padding30 rounded-5">
+						<div class="profile_avatar">
+							<div style="color:limegreen" class="profile_img">
+
+									<img src="~/img/users/admin.jpg" alt="Profile Photo">
+
+							</div>
+							<div class="profile_name">
+								<h4>
+									@Model.Fullname
+									<span class="profile_username text-gray">@Model.Email</span>
+								</h4>
+							</div>
+						</div>
+						<div class="spacer-20"></div>
+						<ul class="menu-col">
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"  ><i class="fa fa-home"></i>Profil</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>Elanlarım</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>Sevimlilər</a></li>
+							<li><a asp-action="Messages" asp-controller="Profile" asp-route-username="@Model.Username" ><i  class="fas fa-envelope"></i>Mesajlar</a></li>
+							<li><a asp-action="Tarixce" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i class="fas fa-clock-o"></i>Tarixçə</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Çıxış</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-9">
+
+					<div class="card padding30 rounded-5 mb25">
+						<h4>Mədaxil Tarixçəsi</h4>
+						<table class="table de-table">							
+							<thead>
+								<tr>
+									<th scope="col"><span class="fs-12 text-gray">Məbləğ</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Tarix</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Ödəniş Metodu</span></th> <!-- Yeni sütun -->
+								</tr>
+							</thead>
+							<tbody>
+									@if (ViewBag.Medaxil != null && ViewBag.Medaxil.Count > 0)
+									{
+										@foreach (var item in ViewBag.Medaxil)
+										{
+										<tr>
+											<td><span class="d-lg-none d-sm-block">Məbləğ</span><span class="bold">+@item.Mebleg</span></td>
+											<td><span class="d-lg-none d-sm-block">Tarix</span>@item.CreatedTime</td>
+											<td><span class="d-lg-none d-sm-block">Ödəniş Metodu</span>Stripe</td> <!-- Statik "Stripe" yazısı -->
+										</tr>
+										}
+									}
+									else
+									{
+									<h3>Heç bir məlumat yoxdur</h3> <!-- "Empty" yerinə daha elmi və anlamlı ifadə -->
+									}
+							</tbody>
+
+						</table>
+					</div>
+
+					<div class="card padding30 rounded-5 mb25">
+						<h4>Məxaric Tarixçəsi</h4>
+						<table class="table de-table">
+							<thead>
+								<tr>
+									<th scope="col"><span class="fs-12 text-gray">Məbləğ</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Kart Nömrəsi</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Tarix</span></th>
+									<th scope="col"><span class="fs-12 text-gray">Təsdiq</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								@if (ViewBag.Mexaric != null && ViewBag.Mexaric.Count > 0)
+								{
+									@foreach (var item in ViewBag.Mexaric)
+									{
+										<tr>
+											<td><span class="d-lg-none d-sm-block">Məbləğ</span><span class="bold">-@item.Mebleg</span></td>
+											<td><span class="d-lg-none d-sm-block">Kart Nömrəsi</span>@item.CardName</td>
+											<td><span class="d-lg-none d-sm-block">Tarix</span>@item.CreatedTime</td>
+											<td>
+												<span class="d-lg-none d-sm-block">Vaxt</span>
+												@if (item.IsConfirmed)
+												{
+													<i class="fas fa-check-circle" style="color: green;" title="Onaylandı"></i> <!-- Onaylandı ikonası -->
+												}
+												else
+												{
+													<i class="fas fa-clock" style="color: orange;" title="Bekleme"></i> <!-- Bekleme ikonası -->
+												}
+											</td>
+										</tr>
+									}
+								}
+								else
+								{
+									<h3>Heç bir məlumat yoxdur</h3> <!-- "Empty" yerinə daha elmi və anlamlı ifadə -->
+								}
+							</tbody>
+
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+<!-- content close -->
+
+<a href="#" id="back-to-top"></a>

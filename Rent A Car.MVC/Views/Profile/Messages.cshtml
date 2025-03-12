@@ -12,7 +12,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h1>Dashboard</h1>
+						<h1>Mesajlar</h1>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -41,11 +41,12 @@
 						</div>
 						<div class="spacer-20"></div>
 						<ul class="menu-col">
-							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"  ><i class="fa fa-home"></i>Dashboard</a></li>
-							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>My Advertisement</a></li>
-							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
-							<li><a asp-action="Messages" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i  class="fas fa-envelope"></i>Messages</a></li>
-							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"  ><i class="fa fa-home"></i>Profil</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-calendar"></i>Elanlarım</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>Sevimlilər</a></li>
+							<li><a asp-action="Messages" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i  class="fas fa-envelope"></i>Mesajlar</a></li>
+							<li><a asp-action="Tarixce" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fas fa-clock-o"></i>Tarixçə</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Çıxış</a></li>
 						</ul>
 					</div>
 				</div>
@@ -53,41 +54,32 @@
 				<div class="col-lg-9">
 					
 					<div class="card padding30 rounded-5 mb25">
-						<h4>My Messages</h4>
+						<h4>Mesajlarım</h4>
 
-						<table class="table de-table">
-							<thead>
-								<tr>
-									<th scope="col"><span class="fs-12 text-gray">Question</span></th>
-									<th scope="col"><span class="fs-12 text-gray">Response</span></th>
-									<th scope="col"><span class="fs-12 text-gray">Send Time</span></th>
-									<th scope="col"><span class="fs-12 text-gray">Answered Time</span></th>
-								</tr>
-							</thead>
-							<tbody>
-								@if (ViewBag.Questions != null && ViewBag.Questions.Count > 0)
+						<div style="display: flex; flex-direction: column; gap: 10px;">
+							@if (ViewBag.Questions != null && ViewBag.Questions.Count > 0)
+							{
+								@foreach (var item in ViewBag.Questions)
 								{
-
-									@foreach (var item in ViewBag.Questions)
+									@if (!string.IsNullOrEmpty(item.AdminResponse))
 									{
-										<tr>
+										<div style="max-width: 70%; padding: 10px; border-radius: 8px;
+                        @(item.UserId == User.Identity!.Name ? "align-self: flex-end; background-color: #f1f1f1;" : "align-self: flex-start; background-color: #e0e0e0;")">
 
-											<td><span class="d-lg-none d-sm-block">Question</span><span class="bold">@item.QuestionText</span></td>
-											<td><span class="d-lg-none d-sm-block">Response</span>@item.AdminResponse</td>
-											<td><span class="d-lg-none d-sm-block">Send Time</span>@item.CreatedTime</td>
-											<td><span class="d-lg-none d-sm-block">Answered Time</span>@item.ResponseAt</td>											
-										</tr>
+											<strong>@item.QuestionText</strong>
+											<p style="margin: 5px 0;">@item.AdminResponse</p>
+											<span style="font-size: 12px; color: #777;">@item.ResponseAt</span>
+										</div>
 									}
 								}
-								else
-								{
-									<h3>Messages Empty</h3>
-								}
-
-
-							</tbody>
-						</table>
+							}
+							else
+							{
+								<h3>Heç bir məlumat yoxdur</h3>
+							}
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>

@@ -30,7 +30,7 @@ namespace Rent_A_Car.BL.DTOs.Advertisement
         public decimal Price { get; set; }
         public int Year { get; set; }
         public City CityName { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [Required]
         public int MinimalGunSayi { get; set; }
         [Required]

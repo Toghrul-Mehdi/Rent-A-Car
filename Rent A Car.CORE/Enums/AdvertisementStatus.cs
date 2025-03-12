@@ -8,9 +8,7 @@ namespace Rent_A_Car.CORE.Enums
 {
     public enum AdvertisementStatus
     {     
-        Active,   
-        Inactive, 
-        Archived,
+        Normal,          
         VIP
     }
 }

@@ -56,7 +56,8 @@ builder.Services.AddAuthentication(options =>
     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
     options.SlidingExpiration = true;
 });
-
+builder.Services.AddHostedService<VipStatusChecker>();
+builder.Services.AddHostedService<BookingStatusUpdater>();
 // Stripe açarlar?n? konfiqurasiya et
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
@@ -87,6 +88,9 @@ app.UseStatusCodePages(async context =>
 
 // Enable routing
 app.UseRouting();
+
+
+
 
 
 app.UseAuthorization();   // Add authorization middleware

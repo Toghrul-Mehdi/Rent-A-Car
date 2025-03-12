@@ -9,7 +9,7 @@ namespace Rent_A_Car.MVC.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.MaxPrice = _context.Advertisements
-            .Where(x => x.Price != null) 
+            .Where(x => x.Price != null && x.IsDeleted==false) 
             .AsEnumerable() 
             .Select(x => x.Price)
             .DefaultIfEmpty(0) 
@@ -25,7 +25,7 @@ namespace Rent_A_Car.MVC.Controllers
                         .ToListAsync();
 
             return View(await _context.Advertisements
-                .Where(x=>x.IsDeleted==false)
+                .Where(x=>x.IsDeleted==false && x.IsConfirmed == true)
                 .Include(x=>x.Brand)
                 .Include(x=>x.Category)
                 .Include(x=>x.User)

@@ -20,7 +20,7 @@ namespace Rent_A_Car.CORE.Entities
         public decimal Price { get; set; }
         public int Year { get; set; }
         public City City { get; set; }
-        public int PhoneNumber { get; set; }   
+        public string PhoneNumber { get; set; }   
         public int MinimalGunSayi { get; set; }
         public int MinimalSuruculukVesiqesi { get; set; }
         public int CategoryId { get; set; }
@@ -37,5 +37,6 @@ namespace Rent_A_Car.CORE.Entities
         public DateTime VipStarted { get; set; }
         public DateTime VipEnded { get; set; }
         public IEnumerable<Booking> Bookings { get; set; }
+        public bool IsConfirmed { get; set; } = false;
     }
 }

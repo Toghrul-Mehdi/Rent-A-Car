@@ -79,6 +79,14 @@
 
 					<div class="dropdown-menu">
 						<ul class="list-unstyled mb-2">
+							<li class="divider"></li>
+							<li>
+								<button style="text-decoration:none;color:green" type="button" class="btn btn-link" onclick="window.location.href = window.location.origin + '/'">
+									<i style="color:green" class="bx bx-home"></i> Go to Website
+								</button>
+							</li>
+
+
 							<li class="divider"></li>							
 							<li>
 								<form action="/Account/SignOut" method="post">
@@ -87,6 +95,7 @@
 									</button>
 								</form>
 							</li>
+							
 						</ul>
 					</div>
 				</div>
@@ -142,7 +151,7 @@
 										</li>
 										<li>
 											<a class="nav-link" asp-action="Index" asp-controller="Model">
-												Model
+												Model	
 											</a>
 										</li>
 										<li>
@@ -155,7 +164,16 @@
 												Advertisement
 											</a>
 										</li>
-																		
+										<li>
+											<a class="nav-link" asp-action="Index" asp-controller="Medaxil">
+												Medaxil
+											</a>
+										</li>
+										<li>
+											<a class="nav-link" asp-action="Index" asp-controller="Mexaric">
+												Mexaric
+											</a>
+										</li>
 									</ul>
 								</li>
 

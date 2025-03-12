@@ -16,5 +16,7 @@ namespace Rent_A_Car.CORE.Entities
         public IEnumerable<WishList> WishList { get; set; }  
         public IEnumerable<Booking> Bookings { get; set; }
         public IEnumerable<Question> Questions { get; set; }
+        public IEnumerable<Odenis> Odenisler { get; set; }
+        public IEnumerable<Cixaris> Cixarislar { get; set; }
     }
 }

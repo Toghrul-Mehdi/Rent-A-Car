@@ -1,0 +1,65 @@
+﻿@using Rent_A_Car.CORE.Entities
+@model List<Odenis>
+<section role="main" class="content-body">
+	<header class="page-header">
+		<h2>Dashboard</h2>
+
+		<div class="right-wrapper text-end">
+			<ol class="breadcrumbs">
+				<li>
+					<a>
+						<i class="bx bx-home-alt"></i>
+					</a>
+				</li>
+
+				<li><span>Dashboard</span></li>
+				<li><span>Medaxil</span></li>
+
+
+			</ol>
+
+			<a style="cursor: auto;" class="sidebar-right-toggle"></a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-lg-6">
+			
+			<br />
+			<section class="card" style="width:1140px">
+				<header class="card-header">
+					<div class="card-actions">
+						<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+
+					</div>
+
+					<h2 class="card-title">Medaxiller</h2>
+				</header>
+				<div class="card-body">
+					<table class="table table-responsive-md mb-0">
+						<thead>
+							<tr>
+								<th>OrderNo</th>
+								<th>Mebleg</th>
+								<th>Istifadeci</th>
+								<th>Odenis Metodu</th>
+								<th>Vaxt</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model ?? [])
+							{
+									<tr>
+										<td>#@item.Id</td>
+										<td>+@item.Mebleg</td>
+										<td>@item.User!.UserName</td>										
+										<td>Stripe</td>										
+										<td>@item.CreatedTime</td>										
+									</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>

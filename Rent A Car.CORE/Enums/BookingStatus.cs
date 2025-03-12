@@ -9,8 +9,9 @@ namespace Rent_A_Car.CORE.Enums
     public enum BookingStatus
     {
         Pending,        // Beklemede (henüz onaylanmadı)
-        Confirmed,      // Onaylandı
+        Started,      // Basladi
         Cancelled,      // İptal edildi
+        Scheduled,      //Planlasdirilir
         Completed       // Tamamlandı (Araç geri teslim edildi)
     }
 }

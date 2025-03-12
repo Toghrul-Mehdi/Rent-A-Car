@@ -85,14 +85,20 @@ namespace Rent_A_Car.MVC.Controllers
                 }
             }
 
-
             if (!ModelState.IsValid)
             {
                 ViewBag.Brand = await _context.Brands
-                    .Where(x => x.IsDeleted == false)
+                    .Where(x => x.IsDeleted==false)
                     .ToListAsync();
-                return View(dto);
+
+                ViewBag.Models = await _context.Models
+                    .Where(x => x.IsDeleted==false && x.BrandId == dto.BrandId) // Seçilmiş brendə uyğun modelləri doldur
+                    .ToListAsync();
+                
+
+                return View(dto); // DTO-nu olduğu kimi geri qaytarırıq
             }
+
 
 
             string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
@@ -123,8 +129,8 @@ namespace Rent_A_Car.MVC.Controllers
             };
             await _context.Advertisements.AddAsync(advertisement);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index","Home");
-            
+            return RedirectToAction("MyAdvertisement", "Profile", new { username = User.Identity!.Name });
+
         }
 
         [HttpGet]
@@ -150,7 +156,7 @@ namespace Rent_A_Car.MVC.Controllers
                 .Include(x => x.User)
                 .SingleOrDefaultAsync();
 
-            if (advertisement == null) return NotFound("İlan bulunamadı!");
+            if (advertisement == null) return NotFound();
 
             advertisement.ViewCount++;
             await _context.SaveChangesAsync();
@@ -171,7 +177,153 @@ namespace Rent_A_Car.MVC.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Update(int adId)
+        {
+            var brands = await _context.Brands
+                .Where(x => x.IsDeleted == false)
+                .ToListAsync();
 
-        
+            ViewBag.Brand = brands;
+            // Kullanıcıyı doğrula
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity!.Name);
+            if (user == null)
+            {
+                return Unauthorized("Geçersiz kullanıcı!");
+            }
+
+            // İlanı kontrol et
+            var advertisement = await _context.Advertisements.Include(x => x.Brand).Include(x => x.Images)
+                .FirstOrDefaultAsync(a => a.Id == adId && a.UserId == user.Id);
+
+            if (advertisement == null)
+            {
+                return NotFound();
+            }
+
+            var updateDTO = new AdvertisementUpdateDTO
+            {
+                Id = adId,
+                Title = advertisement.Title,
+                Description = advertisement.Description,
+                ImageUrl = advertisement.ImageUrl,
+                ImagesUrl = advertisement.Images,
+                Price = advertisement.Price,
+                Year = advertisement.Year,
+                CityName = advertisement.City,
+                PhoneNumber = advertisement.PhoneNumber,
+                MinimalGunSayi = advertisement.MinimalGunSayi,
+                MinimalSuruculukVesiqesi = advertisement.MinimalSuruculukVesiqesi,
+                BrandId = advertisement.BrandId,
+                Model = advertisement.Model,
+                FuelType = advertisement.FuelType,
+                Color = advertisement.Color
+            };
+
+            return View(updateDTO);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(AdvertisementUpdateDTO model, int adId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // 1. Güncellenen ilanı veritabanından al
+            var advertisement = await _context.Advertisements
+                .Include(a => a.Images) // Diğer resimleri de getir
+                .FirstOrDefaultAsync(a => a.Id == adId);
+
+            if (advertisement == null)
+            {
+                return NotFound();
+            }
+
+            // 2. Ana Kapak Fotoğrafı Güncelleme
+            if (model.CoverImage != null)
+            {
+                // Yeni resmi kaydet
+                var uploadsFolder = Path.Combine(_env.WebRootPath, "img/cars");
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + model.CoverImage.FileName;
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.CoverImage.CopyToAsync(fileStream);
+                }
+
+                // Eski resmi sil (eğer yeni yükleme varsa)
+                if (!string.IsNullOrEmpty(advertisement.ImageUrl))
+                {
+                    var oldImagePath = Path.Combine(_env.WebRootPath, advertisement.ImageUrl.TrimStart('~', '/'));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                // Yeni resmi kaydet
+                advertisement.ImageUrl = "/img/cars/" + uniqueFileName;
+            }
+            else
+            {
+                // Kullanıcı yeni bir fotoğraf yüklemediyse eski fotoğrafı koru
+                advertisement.ImageUrl = string.IsNullOrEmpty(model.ImageUrl) ? advertisement.ImageUrl : model.ImageUrl;
+            }
+
+            // 3. Diğer Resimler (Galeri) Güncelleme
+            if (model.OtherFiles != null && model.OtherFiles.Count > 0)
+            {
+                // Yeni resimler ekleniyor
+                foreach (var file in model.OtherFiles)
+                {
+                    if (file != null)
+                    {
+                        var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                        var filePath = Path.Combine(_env.WebRootPath, "img/cars", uniqueFileName);
+
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(fileStream);
+                        }
+
+                        // Yeni resimleri veritabanına ekle
+                        var newOtherImage = new CarImages
+                        {
+                            AdvertisementId = advertisement.Id,
+                            OtherImageUrl = "/img/cars/" + uniqueFileName
+                        };
+                        _context.CarImages.Add(newOtherImage);
+                    }
+                }
+            }
+
+            // 4. Diğer Alanları Güncelle
+            advertisement.Title = model.Title;
+            advertisement.Description = model.Description;
+            advertisement.Price = model.Price;
+            advertisement.Year = model.Year;
+            advertisement.City = model.CityName;
+            advertisement.PhoneNumber = model.PhoneNumber;
+            advertisement.MinimalGunSayi = model.MinimalGunSayi;
+            advertisement.MinimalSuruculukVesiqesi = model.MinimalSuruculukVesiqesi;
+            advertisement.BrandId = model.BrandId;
+            advertisement.Model = model.Model;
+            advertisement.UserId = model.UserId;
+            advertisement.FuelType = model.FuelType;
+            advertisement.Color = model.Color;
+            advertisement.Status = model.Status;
+
+            // 5. Değişiklikleri Kaydet
+            _context.Advertisements.Update(advertisement);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
     }
 }

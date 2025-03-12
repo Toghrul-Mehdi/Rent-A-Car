@@ -19,6 +19,8 @@ namespace Rent_A_Car.DAL.Context
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Question> Questions{ get; set; }
+        public DbSet<Odenis> Odenis{ get; set; }
+        public DbSet<Cixaris> Cixaris{ get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -30,7 +30,7 @@
 					<div class="p-4 rounded-3 shadow-soft" data-bgcolor="#ffffff">
 
 
-						<form asp-action="Book" asp-controller="Booking" class="form-s2 row g-4 on-submit-hide" method="post">
+						<form asp-controller="Booking" asp-action="Book" class="form-s2 row g-4 on-submit-hide" method="post">
 
 							<div class="col-lg-6 d-light">
 								<h4>Rent A Car</h4>
@@ -68,14 +68,40 @@
 							<label>Return Time:</label>
 							<input type="time" asp-for="BookingDTO.DropoffTime" class="form-control" required>
 
+							<label>Phone Number:</label>
+							<div style="width:500px; display: flex; align-items: center; margin-right:200px" >
+								<span class="input-group-text form-control" style="width: 80px; text-align: center;">+994</span>
+								<select id="phonePrefix" class="form-select form-control" style="width: 80px;">
+									<option value="50">50</option>
+									<option value="55">55</option>
+									<option value="70">70</option>
+									<option value="77">77</option>
+								</select>
+								<input id="phoneNumber" type="text" class="form-control" placeholder="XXXXXXX" maxlength="7" style="width: 150px;" required>
+							</div>
+
+
+							<!-- Gizli input - ASP.NET backend-ə göndərmək üçün -->
+							<input type="hidden" asp-for="BookingDTO.PhoneNumber" id="fullPhoneNumber">
+
+							<span id="phoneError" class="text-danger"></span>
+
 
 							<!-- Toplam Fiyat -->
 							<label>Total Price:</label>
 							<input style="width:200px" type="text" id="total-price" class="form-control" readonly>
 
+							@if (TempData["Error"] != null)
+							{
+								<div class="alert alert-danger">@TempData["Error"]</div>
+							}
 
+							@if (TempData["Success"] != null)
+							{
+								<div class="alert alert-success">@TempData["Success"]</div>
+							}
 							<div class="col-lg-3">
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="submit" class="btn btn-primary">Ödəniş et</button>
 							</div>
 						</form>
 					</div>
@@ -133,46 +159,7 @@
 		</div>
 	</section>
 
-	<section class="text-light jarallax">
-		<img src="~/images/background/3.jpg" class="jarallax-img" alt="">
-		<div class="container">
-			<div class="row g-5">
-				<div class="col-lg-6 wow fadeInRight">
-					<h2>We offer customers a wide range of <span class="id-color">commercial cars</span> and <span class="id-color">luxury cars</span> for any occasion.</h2>
-				</div>
-				<div class="col-lg-6 wow fadeInLeft">
-					At our car rental agency, we believe that everyone deserves to experience the pleasure of driving a reliable and comfortable vehicle, regardless of their budget. We have curated a diverse fleet of well-maintained cars, ranging from sleek sedans to spacious SUVs, all at competitive prices. With our streamlined rental process, you can quickly and conveniently reserve your desired vehicle. Whether you need transportation for a business trip, family vacation, or simply want to enjoy a weekend getaway, we have flexible rental options to accommodate your schedule.
-				</div>
-			</div>
-			<div class="spacer-double"></div>
-			<div class="row text-center">
-				<div class="col-md-3 col-sm-6 mb-sm-30">
-					<div class="de_count transparent text-light wow fadeInUp">
-						<h3 class="timer" data-to="15425" data-speed="3000">0</h3>
-						Completed Orders
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-sm-30">
-					<div class="de_count transparent text-light wow fadeInUp">
-						<h3 class="timer" data-to="8745" data-speed="3000">0</h3>
-						Happy Customers
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-sm-30">
-					<div class="de_count transparent text-light wow fadeInUp">
-						<h3 class="timer" data-to="235" data-speed="3000">0</h3>
-						Vehicles Fleet
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 mb-sm-30">
-					<div class="de_count transparent text-light wow fadeInUp">
-						<h3 class="timer" data-to="15" data-speed="3000">0</h3>
-						Years Experience
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 
 	<section aria-label="section" class="pt40 pb40 text-light" data-bgcolor="#181818">
 		<div class="wow fadeInRight d-flex">
@@ -321,7 +308,7 @@
 						return [disabledDates.indexOf(string) == -1];
 					},
 					dateFormat: "yy-mm-dd", // Tarih formatı
-					minDate: 0 // Bugünden önceki tarihler seçilemez
+					minDate: 1 // Bugünden önceki tarihler seçilemez
 				});
 			}).fail(function() {
 				console.log("API çağrısı başarısız oldu!"); // Hata mesajı
@@ -355,10 +342,36 @@
 						$('#total-price').val(totalPrice + ' AZN');
 					} else {
 						// Eğer geçersiz tarih aralığı varsa
-						$('#total-price').val('Geçersiz tarih aralığı');
+						$('#total-price').val('Yanlis vaxt araligi');
 					}
 				}
 			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const phonePrefix = document.getElementById("phonePrefix");
+			const phoneInput = document.getElementById("phoneNumber");
+			const fullPhoneInput = document.getElementById("fullPhoneNumber");
+			const phoneError = document.getElementById("phoneError");
+
+			function updateFullPhoneNumber() {
+				let prefix = phonePrefix.value;
+				let number = phoneInput.value.replace(/\D/g, "").substring(0, 7); // Yalnız 7 rəqəm
+				phoneInput.value = number; // Inputu formatla
+
+				if (number.length < 7) {
+					phoneError.innerText = "Telefon nömrəsi tam və bitişik yazılmalıdır (XXXXXXX).";
+				} else {
+					phoneError.innerText = "";
+				}
+
+				// ASP.NET backend-ə göndərmək üçün tam nömrəni gizli input-a yazırıq
+				fullPhoneInput.value = "+994" + prefix + number;
+			}
+
+			phonePrefix.addEventListener("change", updateFullPhoneNumber);
+			phoneInput.addEventListener("input", updateFullPhoneNumber);
 		});
 	</script>
 

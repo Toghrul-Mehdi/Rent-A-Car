@@ -21,34 +21,34 @@
     <!-- section close -->
 
 
-    <section aria-label="section">
+    <section aria-label="bölmə">
         <div class="container">
             <div class="row g-custom-x">
 
                 <div class="col-lg-8 mb-sm-30">
 
-                    <h3>Do you have any question?</h3>
+                    <h3>Hər hansı bir sualınız var?</h3>
 
-                    @if(User.Identity!.IsAuthenticated){
+                    @if (User.Identity!.IsAuthenticated)
+                    {
                         <form name="contactForm" id="contact_form" class="form-border" method="post">
 
                             <div class="field-set mb20">
-                                <textarea asp-for="Question" class="form-control" placeholder="Your Message" required></textarea>
+                                <textarea asp-for="Question" class="form-control" placeholder="Mesajınızı yazın" required></textarea>
                                 <span asp-validation-for="Question" class="text-danger"></span>
                             </div>
 
                             <div class="col-lg-3">
-                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="submit" class="btn btn-primary">Mesaj Göndər</button>
                             </div>
                         </form>
                     }
-                    else{
+                    else
+                    {
                         <form asp-action="Login" asp-controller="Account" name="contactForm" id="contact_form" class="form-border" method="get">
 
-                           
-
                             <div class="col-lg-3">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn btn-primary">Daxil Ol</button>
                             </div>
                         </form>
                     }
@@ -57,23 +57,22 @@
                 <div class="col-lg-4">
 
                     <div class="de-box mb30">
-                        <h4>US Office</h4>
+                        <h4>ABŞ Ofisi</h4>
                         <address class="s1">
                             <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
                             <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
                             <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:contact@example.com">contact@example.com</a></span>
-                            <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
+                            <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Broşürü Yüklə</a></span>
                         </address>
                     </div>
 
-
                     <div class="de-box mb30">
-                        <h4>AU Office</h4>
+                        <h4>Avstraliya Ofisi</h4>
                         <address class="s1">
-                            <span><i class="fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
+                            <span><i class="fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sidney</span>
                             <span><i class="fa fa-phone fa-lg"></i>+61 333 9296</span>
                             <span><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:contact@example.com">contact@example.com</a></span>
-                            <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
+                            <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Broşürü Yüklə</a></span>
                         </address>
                     </div>
 
@@ -83,6 +82,7 @@
         </div>
 
     </section>
+
 
 </div>
 <!-- content close -->

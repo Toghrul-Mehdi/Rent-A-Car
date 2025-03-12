@@ -13,7 +13,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h1>My Advertisements</h1>
+						<h1>Elanlarım</h1>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -40,18 +40,19 @@
 						</div>
 						<div class="spacer-20"></div>
 						<ul class="menu-col">
-							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-home"></i>Dashboard</a></li>
-							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i class="fa fa-calendar"></i>My Advertisement</a></li>
-							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>My Favorite Cars</a></li>
-							<li><a asp-action="Messages" asp-controller="Profile" asp-route-username="@Model.Username"><i style="color:limegreen" class="fas fa-envelope"></i>Messages</a></li>
-							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+							<li><a asp-action="Index" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-home"></i>Profil</a></li>
+							<li><a asp-action="MyAdvertisement" asp-controller="Profile" asp-route-username="@Model.Username" class="active"><i class="fa fa-calendar"></i>Elanlarım</a></li>
+							<li><a asp-action="FavouriteCar" asp-controller="Profile" asp-route-username="@Model.Username"><i class="fa fa-car"></i>Sevimlilər</a></li>
+							<li><a asp-action="Messages" asp-controller="Profile" asp-route-username="@Model.Username"><i style="color:limegreen" class="fas fa-envelope"></i>Mesajlar</a></li>
+							<li><a asp-action="Tarixce" asp-controller="Profile" asp-route-username="@Model.Username"><i style="color:limegreen" class="fas fa-clock-o"></i>Tarixçə</a></li>
+							<li><a asp-action="SignOut" asp-controller="Account"><i class="fa fa-sign-out"></i>Çıxış</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-lg-9">
 					<div class="card padding30 rounded-5">
-						<h4>My Advertisement</h4>
+						<h4>Elanlarım</h4>
 						<div class="spacer-10"></div>
 						@if (ViewBag.Ads != null && ViewBag.Ads.Count > 0)
 						{
@@ -80,7 +81,7 @@
 									</div>
 
 									<div class="d-price">
-										<form method="post" action="/Profile/DeleteAdvertisement">
+										<form method="get" action="/Profile/DeleteAdvertisement">
 											<input type="hidden" name="username" value="@Model.Username">
 											<input type="hidden" name="adId" value="@item.Id">
 											<button type="submit" class="btn-main delete-button" style="background-color:red">
@@ -89,9 +90,15 @@
 										</form>
 										<br />
 
-										
+										@* <form method="get" action="/Advertisement/Update">
+											
+											<input type="hidden" name="adId" value="@item.Id">
+											<button type="submit" class="btn-main" style="background-color:yellowgreen">
+												Edit
+											</button>
+										</form> *@
 
-										<br />
+										
 
 										@if (item.Status != AdvertisementStatus.VIP)
 										{
@@ -117,7 +124,7 @@
 						}
 						else
 						{
-							<h3>Elaniniz yoxdur Yoxdur</h3>
+							<h3>Elanınız Yoxdur</h3>
 							<div class="menu_side_area">
 								<a asp-action="Index" asp-controller="Advertisement" class="btn-main" style="background-color:orange">Elan Yerlersdir</a>
 								<span id="menu-btn"></span>
@@ -152,12 +159,12 @@
 
 					if (response.ok) {
 						userBalance = result.balance; // Bakiyeyi değişkene ata
-						document.getElementById("user-balance").innerText = `Bakiye: ${userBalance} ₺`;
+						document.getElementById("user-balance").innerText = `Balans: ${userBalance} ₺`;
 					} else {
-						alert("Hata: " + result);
+						alert("Xeta: " + result);
 					}
 				} catch (error) {
-					console.error("Bakiye yüklenirken hata oluştu.", error);
+					console.error("Balans yüklenirken xeta bas verdi.", error);
 				}
 			}
 
@@ -168,7 +175,7 @@
 
 					// Kullanıcının yeterli bakiyesi var mı kontrol et
 					if (userBalance < 5) {
-						alert("Bakiyeniz yetersiz! VIP işlemi için en az 5₺ gereklidir.");
+						alert("Kifayet qeder balans yoxdur! VIP prosesi  üçün ən az 5AZN Lazımdır.");
 						return;
 					}
 
@@ -191,7 +198,7 @@
 							alert("Hata: " + result.message);
 						}
 					} catch (error) {
-						console.error("VIP işlemi sırasında hata oluştu.", error);
+						console.error("VIP prosesi sırasında xəta baş verdi.", error);
 					}
 				});
 			});
@@ -210,7 +217,7 @@
 					event.preventDefault(); // Formun direkt olarak gönderilmesini engelle
 
 					// Kullanıcıya onay sorusu göster
-					const isConfirmed = confirm("Bu ilanı silmek istediğinizden emin misiniz?");
+					const isConfirmed = confirm("Bu elanı silmək istediyinizdən əminsiniz?");
 
 					if (isConfirmed) {
 						let form = this.closest("form"); // Formu al
@@ -231,7 +238,7 @@
 								alert("Hata: " + result.message); // Silme işlemi başarısız
 							}
 						} catch (error) {
-							console.error("Silme işlemi sırasında hata oluştu.", error);
+							console.error("Silme prosesi zamanı xəta baş verdi.", error);
 						}
 					} else {
 						// Kullanıcı iptal ettiğinde herhangi bir işlem yapma

@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1>Cars</h1>
+                        <h1>Avtomobillər</h1>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-lg-3">  
                     <div class="item_filter_group">
-                        <h4>Price ($)</h4>
+                        <h4>Qiymət ($)</h4>
                         <div class="price-input">
                             <div class="field">
                                 <span>Min</span>
@@ -45,8 +45,10 @@
                         </div>
                     </div>
                     <div class="item_filter_group">
-                        <h4>Car Brand</h4>
-                        <div class="de_form">
+                        <h4>Avtomobil Markası</h4>
+                        <input type="text" id="brandSearch" class="form-control mb-2" placeholder="Marka axtarın...">
+
+                        <div class="de_form" style="max-height: 200px; overflow-y: auto; border: 1px solid #ddd; padding: 5px;">
                             @foreach (var item in ViewBag.Brand)
                             {
                                 <div class="de_checkbox">
@@ -55,18 +57,31 @@
                                            type="checkbox"
                                            value="@item.Id"
                                            class="brand-checkbox">
-
-                                    <label for="brand_@item.Id">@item.Name</label>
+                                    <label for="brand_@item.Id" class="brand-label">@item.Name</label>
                                 </div>
                             }
-
-
-
-
                         </div>
                     </div>
+
+                    <script>
+                        document.getElementById("brandSearch").addEventListener("keyup", function () {
+                            let searchValue = this.value.toLowerCase();
+                            let brands = document.querySelectorAll(".de_checkbox");
+
+                            brands.forEach(function (brand) {
+                                let label = brand.querySelector(".brand-label").textContent.toLowerCase();
+                                if (label.includes(searchValue)) {
+                                    brand.style.display = "block";
+                                } else {
+                                    brand.style.display = "none";
+                                }
+                            });
+                        });
+                    </script>
+
+
                     <div class="item_filter_group">
-                        <h4>Car Body Type</h4>
+                        <h4>Ban Növü</h4>
                         <div class="de_form">
                             @if (ViewBag.Category != null && ViewBag.Category.Count > 0)
                             {
@@ -103,8 +118,16 @@
                             <div class="col-xl-4 col-lg-6 car-item" data-category="@item.Category.Id" data-price="@item.Price" data-brand="@item.BrandId">
                                 <div class="de-item mb30">
                                     <div class="d-img">
-                                        <img src="img/cars/@item.ImageUrl" class="img-fluid" alt="">
+                                        <img src="img/cars/@item.ImageUrl" class="img-fluid fixed-size" alt="">
                                     </div>
+
+                                    <style>
+                                        .fixed-size {
+                                            width: 300px;
+                                            height: 175px;
+                                            object-fit: cover;
+                                        }
+                                    </style>
                                     <div class="d-info">
                                         <div class="d-text">
                                             <h4>@item.Brand.Name @item.Model</h4>
@@ -124,7 +147,6 @@
 
 
                                             <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">@item.City</span>
                                                 <span class="d-atr"><img src="images/icons/2-green.svg" alt="">@item.FuelType</span>
                                                 <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
                                                 <span class="d-atr"><img src="images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
