@@ -266,7 +266,7 @@
     <script>
         $(document).ready(function () {
 
-            fetch('/Home/GetFavouriteStatus')
+            fetch('/Car/GetFavouriteStatus')
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -290,7 +290,7 @@
                 var adId = $(this).attr('elan-id');
                 var icon = $(this).find('i');
 
-                fetch('/Home/AddToFavourite/' + adId, {
+                fetch('/Car/AddToFavourite/' + adId, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

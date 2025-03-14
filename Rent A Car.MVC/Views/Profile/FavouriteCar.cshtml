@@ -49,53 +49,146 @@
 					</div>
 				</div>
 
-				<div class="col-lg-9">
-					<div class="card padding30 rounded-5">
-						<h4>Sevimlilər</h4>
-						<div class="spacer-10"></div>
-						@if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
-						{
-							@foreach (var item in ViewBag.Favourite)
-							{
+                <div class="col-lg-9">
+                    <div class="card padding30 rounded-5">
+                        <h4>Sevimlilər</h4>
+
+                        <div class="spacer-10"></div>
+                        
+
+                        @if (ViewBag.Favourite != null && ViewBag.Favourite.Count > 0)
+                        {
+                            <a class="btn-main clear-wishlist-btn"
+                               style="background-color:red;cursor:pointer;width:200px;margin-left:690px;margin-bottom:20px">
+                                Sevimliləri Təmizlə
+                            </a>
+                            @foreach (var item in ViewBag.Favourite)
+                            {
+                                <div class="de-item-list no-border mb30" id="fav-@item.Advertisement.Id">
+                                    <div class="d-img">
+                                        <img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
+                                       
+                                    </div>
+                                    
+                                    <div class="d-info">
+                                        
+                                        <div class="d-text">
+                                            <h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
+                                            <div class="d-atr-group">
+                                                <ul class="d-atr">
+                                                    <li><span>Seats:</span> 4</li>
+                                                    <li><span>Luggage:</span> 2</li>
+                                                    <li><span>Doors:</span> 4</li>
+                                                    <li><span>City:</span> @(item.Advertisement.City)</li>
+                                                    <li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
+                                                    <li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-price">
+
+                                        Daily rate from <span>$@(item.Advertisement.Price)</span>
+                                        <a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Indi Icarələ</a>
+                                        <a class="btn-main remove-wishlist-btn" style="background-color:red;cursor:pointer" data-id="@item.Advertisement.Id">Sil</a>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <h3>Heç bir məlumat yoxdur</h3>
+                        }
+                    </div>
+                </div>
+
+                <!-- **JavaScript (AJAX ile wishlist'den silme)** -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelectorAll(".remove-wishlist-btn").forEach(button => {
+                            button.addEventListener("click", function () {
+                                let advertisementId = this.getAttribute("data-id");
+
+                                Swal.fire({
+                                    title: "Əminsiniz?",
+                                    text: "Bu elanı sevimlilərdən silmək istəyirsiniz?",
+                                    icon: "warning",
+                                    showCancelButton: true,
+                                    confirmButtonColor: "#d33",
+                                    cancelButtonColor: "#3085d6",
+                                    confirmButtonText: "Bəli, sil!",
+                                    cancelButtonText: "Xeyr, ləğv et"
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        fetch(`/Profile/RemoveFromFavourite?id=${advertisementId}`, {
+                                            method: "POST",
+                                            headers: {
+                                                "Content-Type": "application/json",
+                                                "X-Requested-With": "XMLHttpRequest"
+                                            }
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (data.success) {
+                                                Swal.fire("Silindi!", "Elan sevimlilərdən silindi.", "success");
+                                                document.getElementById(`fav-${advertisementId}`).remove();
+                                            } else {
+                                                Swal.fire("Xəta!", "Silinmə zamanı problem yarandı.", "error");
+                                            }
+                                        })
+                                        .catch(error => {
+                                            Swal.fire("Xəta!", "Şəbəkə xətası baş verdi.", "error");
+                                        });
+                                    }
+                                });
+                            });
+                        });
+                    });
+                </script>     
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelector(".clear-wishlist-btn").addEventListener("click", function () {
+                            Swal.fire({
+                                title: "Əminsiniz?",
+                                text: "Bütün sevimli elanları silmək istəyirsiniz?",
+                                icon: "warning",
+                                showCancelButton: true,
+                                confirmButtonColor: "#d33",
+                                cancelButtonColor: "#3085d6",
+                                confirmButtonText: "Bəli, təmizlə!",
+                                cancelButtonText: "Xeyr, ləğv et"
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    fetch(`/Profile/ClearFavourites`, {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                            "X-Requested-With": "XMLHttpRequest"
+                                        }
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.success) {
+                                            Swal.fire("Təmizləndi!", "Bütün elanlar sevimlilərdən silindi.", "success");
+                                            document.querySelectorAll(".de-item-list").forEach(el => el.remove());
+                                        } else {
+                                            Swal.fire("Xəta!", "Silinmə zamanı problem yarandı.", "error");
+                                        }
+                                    })
+                                    .catch(error => {
+                                        Swal.fire("Xəta!", "Şəbəkə xətası baş verdi.", "error");
+                                    });
+                                }
+                            });
+                        });
+                    });
+                </script>
 
 
-								<div class="de-item-list no-border mb30">
-									<div class="d-img">
-										<img src="~/img/cars/@(item.Advertisement.ImageUrl)" class="img-fluid" alt="">
-									</div>
-									<div class="d-info">
-										<div class="d-text">
-											<h4>@(item.Advertisement.Brand.Name)  @(item.Advertisement.Model)</h4>
-											<div class="d-atr-group">
-												<ul class="d-atr">
-													<li><span>Seats:</span> 4</li>
-													<li><span>Luggage:</span> 2</li>
-													<li><span>Doors:</span> 4</li>
-													<li><span>City:</span> @(item.Advertisement.City)</li>
-													<li><span>Fuel:</span> @(item.Advertisement.FuelType)</li>
-													<li><span>Type:</span> @(item.Advertisement.Category.CategoryName)</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="d-price">
-										Daily rate from <span>$@(item.Advertisement.Price)</span>
-										<a class="btn-main" asp-action="Detail" asp-controller="Advertisement" asp-route-id="@item.Advertisement.Id">Rent Now</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							}
-						}
-						else
-						{
-							<h3>Heç bir məlumat yoxdur</h3> <!-- "Empty" yerinə daha elmi və anlamlı ifadə -->
-						}
-
-
-					</div>
-
-
-				</div>
 			</div>
 		</div>
 	</section>

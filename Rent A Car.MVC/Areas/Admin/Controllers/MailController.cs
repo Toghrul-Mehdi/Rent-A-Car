@@ -21,15 +21,23 @@ namespace Rent_A_Car.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> ReplyQuestion(QuestionReplyDTO dto)
         {
             var question = await _context.Questions.FindAsync(dto.QuestionId);
-            if (question == null) return NotFound(new { success = false, message = "Sual Tapilmadi" });
+
+            if (question == null)
+            {
+                TempData["ErrorMessage"] = "Sual tapılmadı!";
+                return RedirectToAction(nameof(Index));
+            }
 
             question.AdminResponse = dto.AdminResponse;
             question.ResponseAt = DateTime.UtcNow;
             question.IsAnswered = true;
 
             await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Cavabınız uğurla göndərildi!";
             return RedirectToAction(nameof(Index));
         }
+
 
     }
 }

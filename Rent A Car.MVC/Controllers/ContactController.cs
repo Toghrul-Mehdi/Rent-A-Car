@@ -18,6 +18,7 @@ namespace Rent_A_Car.MVC.Controllers
         {
             if (!ModelState.IsValid)
             {
+                TempData["ErrorMessage"] = "Zəhmət olmasa bütün sahələri düzgün doldurun!";
                 return BadRequest(ModelState);
             }
 
@@ -32,8 +33,10 @@ namespace Rent_A_Car.MVC.Controllers
             _context.Questions.Add(question);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Soru başarıyla gönderildi!" });
+            TempData["SuccessMessage"] = "Sualınız uğurla göndərildi!";
+            return RedirectToAction(nameof(Index));
         }
+
 
 
     }

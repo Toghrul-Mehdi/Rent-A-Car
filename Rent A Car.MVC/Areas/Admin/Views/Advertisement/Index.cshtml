@@ -1,4 +1,5 @@
 ﻿@using Rent_A_Car.CORE.Entities
+@using Rent_A_Car.CORE.Enums
 @model List<Advertisement>
 <section role="main" class="content-body">
 	<header class="page-header">
@@ -47,31 +48,84 @@
 						<tbody>
 							@foreach (var item in Model ?? [])
 							{
-								<tr>
-									<td>@item.Id</td>
-									<td>@item.User.UserName</td>
-									<td>@item.Title</td>
-									<td>@item.Price</td>
-									<td><img width="50px" src="~/img/cars/@item.ImageUrl" /></td>
-									<td>
-										<a href="/Advertisement/Detail/@item.Id" class="btn btn-primary btn-icon-split">
-											<span class="icon text-white-50">
-												<i class="fa-solid fa-flag"></i>
-											</span>
-											<span class="text">Link</span>
-										</a>
+								if (item.Status == AdvertisementStatus.VIP)
+								{
+									<tr>
+										<td>@item.Id</td>
+										<td >
+											@item.User.UserName
+										</td>
+										<td style="color: gold;
+           text-shadow:
+           -1px -1px 2px black,
+            1px -1px 2px black,
+           -1px  1px 2px black,
+            1px  1px 2px black,
+            0px  0px 5px gold;">
+											@item.Title
+										</td>
 
-									</td>
-									<td class="actions">
 
-										<a asp-action="Delete" asp-controller="Advertisement" asp-route-id="@item.Id" class="delete-row"><span class="text">Delete</span><br /><i class="far fa-trash-alt"></i></a>
-										@if (!item.IsConfirmed)
-										{
 
-											<a asp-action="Confirm" asp-controller="Advertisement" asp-route-id="@item.Id"><span class="text">Confirm</span><br /><i class="fas fa-check-circle"></i></a>
-										}
-									</td>
-								</tr>
+										<td >
+											@item.Price
+										</td>
+										<td><img width="50px" src="~/img/cars/@item.ImageUrl" /></td>
+										<td>
+											<a href="/Advertisement/Detail/@item.Id" class="btn btn-primary btn-icon-split">
+												<span class="icon text-white-50">
+													<i class="fa-solid fa-flag"></i>
+												</span>
+												<span class="text">Link</span>
+											</a>
+
+										</td>
+										<td class="actions">
+
+											<a asp-action="Delete" asp-controller="Advertisement" asp-route-id="@item.Id" class="delete-row"><span class="text">Delete</span><br /><i class="far fa-trash-alt"></i></a>
+											@if (!item.IsConfirmed)
+											{
+
+												<a asp-action="Confirm" asp-controller="Advertisement" asp-route-id="@item.Id"><span class="text">Confirm</span><br /><i class="fas fa-check-circle"></i></a>
+											}
+										</td>
+									</tr>
+								}
+								else
+								{
+									<tr>
+										<td>@item.Id</td>
+										<td>
+											@item.User.UserName
+										</td>
+										<td >
+											@item.Title
+										</td>
+										<td >
+											@item.Price
+										</td>
+										<td><img width="50px" src="~/img/cars/@item.ImageUrl" /></td>
+										<td>
+											<a href="/Advertisement/Detail/@item.Id" class="btn btn-primary btn-icon-split">
+												<span class="icon text-white-50">
+													<i class="fa-solid fa-flag"></i>
+												</span>
+												<span class="text">Link</span>
+											</a>
+
+										</td>
+										<td class="actions">
+
+											<a asp-action="Delete" asp-controller="Advertisement" asp-route-id="@item.Id" class="delete-row"><span class="text">Delete</span><br /><i class="far fa-trash-alt"></i></a>
+											@if (!item.IsConfirmed)
+											{
+
+												<a asp-action="Confirm" asp-controller="Advertisement" asp-route-id="@item.Id"><span class="text">Confirm</span><br /><i class="fas fa-check-circle"></i></a>
+											}
+										</td>
+									</tr>
+								}
+
 							}
 						</tbody>
 					</table>

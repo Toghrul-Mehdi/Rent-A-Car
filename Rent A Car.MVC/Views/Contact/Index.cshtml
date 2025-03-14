@@ -28,6 +28,20 @@
                 <div class="col-lg-8 mb-sm-30">
 
                     <h3>Hər hansı bir sualınız var?</h3>
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["ErrorMessage"]
+                        </div>
+                    }
+
 
                     @if (User.Identity!.IsAuthenticated)
                     {

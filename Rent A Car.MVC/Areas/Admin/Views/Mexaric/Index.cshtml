@@ -55,10 +55,23 @@
 									<td>@item.User!.UserName</td>
 									<td>@item.CardName</td>
 									<td>@item.CreatedTime</td>
-									<td><a asp-action="Confirm" asp-controller="Mexaric" asp-route-id="@item.Id"><span class="text">Confirm</span><br /><i class="fas fa-check-circle"></i></a></td>
-
+									<td>
+										@if (item.IsConfirmed==false)
+										{
+											<a asp-action="Confirm" asp-controller="Mexaric" asp-route-id="@item.Id">
+												<span class="text">Confirm</span><br />
+												<i class="fas fa-check-circle"></i>
+											</a>
+										}
+										else
+										{
+											<span class="text">Odenis Tesdiqlenib</span>
+											
+										}
+									</td>
 								</tr>
 							}
+
 						</tbody>
 					</table>
 				</div>

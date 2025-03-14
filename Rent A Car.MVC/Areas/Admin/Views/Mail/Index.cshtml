@@ -32,12 +32,27 @@
 				<div class="mailbox-email-header mb-3">
 					<h3 class="mailbox-email-subject m-0 font-weight-light">
 						Released Porto Admin! (@ViewBag.UnReadQuestion)
+						@if (TempData["SuccessMessage"] != null)
+						{
+							<div class="alert alert-success">
+								@TempData["SuccessMessage"]
+							</div>
+						}
+
+						@if (TempData["ErrorMessage"] != null)
+						{
+							<div class="alert alert-danger">
+								@TempData["ErrorMessage"]
+							</div>
+						}
 					</h3>
 				</div>
 				<div class="mailbox-email-container">
 					<div class="mailbox-email-screen pt-4">
 						@if (ViewBag.Question != null && ViewBag.Question.Count > 0)
 						{
+							
+
 							@foreach (var item in ViewBag.Question)
 							{
 								<div class="card mb-3">

@@ -1,0 +1,48 @@
+﻿@{
+	ViewData["Title"] = "Email Verification";
+}
+
+
+<!-- content begin -->
+<div class="no-bottom no-top" id="content">
+	<div id="top"></div>
+	<section id="section-hero" aria-label="section" class="jarallax">
+		<img src="~/images/background/2.jpg" class="jarallax-img" alt="">
+		<div class="v-center">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-4 offset-lg-4">
+						<div class="padding40 rounded-3 shadow-soft" data-bgcolor="#ffffff">
+							<h4>Email Verification</h4>
+							<p>A verification code has been sent to <b>@ViewBag.Email</b>. Please enter the code below:</p>
+							<div class="spacer-10"></div>
+							<form method="post" asp-action="VerifyCode">
+								<div class="form-group">
+									<label>Enter 6-digit Code:</label>
+									<input type="text" name="code" id="verificationCode" class="form-control" placeholder="123456" required>
+									<span id="codeValidationMessage" class="text-danger"></span>
+								</div>
+								<br>
+								<button type="submit" class="btn btn-primary">Verify</button>
+							</form>
+							<script>
+								document.getElementById("verificationCode").addEventListener("input", function () {
+									var code = this.value;
+									var messageSpan = document.getElementById("codeValidationMessage");
+
+									if (code.length !== 6 || isNaN(code)) {
+										messageSpan.innerText = "Please enter a valid 6-digit code.";
+									} else {
+										messageSpan.innerText = "";
+									}
+								});
+							</script>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- content close -->

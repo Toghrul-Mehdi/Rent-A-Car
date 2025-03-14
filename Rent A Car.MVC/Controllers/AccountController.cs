@@ -33,21 +33,19 @@ namespace Rent_A_Car.MVC.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-
-
             if (await _usermanager.Users.AnyAsync(x => x.Email == dto.Email))
             {
-                ModelState.AddModelError("", "Email movcuddur");
+                ModelState.AddModelError("", "Email mövcuddur.");
                 return View();
             }
 
             User user = new User
             {
-                Fullname = dto.Username,
+                Fullname = dto.Fullname,
                 Email = dto.Email,
                 UserName = dto.Username,
                 ImageUrl = "photo.jpg",
-                PasswordHash = dto.Password
+                EmailConfirmed = false
             };
 
             var result = await _usermanager.CreateAsync(user, dto.Password);
@@ -60,8 +58,48 @@ namespace Rent_A_Car.MVC.Controllers
                 }
                 return View();
             }
-            return RedirectToAction(nameof(Login));
+
+            // ✅ **6 rəqəmli təsdiq kodu yaradılır**
+            Random random = new Random();
+            string verificationCode = random.Next(100000, 999999).ToString();
+
+            // ✅ **Kodu Session-da saxlayırıq**
+            HttpContext.Session.SetString("VerificationCode", verificationCode);
+            HttpContext.Session.SetString("UserEmail", dto.Email);
+
+            // ✅ **Email göndəririk**
+            try
+            {
+                using (SmtpClient smtp = new SmtpClient())
+                {
+                    smtp.Host = _smtp.Host;
+                    smtp.Port = _smtp.Port;
+                    smtp.EnableSsl = true;
+                    smtp.Credentials = new NetworkCredential(_smtp.Username, _smtp.Password);
+
+                    MailMessage msg = new MailMessage
+                    {
+                        From = new MailAddress(_smtp.Username, "Rent A Car"),
+                        Subject = "Email Doğrulama Kodu",
+                        Body = $"<p>Sizin təsdiq kodunuz: <b>{verificationCode}</b></p>",
+                        IsBodyHtml = true
+                    };
+                    msg.To.Add(dto.Email);
+
+                    await smtp.SendMailAsync(msg);
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Email göndərilərkən xəta baş verdi.");
+                return View();
+            }
+
+            return RedirectToAction(nameof(Verification)); 
         }
+
+
+
 
         public IActionResult Login()
         {
@@ -218,10 +256,57 @@ namespace Rent_A_Car.MVC.Controllers
             return View(vm);
         }
 
-        public IActionResult SendEmailView()
+        [HttpGet]
+        public IActionResult Verification()
         {
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return RedirectToAction("Register");
+            }
+            ViewBag.Email = email;
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> VerifyCode(string code)
+        {
+            var storedCode = HttpContext.Session.GetString("VerificationCode");
+            var email = HttpContext.Session.GetString("UserEmail");
+
+            if (string.IsNullOrEmpty(storedCode) || string.IsNullOrEmpty(email))
+            {
+                return RedirectToAction("Register");
+            }
+
+            if (code != storedCode)
+            {
+                ModelState.AddModelError("", "Invalid verification code.");
+                return View("Verification");
+            }
+
+            var user = await _usermanager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return RedirectToAction("Register");
+            }
+
+            user.EmailConfirmed = true; // Email təsdiqləndi
+            await _usermanager.UpdateAsync(user);
+
+            HttpContext.Session.Remove("VerificationCode");
+            HttpContext.Session.Remove("UserEmail");
+
+            // TempData vasitəsilə uğurlu mesajı göndər
+            TempData["SuccessMessage"] = "Email uğurla təsdiqləndi! Zəhmət olmasa giriş edin.";
+
+            return RedirectToAction("Login");
+        }
+
+
+
+
+
 
 
 

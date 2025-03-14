@@ -54,6 +54,9 @@
 					<div class="card padding30 rounded-5">
 						<h4>Elanlarım</h4>
 						<div class="spacer-10"></div>
+						<div id="user-balance">
+							
+						</div>
 						@if (ViewBag.Ads != null && ViewBag.Ads.Count > 0)
 						{
 							@foreach (var item in ViewBag.Ads)
@@ -90,26 +93,37 @@
 										</form>
 										<br />
 
-										@* <form method="get" action="/Advertisement/Update">
-											
-											<input type="hidden" name="adId" value="@item.Id">
-											<button type="submit" class="btn-main" style="background-color:yellowgreen">
-												Edit
-											</button>
-										</form> *@
-
-										
-
-										@if (item.Status != AdvertisementStatus.VIP)
+										@if (!item.IsConfirmed)
 										{
-											<form method="post" action="/Profile/GetVIP">
+											<input type="hidden" name="username" value="@Model.Username">
+											<input type="hidden" name="adId" value="@item.Id">
+											<button type="submit" class="btn-main delete-button"
+													style="background-color: #85c88a; color: white; cursor: not-allowed; opacity: 0.8; border-radius: 5px;"
+													title="Elanınız admin tərəfindən təsdiqlənməlidir" disabled>
+												<i class="fa fa-clock"></i> Admin tərəfindən təsdiq gözlənilir...
+											</button>
+											
+										}
+
+
+
+
+
+
+
+										@if (item.Status != AdvertisementStatus.VIP && item.IsConfirmed==true)
+										{
+											<form method="post" action="/Profile/GetVIP" onsubmit="return confirmVIP(event, this)">
 												<input type="hidden" name="username" value="@Model.Username">
 												<input type="hidden" name="adId" value="@item.Id">
 												<button type="submit" class="btn-main vip-button" style="background-color:orange">
-													<i class="fas fa-star"></i> VIP || Price:5AZN
+													<i class="fas fa-star"></i> VIP || Price: 5 AZN
 												</button>
 											</form>
 										}
+
+										
+
 
 
 										<br />
@@ -147,105 +161,154 @@
 <a href="#" id="back-to-top"></a>
 
 @section scripts{
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>
-						document.addEventListener("DOMContentLoaded", function () {
-			let userBalance = 0; // Kullanıcının bakiyesi
+		document.addEventListener("DOMContentLoaded", function () {
+			let userBalance = 0; // İstifadəçinin balansı
 
-			// Kullanıcı bakiyesini çek ve ekrana yaz
-			async function loadUserBalance() {
-				try {
-					let response = await fetch("/Profile/GetUserBalance");
-					let result = await response.json();
-
-					if (response.ok) {
-						userBalance = result.balance; // Bakiyeyi değişkene ata
-						document.getElementById("user-balance").innerText = `Balans: ${userBalance} ₺`;
-					} else {
-						alert("Xeta: " + result);
-					}
-				} catch (error) {
-					console.error("Balans yüklenirken xeta bas verdi.", error);
+					async function loadUserBalance() {
+			try {
+				// "user-balance" elementi səhifədə varmı?
+				let balanceElement = document.getElementById("user-balance");
+				if (!balanceElement) {
+					console.warn("Xəbərdarlıq: 'user-balance' elementi səhifədə yoxdur.");
+					return; // Əgər element yoxdursa, funksiyanı dayandır
 				}
-			}
 
-			// VIP yapma butonlarına event ekle
+				let response = await fetch("/Profile/GetUserBalance");
+				let result = await response.json();
+
+				if (response.ok) {
+					userBalance = result.balance; // Balansı dəyişkənə ata
+					balanceElement.innerText = ``;
+				} else {
+					console.error("Xəta: Server düzgün cavab qaytarmadı!", result);
+					Swal.fire("Xəta", "Balans yüklənmədi: " + result.message, "error");
+				}
+			} catch (error) {
+				console.error("Balans yüklənərkən xəta baş verdi.", error);
+				Swal.fire("Xəta", "Balans yüklənərkən bağlantı xətası baş verdi!", "error");
+			}
+		}
+
+
+			// VIP düymələrinə event əlavə et
 			document.querySelectorAll(".vip-button").forEach(button => {
 				button.addEventListener("click", async function (event) {
 					event.preventDefault();
 
-					// Kullanıcının yeterli bakiyesi var mı kontrol et
+					// İstifadəçinin kifayət qədər balansı var mı?
 					if (userBalance < 5) {
-						alert("Kifayet qeder balans yoxdur! VIP prosesi  üçün ən az 5AZN Lazımdır.");
+						Swal.fire({
+							icon: "warning",
+							title: "Balans yetərsiz!",
+							text: "VIP elan etmək üçün ən az 5 AZN balansınız olmalıdır.",
+							confirmButtonText: "Bağla"
+						});
 						return;
 					}
 
 					let form = this.closest("form"); // Formu al
-					let formData = new FormData(form); // Form verilerini al
+					let formData = new FormData(form); // Form məlumatlarını al
 
-					try {
-						let response = await fetch(form.action, {
-							method: "POST",
-							body: formData
-						});
+					Swal.fire({
+						title: "VIP elan etmək istədiyinizə əminsiniz?",
+						text: "Bu əməliyyat 5 AZN tutacaq!",
+						icon: "question",
+						showCancelButton: true,
+						confirmButtonColor: "#3085d6",
+						cancelButtonColor: "#d33",
+						confirmButtonText: "Bəli, davam et",
+						cancelButtonText: "Xeyr, ləğv et"
+					}).then(async (result) => {
+						if (result.isConfirmed) {
+							try {
+								let response = await fetch(form.action, {
+									method: "POST",
+									body: formData
+								});
 
-						let result = await response.json();
+								let result = await response.json();
 
-						if (response.ok) {
-							alert(result.message);
-							await loadUserBalance(); // Bakiye güncelle
-							location.reload(); // Sayfayı yenile
-						} else {
-							alert("Hata: " + result.message);
+								if (response.ok) {
+									Swal.fire({
+										icon: "success",
+										title: "Uğurlu!",
+										text: result.message,
+										confirmButtonText: "Bağla"
+									}).then(() => {
+										loadUserBalance(); // Balansı yenilə
+										location.reload(); // Səhifəni yenilə
+									});
+								} else {
+									Swal.fire("Xəta!", result.message, "error");
+								}
+							} catch (error) {
+								console.error("VIP prosesi zamanı xəta baş verdi.", error);
+								Swal.fire("Xəta!", "VIP prosesi zamanı xəta baş verdi!", "error");
+							}
 						}
-					} catch (error) {
-						console.error("VIP prosesi sırasında xəta baş verdi.", error);
-					}
+					});
 				});
 			});
 
-			// Sayfa yüklendiğinde kullanıcı bakiyesini getir
+			// Səhifə yükləndikdə istifadəçinin balansını gətir
 			loadUserBalance();
 		});
-
-
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// Silme butonlarına tıklama eventi ekle
+			// Silmə düymələrinə event əlavə et
 			document.querySelectorAll(".delete-button").forEach(button => {
 				button.addEventListener("click", async function (event) {
-					event.preventDefault(); // Formun direkt olarak gönderilmesini engelle
+					event.preventDefault(); // Formun birbaşa göndərilməsinin qarşısını al
 
-					// Kullanıcıya onay sorusu göster
-					const isConfirmed = confirm("Bu elanı silmək istediyinizdən əminsiniz?");
+					// SweetAlert təsdiqləmə dialoqu
+					Swal.fire({
+						title: "Eminsiniz?",
+						text: "Bu elanı silmək istədiyinizə əminsiniz?",
+						icon: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#d33",
+						cancelButtonColor: "#3085d6",
+						confirmButtonText: "Bəli, sil!",
+						cancelButtonText: "İmtina"
+					}).then(async (result) => {
+						if (result.isConfirmed) {
+							let form = this.closest("form"); // Formu al
+							let formData = new FormData(form); // Form məlumatlarını al
 
-					if (isConfirmed) {
-						let form = this.closest("form"); // Formu al
-						let formData = new FormData(form); // Form verilerini al
+							try {
+								let response = await fetch(form.action, {
+									method: "POST",
+									body: formData
+								});
 
-						try {
-							let response = await fetch(form.action, {
-								method: "POST",
-								body: formData
-							});
+								let result = await response.json();
 
-							let result = await response.json();
-
-							if (response.ok) {
-								alert(result.message); // Silme işlemi başarılı
-								location.reload(); // Sayfayı yenile
-							} else {
-								alert("Hata: " + result.message); // Silme işlemi başarısız
+								if (response.ok) {
+									Swal.fire({
+										title: "Silindi!",
+										text: result.message,
+										icon: "success"
+									}).then(() => {
+										location.reload(); // Səhifəni yenilə
+									});
+								} else {
+									Swal.fire("Xəta!", result.message, "error");
+								}
+							} catch (error) {
+								console.error("Silme prosesi zamanı xəta baş verdi.", error);
+								Swal.fire("Xəta!", "Silme prosesi zamanı xəta baş verdi.", "error");
 							}
-						} catch (error) {
-							console.error("Silme prosesi zamanı xəta baş verdi.", error);
 						}
-					} else {
-						// Kullanıcı iptal ettiğinde herhangi bir işlem yapma
-						console.log("İlan silme işlemi iptal edildi.");
-					}
+					});
 				});
 			});
 		});
 	</script>
+
+	
 }

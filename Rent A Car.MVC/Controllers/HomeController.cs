@@ -16,6 +16,20 @@ namespace Rent_A_Car.MVC.Controllers
             ViewBag.AdvCount = await _context.Advertisements.CountAsync();
             ViewBag.OrderCount = await _context.Bookings.CountAsync();
             ViewBag.UserCount = await _context.Users.CountAsync();
+            ViewBag.Questions1 = await _context.Questions
+                .Where(q => !string.IsNullOrEmpty(q.AdminResponse)) 
+                .OrderByDescending(q => q.CreatedTime) 
+                .Take(3) 
+                .ToListAsync();
+
+            ViewBag.Questions2 = await _context.Questions
+                .Where(q => !string.IsNullOrEmpty(q.AdminResponse)) 
+                .OrderByDescending(q => q.CreatedTime) 
+                .Skip(3) 
+                .Take(3) 
+                .ToListAsync();
+
+
             return View(await _context.Advertisements
                 .Where(x => !x.IsDeleted
                     && x.IsConfirmed ==true

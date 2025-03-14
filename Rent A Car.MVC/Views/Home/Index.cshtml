@@ -460,9 +460,9 @@
 
                                     <style>
                                         .fixed-size {
-                                            width: 300px;
-                                            height: 175px;
-                                            object-fit: cover;
+                                        width: 300px;
+                                        height: 175px;
+                                        object-fit: cover;
                                         }
                                     </style>
 
@@ -483,7 +483,7 @@
 
 
                                             <div class="d-atr-group">
-                                                
+
                                                 <span class="d-atr"><img src="images/icons/2-green.svg" alt="">@item.FuelType</span>
                                                 <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
                                                 <span class="d-atr"><img src="images/icons/4-green.svg" alt="">@item.Category.CategoryName</span>
@@ -503,8 +503,8 @@
                                 </div>
                             </div>
                         }      
-                        
-                       
+
+
 
                     </div>
                 </div>
@@ -518,7 +518,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <h1>Səyahıtiniz Başlasın</h1>
+                    <h1>Səyahətiniz Başlasın</h1>
                     <div class="spacer-20"></div>
                 </div>
                 <div class="col-md-3">
@@ -541,7 +541,7 @@
 
     </section>
 
-    
+
 
     <section id="section-faq">
         <div class="container">
@@ -557,24 +557,22 @@
                 <div class="col-md-6 wow fadeInUp">
                     <div class="accordion secondary">
                         <div class="accordion-section">
-                            <div class="accordion-section-title" data-tab="#accordion-1">
-                                Avtomobil icarəsinə necə başlaya bilərəm?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-1">
-                                <p>Avtomobil icarəsinə başlamaq üçün ilk növbədə uyğun şirkəti seçməli və istədiyiniz avtomobili sifariş etməlisiniz. Bunun üçün şəxsiyyət vəsiqəsi, sürücülük vəsiqəsi və ödəmə üçün kredit və ya debet kartı tələb oluna bilər. İcarə şərtlərini diqqətlə oxumağınız məsləhətdir.</p>
-                            </div>
-                            <div class="accordion-section-title" data-tab="#accordion-2">
-                                Debet kartı ilə avtomobil icarəyə götürə bilərəmmi?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-2">
-                                <p>Bəzi icarə şirkətləri debet kartı ilə ödənişi qəbul edir, lakin bu, şirkətdən və ölkədən asılı olaraq dəyişə bilər. Adətən, debet kartı ilə ödəniş üçün əlavə tələblər qoyulur, məsələn, daha yüksək depozit və ya əlavə sənədlər təqdim etməlisiniz.</p>
-                            </div>
-                            <div class="accordion-section-title" data-tab="#accordion-3">
-                                Hansı növ avtomobil icarəyə götürməliyəm?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-3">
-                                <p>İcarəyə götürəcəyiniz avtomobil sizin ehtiyaclarınıza və büdcənizə uyğun olmalıdır. Şəhər içi səyahətlər üçün kiçik və ya orta ölçülü avtomobillər, ailəvi səfərlər üçün geniş sedanlar və ya SUV-lər, biznes görüşləri üçün isə premium sinif avtomobillər tövsiyə olunur.</p>
-                            </div>
+                            @if (ViewBag.Questions1 != null && ViewBag.Questions1.Count > 0)
+                            {
+                                @foreach (var item in ViewBag.Questions1)
+                                {
+                                    <div class="accordion-section-title" data-tab="#accordion-@item.Id">
+                                        @item.QuestionText
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-@item.Id">
+                                        <p>@item.AdminResponse</p>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+
+                            }
                         </div>
                     </div>
                 </div>
@@ -583,24 +581,22 @@
                 <div class="col-md-6 wow fadeInUp">
                     <div class="accordion secondary">
                         <div class="accordion-section">
-                            <div class="accordion-section-title" data-tab="#accordion-b-4">
-                                Kirayə avtomobil üçün depozit nədir?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-b-4">
-                                <p>Kirayə avtomobil üçün depozit, avtomobilin təhlükəsizliyini təmin etmək məqsədilə şirkət tərəfindən müştəridən alınan məbləğdir. Bu məbləğ, avtomobilin qaytarılmasından sonra hər hansı bir zərər və ya əlavə xərclər yoxdursa, geri qaytarılır.</p>
-                            </div>
-                            <div class="accordion-section-title" data-tab="#accordion-b-5">
-                                Rezervasiyamı ləğv edə və ya dəyişdirə bilərəmmi?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-b-5">
-                                <p>Bəli, rezervasiyanızı ləğv edə və ya dəyişdirə bilərsiniz. Bunun üçün şirkətin qaydalarına uyğun olaraq müəyyən müddətdən əvvəl müraciət etməlisiniz. Ləğv və dəyişiklik şərtləri seçdiyiniz tarif planından asılıdır.</p>
-                            </div>
-                            <div class="accordion-section-title" data-tab="#accordion-b-6">
-                                Kirayə müddətimi uzatmaq mümkündürmü?
-                            </div>
-                            <div class="accordion-section-content" id="accordion-b-6">
-                                <p>Bəli, kirayə müddətini uzatmaq mümkündür. Bunun üçün kirayə müddətinin bitməsindən əvvəl şirkətlə əlaqə saxlamalı və əlavə günlər üçün ödəniş etməlisiniz. Mövcudluq və qiymətlər barədə məlumatı öncədən dəqiqləşdirmək tövsiyə olunur.</p>
-                            </div>
+                            @if (ViewBag.Questions2 != null && ViewBag.Questions2.Count > 0)
+                            {
+                                @foreach (var item in ViewBag.Questions2)
+                                {
+                                    <div class="accordion-section-title" data-tab="#accordion-@item.Id">
+                                        @item.QuestionText
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-@item.Id">
+                                        <p>@item.AdminResponse</p>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+
+                            }
                         </div>
                     </div>
                 </div>
@@ -608,6 +604,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <section id="section-call-to-action" class="bg-color-2 pt60 pb60 text-light">
         <div class="container">
@@ -615,29 +613,31 @@
                 <div class="row">
 
                     <div class="col-lg-4 offset-lg-2">
-                        <span class="subtitle text-white">Call us for further information</span>
-                        <h2 class="s2">Rentaly customer care is here to help you anytime.</h2>
+                        <span class="subtitle text-white">Əlavə məlumat üçün bizə zəng edin</span>
+                        <h2 class="s2">Rentaly müştəri xidməti sizə hər zaman kömək etməyə hazırdır.</h2>
                     </div>
 
                     <div class="col-lg-4 text-lg-center text-sm-center">
                         <div class="phone-num-big">
                             <i class="fa fa-phone"></i>
                             <span class="pnb-text">
-                                Call Us Now
+                                İndi bizə zəng edin
                             </span>
                             <span class="pnb-num">
                                 1 200 333 800
                             </span>
                         </div>
-                        <a asp-action="Index" asp-controller="Contact" class="btn-main">Contact Us</a>
+                        <a asp-action="Index" asp-controller="Contact" class="btn-main">Bizimlə əlaqə saxlayın</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
 </div>
 <!-- content close -->
+
 <a href="#" id="back-to-top"></a>
 @section scripts {
     
@@ -693,6 +693,7 @@
             });
         });
     </script>
+    
 }
 
 

@@ -15,6 +15,13 @@
 					<div class="col-lg-4 offset-lg-4">
 						<div class="padding40 rounded-3 shadow-soft" data-bgcolor="#ffffff">
 							<h4>Login</h4>
+							@if (TempData["SuccessMessage"] != null)
+							{
+								<div class="alert alert-success">
+									@TempData["SuccessMessage"]
+								</div>
+							}
+
 							<div class="spacer-10"></div>
 							<form class="form-border" method="post">
 								<div class="field-set">
@@ -37,7 +44,7 @@
 
 								<div class="field-set">
 
-									<a style="color:black" asp-action="ForgotPassword" asp-controller="Account">Forgot Password</a>
+									<a style="color:darkblue;text-decoration:underline" asp-action="ForgotPassword" asp-controller="Account">Forgot Password</a>
 
 								</div>
 
@@ -46,7 +53,7 @@
 								<div class="col-md-12">
 
 									<div class="col-lg-3">
-										<button type="submit" style="background-color:forestgreen" class="btn btn-primary">Login</button>
+										<button type="submit" style="background-color:forestgreen;" class="btn btn-primary">Login</button>
 									</div>
 
 								</div>

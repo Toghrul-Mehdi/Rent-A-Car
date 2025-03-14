@@ -12,7 +12,10 @@ namespace Rent_A_Car.MVC.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cixaris.Include(x=>x.User).Where(x=>x.IsConfirmed==false).ToListAsync());
+            return View(await _context.Cixaris
+    .Include(x => x.User)
+    .OrderBy(x => x.IsConfirmed) // Öncelikle IsConfirmed == false olanları getir
+    .ToListAsync());
         }
         public async Task<IActionResult> Confirm(int? id)
         {

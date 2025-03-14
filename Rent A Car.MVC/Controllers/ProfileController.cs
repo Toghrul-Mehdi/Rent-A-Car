@@ -159,7 +159,7 @@ namespace Rent_A_Car.MVC.Controllers
                 return NotFound();
             }
 
-            var myads = await _context.Advertisements.Where(x => x.IsDeleted == false && user.Id == x.UserId && x.IsConfirmed == true)
+            var myads = await _context.Advertisements.Where(x => x.IsDeleted == false && user.Id == x.UserId)
                .Include(x => x.Brand)
                .Include(x => x.Category)
                .Include(x => x.User)
@@ -339,7 +339,7 @@ namespace Rent_A_Car.MVC.Controllers
                 return NotFound();
             }
 
-            var question = await _context.Questions.Include(x => x.User).Where(x => x.UserId == user.Id).ToListAsync();
+            var question = await _context.Questions.Include(x => x.User).Where(x => x.UserId == user.Id).OrderByDescending(x=>x.CreatedTime).ToListAsync();
 
 
             ViewBag.Questions = question;
@@ -390,6 +390,48 @@ namespace Rent_A_Car.MVC.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveFromFavourite(int? id)
+        {
+            if (!id.HasValue)
+                return BadRequest();
+
+            string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)!.Value;
+
+            var existingWish = await _context.WishLists
+                                              .FirstOrDefaultAsync(w => w.UserId == userId && w.AdvertisementId == id.Value);
+
+            if (existingWish == null)
+                return NotFound();
+
+            _context.WishLists.Remove(existingWish);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true, message = "Removed from Favourites" });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ClearFavourites()
+        {
+            string userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+                return Unauthorized();
+
+            var userWishlist = _context.WishLists.Where(w => w.UserId == userId).ToList();
+
+            if (userWishlist.Any())
+            {
+                _context.WishLists.RemoveRange(userWishlist);
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, message = "All favourites cleared" });
+            }
+
+            return Json(new { success = false, message = "No favourites to clear" });
+        }
+
+
 
 
 

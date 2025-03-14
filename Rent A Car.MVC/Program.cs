@@ -11,13 +11,14 @@ using Rent_A_Car.MVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 builder.Services.AddControllersWithViews();
 
 // Database context configuration
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL")));
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL")));
 
-// Configure JSON serialization options
+// JSON Serialization options
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -30,6 +31,7 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<AppDbContext>();
 
+// SMTP Configuration for email sending
 SmtpOptions opt = new();
 builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("Smtp"));
 
@@ -38,13 +40,19 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
     options.TokenLifespan = TimeSpan.FromHours(24);
 });
 
+// **Session Configuration**
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-// Add application services
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IModelService, ModelService>();
-builder.Services.AddScoped<IBrandService, BrandService>();
+// **AddHttpContextAccessor for accessing session**
+builder.Services.AddHttpContextAccessor();
 
-// Authentication configuration (fixing the missing cookie authentication)
+// Authentication configuration
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -56,12 +64,17 @@ builder.Services.AddAuthentication(options =>
     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
     options.SlidingExpiration = true;
 });
+
+// Add application services
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IModelService, ModelService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+
 builder.Services.AddHostedService<VipStatusChecker>();
 builder.Services.AddHostedService<BookingStatusUpdater>();
-// Stripe açarlar?n? konfiqurasiya et
+
+// Stripe Configuration
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
-
-
 
 var app = builder.Build();
 
@@ -85,19 +98,24 @@ app.UseStatusCodePages(async context =>
     }
 });
 
-
 // Enable routing
 app.UseRouting();
 
+// **Enable Session Middleware (Düzgün yer!)**
+app.UseSession();
 
-
-
-
-app.UseAuthorization();   // Add authorization middleware
+// **Enable Authentication and Authorization**
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Map controller routes
-app.MapControllerRoute(name: "areas", pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
-app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 // User seeding middleware (if defined in an extension method)
 app.UseUserSeed();

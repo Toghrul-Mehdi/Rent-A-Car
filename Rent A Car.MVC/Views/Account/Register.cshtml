@@ -28,30 +28,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h3>Don't have an account? Register now.</h3>
-                    <p>Welcome to Rentaly. We're excited to have you on board. By creating an account with us, you'll gain access to a range of benefits and convenient features that will enhance your car rental experience.</p>
+                    <h3>Hesabınız yoxdur? İndi qeydiyyatdan keçin.</h3>
+                    <p>Rentaly-ə xoş gəldiniz. Sizi burada görməkdən məmnunuq. Bizimlə hesab yaradaraq, avtomobil icarənizi daha rahat və üstünlüklərlə dolu bir təcrübəyə çevirəcək bir sıra imkanlara sahib olacaqsınız.</p>
 
                     <div class="spacer-10"></div>
 
-                    <form class="form-border" method="post" >
+                    <form class="form-border" method="post">
 
                         <div class="row">
 
                             <div class="col-md-6">
                                 <div class="field-set">
                                     <label>Full Name:</label>
-                                    <input asp-for="Fullname" type='text'  class="form-control">
+                                    <input asp-for="Fullname" type='text' class="form-control">
                                     <span asp-validation-for="Fullname" class="text-danger"></span>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="field-set">
-                                    <label>Email Address:</label>
-                                    <input asp-for="Email" type='text' class="form-control">
-                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                </div>
-                            </div>
+
 
                             <div class="col-md-6">
                                 <div class="field-set">
@@ -60,7 +54,15 @@
                                     <span asp-validation-for="Username" class="text-danger"></span>
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="field-set">
+                                    <label>Email Address:</label>
+                                    <div class="input-group">
+                                        <input asp-for="Email" type='text' class="form-control" id="emailInput">                                        
+                                    </div>                                    
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
                             
 
                             <div class="col-md-6">
@@ -78,19 +80,18 @@
                                     <span asp-validation-for="RePassword" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="form-group row" asp-validation-summary="ModelOnly">
-                            </div>
+
+                            <div class="form-group row" asp-validation-summary="ModelOnly"></div>
 
                             <div class="col-md-12">
-
                                 <div class="col-lg-3">
                                     <button type="submit" style="background-color:forestgreen" class="btn btn-primary">Register</button>
-                                </div>                               
-
+                                </div>
                             </div>
 
                         </div>
                     </form>
+
 
                 </div>
             </div>

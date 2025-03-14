@@ -107,7 +107,7 @@
                         <div class="de-box mb25">
                             <form action="/Account/Login" method="get">
                                 <div class="col-lg-3">
-                                    <button type="submit" style="background-color:dodgerblue" class="btn btn-primary">Login</button>
+                                    <button type="submit" style="background-color:dodgerblue;width:220px" class="btn btn-primary">Icarə üçün Login ol</button>
                                 </div>
                             </form>
                         </div>
@@ -126,19 +126,50 @@
                         </div>
 
                     }
-                    <div class="de-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 10px; width: 250px; text-align: center; margin: auto;">
-                        <h4 style="margin-bottom: 10px; color: #333;">Contact</h4>
-                        <div>
-                            <h3 style="margin: 5px 0; color: #555;">@Model.Advertisement.User.UserName</h3>
-                            <p style="margin: 5px 0; font-size: 14px; color: #777;">
-                                Telefon: <a href="tel:@Model.Advertisement.PhoneNumber" style="text-decoration: none; color: #007bff;">@Model.Advertisement.PhoneNumber</a>
-                            </p>
+                    @if (User.Identity!.Name == Model.Advertisement.User.UserName)
+                    {                    
+                    
+                    }
+                    else{
 
-                           
+                        <div class="de-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 10px; width: 250px; text-align: center; margin: auto;">
+                            <h4 style="margin-bottom: 10px; color: #333;">Contact</h4>
+                            <div>
+                                <h3 style="margin: 5px 0; color: #555;">@Model.Advertisement.User.UserName</h3>
+                                <p style="margin: 5px 0; font-size: 14px; color: #777;">
+                                    Telefon:
+                                    <a href="javascript:void(0);"
+                                       onclick="redirectToWhatsApp('@(Model.Advertisement.PhoneNumber)', '@(Model.Advertisement.Id)', '@(Model.Advertisement.Brand.Name)', '@(Model.Advertisement.Model)')"
+                                       style="text-decoration: none; color: #007bff;">
+                                        @(Model.Advertisement.PhoneNumber)
+                                    </a>
+                                </p>
 
+                                <script>
+                                    function redirectToWhatsApp(phoneNumber, advertisementId, brand, model) {
+                                        let adLink = window.location.origin + "/Advertisement/Detail/" + advertisementId; // Elanın linkini generasiya edir
+                                        let message = encodeURIComponent("Salam, bu '" + brand + " " + model + "' maşını ilə maraqlanıram. Zəhmət olmasa, məlumat verərdiniz?\n\nElan linki: " + adLink);
+                                        let url = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+                                        // Mobil və ya masaüstü istifadəçi olduğunu yoxlayırıq
+                                        if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+                                            window.location.href = url; // Mobil üçün
+                                        } else {
+                                            window.open("https://web.whatsapp.com/send?phone=" + phoneNumber + "&text=" + message, "_blank");
+                                        }
+                                    }
+                                </script>
+
+
+
+
+
+
+
+
+                            </div>
                         </div>
-                    </div>
-
+                    }
                    
                 </div>
             </div>
